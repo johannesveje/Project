@@ -1,8 +1,8 @@
 within Tutorial.UnitTest;
-model Pipe2
+model Pipe
   import Tutorial;
 
-  Tutorial.Pipe2 pipe2_1
+  Tutorial.Pipe pipe2_1
     annotation (Placement(transformation(extent={{-14,6},{6,26}})));
   Modelica.Fluid.Sources.Boundary_ph boundary1(
     nPorts=1,
@@ -22,4 +22,4 @@ equation
           {-26,0},{-26,8},{-4,8}}, color={0,127,255}));
   annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}})));
-end Pipe2;
+end Pipe;
