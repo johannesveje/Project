@@ -2,54 +2,69 @@ within Tutorial;
 model Pump
   outer Modelica.Fluid.System system "System wide properties";
 
-  replaceable package Medium = Modelica.Media.Water.StandardWater constrainedby
-    Modelica.Media.Interfaces.PartialMedium                                                                             annotation (choicesAllMatching=true);
+  replaceable package Medium = Modelica.Media.Water.StandardWater
+    constrainedby Modelica.Media.Interfaces.PartialMedium annotation (
+      choicesAllMatching=true);
 
-   Modelica.SIunits.Density rho;
-  parameter Modelica.SIunits.Height z = 0;
+  SI.Density rho;
+  parameter SI.Height z=0;
 
-  parameter Boolean fixed_diameter = true "Same inlet and outlet diameter"
-    annotation(Evaluate=true, HideResult=true, choices(checkBox=true));
-  parameter Modelica.SIunits.Efficiency eta_pump = 1 "Pump efficiency";
-  parameter Modelica.SIunits.Diameter diameter_a = 0.1 "Inlet diameter";
-  parameter Modelica.SIunits.Diameter diameter_b = diameter_a "Outlet diameter"
-  annotation(Dialog(enable = not fixed_diameter));
+  parameter Boolean fixed_diameter=true "Same inlet and outlet diameter"
+    annotation (
+    Evaluate=true,
+    HideResult=true,
+    choices(checkBox=true));
+  parameter SI.Efficiency eta_pump=1 "Pump efficiency";
+  parameter SI.Diameter diameter_a=0.1 "Inlet diameter";
+  parameter SI.Diameter diameter_b=diameter_a "Outlet diameter"
+    annotation (Dialog(enable=not fixed_diameter));
 
-   Modelica.SIunits.Length head;
-   Modelica.SIunits.Velocity velocity_a, velocity_b;
-  parameter Modelica.SIunits.Area area_a = Modelica.Constants.pi*diameter_a*diameter_a/4;
-  parameter Modelica.SIunits.Area area_b = Modelica.Constants.pi*diameter_b*diameter_b/4;
-   Modelica.SIunits.AngularVelocity omega;
-   Modelica.SIunits.Torque tau;
+  SI.Length head;
+  parameter SI.MassFlowRate m_flow_nominal=10;
+  parameter NonSI.AngularVelocity_rpm n_nominal=3000;
+  parameter SI.Length head_nominal=35;
 
-  Modelica.Fluid.Interfaces.FluidPort_a port_a(redeclare package Medium=Medium) annotation (Placement(
-        transformation(extent={{-60,-10},{-40,10}}), iconTransformation(extent={
-            {-60,-10},{-40,10}})));
-  Modelica.Fluid.Interfaces.FluidPort_b port_b(redeclare package Medium=Medium) annotation (Placement(
-        transformation(extent={{40,-12},{60,8}}), iconTransformation(extent={{40,
-            -12},{60,8}})));
-//    Modelica.Mechanics.Rotational.Interfaces.Flange_a shaft annotation (
-//        Placement(transformation(extent={{-10,48},{10,68}}), iconTransformation(
-//            extent={{-10,48},{10,68}})));
-  parameter SI.Power power = 3000;
+  SI.Velocity velocity_a;
+  SI.Velocity velocity_b;
+  SI.AngularVelocity omega;
+  //    SI.Torque tau;
+  NonSI.AngularVelocity_rpm n;
+
+  Modelica.Fluid.Interfaces.FluidPort_a port_a(redeclare package Medium =
+        Medium,m_flow(min=if allowFlowReversal then -Constants.inf else 0)) annotation (Placement(transformation(extent={{-60,-10},{-40,10}}),
+        iconTransformation(extent={{-60,-10},{-40,10}})));
+  Modelica.Fluid.Interfaces.FluidPort_b port_b(redeclare package Medium =
+        Medium,m_flow(max=if allowFlowReversal then +Constants.inf else 0)) annotation (Placement(transformation(extent={{40,-12},{60,8}}),
+        iconTransformation(extent={{40,-12},{60,8}})));
+  Modelica.Mechanics.Rotational.Interfaces.Flange_a shaft(phi(start=0, fixed=true))
+    annotation (Placement(transformation(extent={{-10,48},{10,68}}),
+        iconTransformation(extent={{-10,48},{10,68}})));
+
+  SI.Power power;
+  parameter Boolean allowFlowReversal=false;
+
 protected
-  final parameter Boolean allowFlowReversal = false;
-  final parameter Real g = system.g;
+    final parameter Real g=system.g;
+  parameter SI.Area area_a=Modelica.Constants.pi*diameter_a*diameter_a/4;
+  parameter SI.Area area_b=Modelica.Constants.pi*diameter_b*diameter_b/4;
 
 equation
-//   omega = der(shaft.phi);
-   tau*omega*eta_pump = port_a.m_flow*head*g;
-   port_a.m_flow + port_b.m_flow = 0;
-   port_a.m_flow*inStream(port_a.h_outflow) + port_b.m_flow*port_b.h_outflow = 0;
-    port_a.m_flow*port_a.h_outflow + port_b.m_flow*inStream(port_b.h_outflow) = 0;
-   head = (port_b.p-port_a.p)/(rho*g) + (velocity_b*velocity_b - velocity_a*velocity_a)/(2*g) + z;
-   rho = Medium.density_ph(port_a.p,port_a.h_outflow);
-   power = tau*omega;
-   // head = head_nominel*((n/n
-   velocity_a = port_a.m_flow/(area_a*rho);
-   velocity_b = port_b.m_flow/(area_b*rho);
+  omega = der(shaft.phi);
+  n = SI.Conversions.to_rpm(omega);
+  shaft.tau*omega*eta_pump = port_a.m_flow*head*g;
+  port_a.m_flow + port_b.m_flow = 0;
+  port_a.m_flow*inStream(port_a.h_outflow) + port_b.m_flow*port_b.h_outflow = 0;
+  port_a.m_flow*port_a.h_outflow + port_b.m_flow*inStream(port_b.h_outflow) = 0;
+  head = (port_b.p - port_a.p)/(rho*g) + (Modelica.Fluid.Utilities.regSquare(
+    velocity_b) - Modelica.Fluid.Utilities.regSquare(velocity_a))/(2*g) + z;
+  rho = Medium.density_ph(port_a.p, port_a.h_outflow);
+  power = shaft.tau*omega;
+  head = head_nominal*(Modelica.Fluid.Utilities.regSquare(n/n_nominal) -
+    Modelica.Fluid.Utilities.regSquare(port_a.m_flow/m_flow_nominal));
+  velocity_a = port_a.m_flow/(area_a*rho);
+  velocity_b = port_b.m_flow/(area_b*rho);
 
-   annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
+  annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
             {100,100}}), graphics={
         Ellipse(
           extent={{-40,40},{40,-40}},
