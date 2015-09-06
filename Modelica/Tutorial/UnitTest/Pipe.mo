@@ -6,22 +6,19 @@ model Pipe
     p_start=300000,
     use_T_start=true,
     T_start=313.15,
-    redeclare package Medium =
-        Modelica.Media.IdealGases.MixtureGases.CombustionAir)
+    redeclare package Medium = Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{-14,6},{6,26}})));
   Modelica.Fluid.Sources.Boundary_ph boundary1(
     p=500000,
     nPorts=1,
-    redeclare package Medium =
-        Modelica.Media.IdealGases.MixtureGases.CombustionAir)
+    redeclare package Medium = Modelica.Media.Water.StandardWater)
               annotation (Placement(transformation(extent={{72,40},{52,60}})));
   Modelica.Fluid.Sources.MassFlowSource_T
                                      boundary2(
     nPorts=1,
     use_T_in=true,
     m_flow=8000,
-    redeclare package Medium =
-        Modelica.Media.IdealGases.MixtureGases.CombustionAir)
+    redeclare package Medium = Modelica.Media.Water.StandardWater)
            annotation (Placement(transformation(extent={{-52,0},{-32,20}})));
   inner Modelica.Fluid.System system(energyDynamics=Modelica.Fluid.Types.Dynamics.DynamicFreeInitial)
     annotation (Placement(transformation(extent={{-94,76},{-74,96}})));

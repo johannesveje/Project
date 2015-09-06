@@ -2,23 +2,26 @@ within Tutorial.UnitTest;
 model Pump
   import Tutorial;
 
-  Tutorial.Pump pump(fixed_diameter=true, allowFlowReversal=false)
+  Tutorial.Pump pump(fixed_diameter=true, allowFlowReversal=false,
+    redeclare package Medium = Modelica.Media.Water.StandardWater)
     annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
   Modelica.Fluid.Sources.Boundary_ph boundary(
     nPorts=1,
-    redeclare package Medium = Modelica.Media.Water.StandardWater,
     h=1e5,
+    redeclare package Medium = Modelica.Media.Water.StandardWater,
+    use_p_in=false,
     p=500000)
     annotation (Placement(transformation(extent={{-72,-14},{-52,6}})));
   Modelica.Fluid.Sources.Boundary_ph boundary1(
     nPorts=1,
     redeclare package Medium = Modelica.Media.Water.StandardWater,
-    p=1500000)
+    p=1000000)
     annotation (Placement(transformation(extent={{54,-12},{74,8}})));
-  inner Modelica.Fluid.System system(allowFlowReversal=false)
+  inner Modelica.Fluid.System system(allowFlowReversal=false, energyDynamics=
+        Modelica.Fluid.Types.Dynamics.FixedInitial)
     annotation (Placement(transformation(extent={{-86,72},{-66,92}})));
   Modelica.Mechanics.Rotational.Sources.ConstantSpeed constantSpeed(w_fixed(
-        displayUnit="rpm") = 314.15926535898)
+        displayUnit="rpm") = 628.31853071796)
     annotation (Placement(transformation(extent={{-32,42},{-12,62}})));
 equation
   connect(boundary.ports[1], pump.port_a) annotation (Line(points={{-52,-4},{
