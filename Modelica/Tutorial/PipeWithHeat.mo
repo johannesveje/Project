@@ -1,7 +1,5 @@
 within Tutorial;
-
-
-model Pipe
+model PipeWithHeat
   outer Modelica.Fluid.System system "System wide properties";
   replaceable package Medium = Modelica.Media.Water.StandardWater
     constrainedby Modelica.Media.Interfaces.PartialMedium annotation (
@@ -12,8 +10,8 @@ model Pipe
   parameter SI.Length length = 100 "Pipe Length";
   parameter SI.Diameter diameter = 0.1 "Pipe diameter";
   parameter SI.Volume volume = length * Constants.pi * Modelica.Fluid.Utilities.regSquare(diameter) / 4;
-  parameter Real k = 0.5 / 10;
-  SI.PressureDifference dp;
+//   parameter Real k = 0.5 / 10;
+//   SI.PressureDifference dp;
   SI.Mass m;
   SI.InternalEnergy U;
   SI.MassFlowRate dm_dt = if massDynamics == Dynamics.SteadyState then 0 else der(m);
@@ -34,9 +32,14 @@ model Pipe
   Modelica.Fluid.Interfaces.FluidPort_a port_a(redeclare package Medium = Medium) annotation(Placement(transformation(extent={{-92,-10},
             {-72,10}}),                                                                                                    iconTransformation(extent={{-92,-10},
             {-72,10}})));
-  Modelica.Fluid.Interfaces.FluidPort_b port_b(redeclare package Medium = Medium) annotation(Placement(transformation(extent={{72,-12},
-            {92,8}}),                                                                                                    iconTransformation(extent={{72,-12},
-            {92,8}})));
+  Modelica.Fluid.Interfaces.FluidPort_b port_b(redeclare package Medium = Medium) annotation(Placement(transformation(extent={{72,-10},
+            {92,10}}),                                                                                                    iconTransformation(extent={{72,-10},
+            {92,10}})));
+  Modelica.Fluid.Interfaces.HeatPorts_a heatPorts_a annotation (Placement(
+        transformation(extent={{-66,-8},{-46,12}}), iconTransformation(
+        extent={{-21,-5},{21,5}},
+        rotation=0,
+        origin={-1,25})));
 equation
   // Medium properties //
   medium.p = port_b.p;
@@ -44,14 +47,15 @@ equation
   medium.h = port_a.h_outflow;
   medium.Xi = port_a.Xi_outflow;
   medium.Xi = port_b.Xi_outflow;
+  medium.T = heatPorts_a.T;
   // Equations //
   port_a.m_flow + port_b.m_flow = dm_dt;
-  port_a.p - port_b.p = dp;
+  port_a.p - port_b.p = 0;
   //     port_a.m_flow*inStream(port_a.h_outflow) + port_b.m_flow*port_b.h_outflow = dU_dt;
-  port_a.m_flow * actualStream(port_a.h_outflow) + port_b.m_flow * actualStream(port_b.h_outflow) = dU_dt;
+  port_a.m_flow * actualStream(port_a.h_outflow) + port_b.m_flow * actualStream(port_b.h_outflow) + heatPorts_a.Q_flow = dU_dt;
   // port_a.m_flow*port_a.h_outflow + port_b.m_flow*inStream(port_b.h_outflow) = dU_dt;
   port_a.m_flow * actualStream(port_a.Xi_outflow) = -port_b.m_flow * actualStream(port_b.Xi_outflow);
-  dp = k * port_a.m_flow;
+//   dp = k * port_a.m_flow;
   m = volume * medium.d;
   U = m * medium.h - volume * medium.p;
 initial equation
@@ -77,4 +81,4 @@ initial equation
             fillPattern =                                                                                                    FillPattern.Solid, fillColor = {0, 0, 255},
           origin={0,0},
           rotation=-90)}));
-end Pipe;
+end PipeWithHeat;

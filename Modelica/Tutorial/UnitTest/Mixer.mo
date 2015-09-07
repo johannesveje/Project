@@ -5,8 +5,7 @@ model Mixer
   import Tutorial;
   Tutorial.Mixer mixer(redeclare package Medium =
         Modelica.Media.Water.StandardWater)                                           annotation(Placement(transformation(extent = {{-12, -6}, {8, 14}})));
-  inner Modelica.Fluid.System system(energyDynamics=Modelica.Fluid.Types.Dynamics.DynamicFreeInitial)
-                                                                                                        annotation(Placement(transformation(extent = {{-94, 72}, {-74, 92}})));
+  inner Modelica.Fluid.System system(energyDynamics=Modelica.Fluid.Types.Dynamics.DynamicFreeInitial)   annotation(Placement(transformation(extent = {{-94, 72}, {-74, 92}})));
   Modelica.Fluid.Sources.Boundary_ph boundary(redeclare package Medium =
         Modelica.Media.Water.StandardWater,                                                                  p = 200000, nPorts = 1) annotation(Placement(transformation(extent={{78,-2},
             {58,18}})));
