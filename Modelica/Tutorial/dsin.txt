@@ -102,7 +102,7 @@ int settings(13,1)
 
 
 #    Names of initial variables
-char initialName(187,94)
+char initialName(192,94)
 _dummy
 _derdummy
 system.p_ambient
@@ -189,7 +189,12 @@ _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltas
 mixer.massDynamics
 mixer.energyDynamics
 mixer.volume
-mixer.k
+mixer.m
+mixer.der(m)
+mixer.U
+mixer.der(U)
+mixer.dm_dt
+mixer.dU_dt
 mixer.p_start
 mixer.use_T_start
 mixer.T_start
@@ -291,7 +296,7 @@ boundary2.m_flow_in_internal
 boundary2.T_in_internal
 boundary2.X_in_internal[1]
 
-double initialValue(187,6)
+double initialValue(192,6)
  -1       1                       0                       0                
   2     0   # _dummy
   0       0                       0                       0                
@@ -462,10 +467,20 @@ double initialValue(187,6)
   6   258   # mixer.massDynamics
   0       1                       1                       4                
   6   258   # mixer.energyDynamics
- -1 1.0000000000000001E-001       0                       0                
+ -1       1                       0                       0                
   1   280   # mixer.volume
- -1 5.0000000000000003E-002       0                       0                
-  1   280   # mixer.k
+  0       0                       0                 1.0000000000000000E+100
+  6   256   # mixer.m
+  0       0                       0                       0                
+  6   256   # mixer.der(m)
+  0       0                       0                       0                
+  6   256   # mixer.U
+  0       0                       0                       0                
+  6   256   # mixer.der(U)
+  0       0                       0                       0                
+  6   256   # mixer.dm_dt
+  0       0                       0                       0                
+  6   256   # mixer.dU_dt
   0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
   6   256   # mixer.p_start
   0       1                       0                       0                
@@ -716,7 +731,7 @@ double initialValue(187,6)
 #   nominal value (and maybe minimum and maximum values given in 
 #   column 3 and 4). If these values are zero, scale(i)=1 is used).
 #
-char initialDescription(187,114)
+char initialDescription(192,114)
 dummy
 derdummy
 Default ambient pressure [Pa|bar]
@@ -803,7 +818,12 @@ Difference between specific enthalpy model (s_m) and f.eq. (s_f) (s_m - s_f) [J/
 [:#(type=Modelica.Fluid.Types.Dynamics)]
 [:#(type=Modelica.Fluid.Types.Dynamics)]
 Mixer volume [m3]
-
+[kg]
+[kg/s]
+[J]
+[W]
+[kg/s]
+[W]
 Start value of pressure at port a [Pa|bar]
 Use T_start if true, otherwise h_start [:#(type=Boolean)]
 Start value of temperature [K|degC]
