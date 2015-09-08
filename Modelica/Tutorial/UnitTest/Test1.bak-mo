@@ -1,0 +1,13 @@
+within Tutorial.UnitTest;
+model Test1
+  import Tutorial;
+
+  inner Modelica.Fluid.System system
+    annotation (Placement(transformation(extent={{-76,74},{-56,94}})));
+  Modelica.Fluid.Sources.Boundary_ph boundary
+    annotation (Placement(transformation(extent={{-88,-4},{-68,16}})));
+  Modelica.Fluid.Sources.MassFlowSource_h boundary1
+    annotation (Placement(transformation(extent={{70,-6},{50,14}})));
+  Tutorial.Pipe pipe
+    annotation (Placement(transformation(extent={{-22,-4},{-2,16}})));
+end Test1;
