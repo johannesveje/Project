@@ -9,7 +9,7 @@ Modelica experiment file
 double experiment(7,1)
        0                   # StartTime    Time at which integration starts
                            #              (and linearization and trimming time)
-    1000                   # StopTime     Time at which integration stops
+       1                   # StopTime     Time at which integration stops
        0                   # Increment    Communication step size, if > 0
      500                   # nInterval    Number of communication intervals, if > 0
  1.0000000000000000E-004   # Tolerance    Relative precision of signals for
@@ -102,41 +102,34 @@ int settings(13,1)
 
 
 #    Names of initial variables
-char initialName(165,94)
-system.p_ambient
-system.T_ambient
-system.g
-system.allowFlowReversal
-system.energyDynamics
-system.massDynamics
-system.substanceDynamics
-system.traceDynamics
-system.momentumDynamics
-system.m_flow_start
-system.p_start
-system.T_start
-system.use_eps_Re
-system.m_flow_nominal
-system.eps_m_flow
-system.dp_small
-system.m_flow_small
-pipeWithHeat.medium.p
-pipeWithHeat.medium.h
-pipeWithHeat.medium.der(h)
-pipeWithHeat.medium.d
-pipeWithHeat.medium.der(d)
-pipeWithHeat.medium.X[1]
-pipeWithHeat.medium.u
-pipeWithHeat.medium.R
-pipeWithHeat.medium.MM
-pipeWithHeat.medium.state.phase
-pipeWithHeat.medium.state.p
-pipeWithHeat.medium.preferredMediumStates
-pipeWithHeat.medium.standardOrderComponents
-pipeWithHeat.medium.T_degC
-pipeWithHeat.medium.p_bar
-pipeWithHeat.medium.sat.psat
-pipeWithHeat.medium.sat.Tsat
+char initialName(127,94)
+_dummy
+_derdummy
+ramp.height
+ramp.duration
+ramp.offset
+ramp.startTime
+ramp1.height
+ramp1.duration
+ramp1.offset
+ramp1.startTime
+fuelInput1.nXi
+fuelInput1.m_flow
+fuelInput1.k
+fuelInput1.j
+boundary.nPorts
+boundary.medium.d
+boundary.medium.T
+boundary.medium.X[1]
+boundary.medium.u
+boundary.medium.R
+boundary.medium.MM
+boundary.medium.state.phase
+boundary.medium.preferredMediumStates
+boundary.medium.standardOrderComponents
+boundary.medium.T_degC
+boundary.medium.p_bar
+boundary.medium.sat.Tsat
 _GlobalScope.Modelica.Media.Water.waterConstants[1].molarMass
 _GlobalScope.Modelica.Media.Water.waterConstants[1].criticalTemperature
 _GlobalScope.Modelica.Media.Water.waterConstants[1].criticalPressure
@@ -185,26 +178,25 @@ _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].HCRIT0
 _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].SCRIT0
 _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltah
 _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltas
-pipeWithHeat.massDynamics
-pipeWithHeat.energyDynamics
-pipeWithHeat.length
-pipeWithHeat.diameter
-pipeWithHeat.volume
-pipeWithHeat.m
-pipeWithHeat.der(m)
-pipeWithHeat.U
-pipeWithHeat.der(U)
-pipeWithHeat.p_start
-pipeWithHeat.use_T_start
-pipeWithHeat.T_start
-pipeWithHeat.h_start
-pipeWithHeat.X_start[1]
-pipeWithHeat.port_a.m_flow
-pipeWithHeat.port_a.p
-pipeWithHeat.port_b.m_flow
-pipeWithHeat.port_b.p
-pipeWithHeat.heatPorts_a.T
-pipeWithHeat.heatPorts_a.Q_flow
+boundary.ports[1].m_flow
+boundary.ports[1].p
+boundary.ports[1].h_outflow
+boundary.flowDirection
+boundary.use_m_flow_in
+boundary.use_h_in
+boundary.use_X_in
+boundary.use_C_in
+boundary.m_flow
+boundary.h
+boundary.X[1]
+boundary.X_in_internal[1]
+valve.dp_nominal
+valve.m_flow_nominal
+valve.k
+valve.dp
+valve.port_a.h_outflow
+valve.port_b.p
+valve.port_b.h_outflow
 boundary1.nPorts
 boundary1.medium.p
 boundary1.medium.d
@@ -222,122 +214,78 @@ boundary1.medium.p_bar
 boundary1.medium.sat.psat
 boundary1.medium.sat.Tsat
 boundary1.ports[1].p
+boundary1.ports[1].h_outflow
 boundary1.flowDirection
 boundary1.use_p_in
-boundary1.use_h_in
+boundary1.use_T_in
 boundary1.use_X_in
 boundary1.use_C_in
 boundary1.p
-boundary1.h
+boundary1.T
 boundary1.X[1]
 boundary1.p_in_internal
+boundary1.T_in_internal
 boundary1.X_in_internal[1]
-boundary.nPorts
-boundary.medium.p
-boundary.medium.d
-boundary.medium.T
-boundary.medium.X[1]
-boundary.medium.u
-boundary.medium.R
-boundary.medium.MM
-boundary.medium.state.phase
-boundary.medium.state.p
-boundary.medium.preferredMediumStates
-boundary.medium.standardOrderComponents
-boundary.medium.T_degC
-boundary.medium.p_bar
-boundary.medium.sat.psat
-boundary.medium.sat.Tsat
-boundary.ports[1].m_flow
-boundary.ports[1].p
-boundary.ports[1].h_outflow
-boundary.flowDirection
-boundary.use_m_flow_in
-boundary.use_T_in
-boundary.use_X_in
-boundary.use_C_in
-boundary.m_flow
-boundary.T
-boundary.X[1]
-boundary.m_flow_in_internal
-boundary.T_in_internal
-boundary.X_in_internal[1]
-fixedHeatFlow.T_ref
-fixedHeatFlow.alpha
-fixedHeatFlow.Q_flow
-step.height
-step.offset
-step.startTime
+ramp2.height
+ramp2.duration
+ramp2.offset
+ramp2.startTime
 
-double initialValue(165,6)
-  0 1.0132500000000000E+005       0                 1.0000000000000000E+100
-  6   256   # system.p_ambient
-  0 2.9314999999999998E+002       0                 1.0000000000000000E+100
-  6   256   # system.T_ambient
- -1 9.8066499999999994E+000       0                       0                
-  1   280   # system.g
-  0       1                       0                       0                
-  6   257   # system.allowFlowReversal
-  0       1                       1                       4                
-  6   258   # system.energyDynamics
-  0       1                       1                       4                
-  6   258   # system.massDynamics
-  0       1                       1                       4                
-  6   258   # system.substanceDynamics
-  0       1                       1                       4                
-  6   258   # system.traceDynamics
-  0       4                       1                       4                
-  6   258   # system.momentumDynamics
+double initialValue(127,6)
+ -1       1                       0                       0                
+  2     0   # _dummy
+  0       0                       0                       0                
+  3     0   # _derdummy
+ -1       1                       0                       0                
+  1   280   # ramp.height
+ -1 8.0000000000000004E-001       0                 1.0000000000000000E+100
+  1   280   # ramp.duration
  -1       0                       0                       0                
-  1   280   # system.m_flow_start
-  0 1.0132500000000000E+005       0                 1.0000000000000000E+100
-  6   256   # system.p_start
-  0 2.9314999999999998E+002       0                 1.0000000000000000E+100
-  6   256   # system.T_start
+  1   280   # ramp.offset
+ -1 1.0000000000000001E-001       0                       0                
+  1   280   # ramp.startTime
+ -1    5000                       0                       0                
+  1   280   # ramp1.height
+ -1 8.0000000000000004E-001       0                 1.0000000000000000E+100
+  1   280   # ramp1.duration
+ -1   80000                       0                       0                
+  1   280   # ramp1.offset
+ -1 1.0000000000000001E-001       0                       0                
+  1   280   # ramp1.startTime
+  0 6.0100000000000001E-002       0                       0                
+  6   260   # fuelInput1.nXi
   0       0                       0                       0                
-  6   257   # system.use_eps_Re
+  4   260   # fuelInput1.m_flow
+  0       0                       0                       1                
+  4   260   # fuelInput1.k
   0       0                       0                       0                
-  6   256   # system.m_flow_nominal
- -1 1.0000000000000000E-004       0                 1.0000000000000000E+100
-  1   280   # system.eps_m_flow
- -1       1                       0                 1.0000000000000000E+100
-  1   280   # system.dp_small
- -1 1.0000000000000000E-002       0                 1.0000000000000000E+100
-  1   280   # system.m_flow_small
-  0 1.0132500000000000E+005       0                 1.0000000000000000E+100
-  6   256   # pipeWithHeat.medium.p
- -1       0                 -1.0000000000000000E+010 1.0000000000000000E+010
-  2   272   # pipeWithHeat.medium.h
-  0       0                       0                       0                
-  3   288   # pipeWithHeat.medium.der(h)
+  4   260   # fuelInput1.j
+  0       1                       0                       0                
+  6   258   # boundary.nPorts
   0     150                       0                  100000                
-  6   256   # pipeWithHeat.medium.d
-  0       0                       0                       0                
-  6   256   # pipeWithHeat.medium.der(d)
+  6   256   # boundary.medium.d
+  0     500                 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256   # boundary.medium.T
   0       1                       0                       1                
-  6   256   # pipeWithHeat.medium.X[1]
+  6   256   # boundary.medium.X[1]
   0       0                 -1.0000000000000000E+008 1.0000000000000000E+008
-  6   256   # pipeWithHeat.medium.u
+  6   256   # boundary.medium.u
   0 4.6152363650654542E+002       0                 1.0000000000000000E+007
-  6   256   # pipeWithHeat.medium.R
+  6   256   # boundary.medium.R
   0 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
-  6   256   # pipeWithHeat.medium.MM
+  6   256   # boundary.medium.MM
   0       1                       0                       2                
-  6   322   # pipeWithHeat.medium.state.phase
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
-  6   256   # pipeWithHeat.medium.state.p
-  0       1                       0                       0                
-  6   257   # pipeWithHeat.medium.preferredMediumStates
-  0       1                       0                       0                
-  6   257   # pipeWithHeat.medium.standardOrderComponents
+  6   322   # boundary.medium.state.phase
   0       0                       0                       0                
-  6   256   # pipeWithHeat.medium.T_degC
-  0 1.0132500000000000E+000       0                       0                
-  6   256   # pipeWithHeat.medium.p_bar
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
-  6   256   # pipeWithHeat.medium.sat.psat
-  0 3.7312430000048056E+002 2.7314999999999998E+002 2.2731500000000001E+003
-  6   256   # pipeWithHeat.medium.sat.Tsat
+  6   257   # boundary.medium.preferredMediumStates
+  0       1                       0                       0                
+  6   257   # boundary.medium.standardOrderComponents
+  0       0                       0                       0                
+  6   256   # boundary.medium.T_degC
+  0       0                       0                       0                
+  6   256   # boundary.medium.p_bar
+  0     500                 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256   # boundary.medium.sat.Tsat
   0 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
   6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].molarMass
   0 6.4709600000000000E+002       1                   10000                
@@ -434,49 +382,47 @@ double initialValue(165,6)
   6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltah
   0       0                 -1.0000000000000000E+007 1.0000000000000000E+007
   6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltas
-  0       1                       1                       4                
-  6   258   # pipeWithHeat.massDynamics
-  0       1                       1                       4                
-  6   258   # pipeWithHeat.energyDynamics
- -1     100                       0                       0                
-  1   280   # pipeWithHeat.length
- -1 1.0000000000000001E-001       0                 1.0000000000000000E+100
-  1   280   # pipeWithHeat.diameter
-  0       0                       0                       0                
-  6   256   # pipeWithHeat.volume
-  0       0                       0                 1.0000000000000000E+100
-  6   256   # pipeWithHeat.m
-  0       0                       0                       0                
-  6   256   # pipeWithHeat.der(m)
-  0       0                       0                       0                
-  6   256   # pipeWithHeat.U
-  0       0                       0                       0                
-  6   256   # pipeWithHeat.der(U)
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
-  6   256   # pipeWithHeat.p_start
-  0       1                       0                       0                
-  6   257   # pipeWithHeat.use_T_start
-  0     500                 2.7314999999999998E+002 2.2731500000000001E+003
-  6   288   # pipeWithHeat.T_start
-  0  100000                 -1.0000000000000000E+010 1.0000000000000000E+010
-  6   256   # pipeWithHeat.h_start
- -1       1                       0                       1                
-  1   280   # pipeWithHeat.X_start[1]
-  0      10                 -100000                  100000                
-  6   388   # pipeWithHeat.port_a.m_flow
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
-  6   260   # pipeWithHeat.port_a.p
   0       0                 -100000                  100000                
-  6   388   # pipeWithHeat.port_b.m_flow
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
-  6   260   # pipeWithHeat.port_b.p
-  0 2.8814999999999998E+002 2.7314999999999998E+002 2.2731500000000001E+003
-  6   260   # pipeWithHeat.heatPorts_a.T
+  6   388   # boundary.ports[1].m_flow
+  0 5.0000000000000000E+006 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260   # boundary.ports[1].p
+  0  100000                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260   # boundary.ports[1].h_outflow
+  0       3                       1                       3                
+  6  1282   # boundary.flowDirection
+  0       1                       0                       0                
+  6   769   # boundary.use_m_flow_in
   0       0                       0                       0                
-  6   388   # pipeWithHeat.heatPorts_a.Q_flow
+  6   769   # boundary.use_h_in
+  0       0                       0                       0                
+  6   769   # boundary.use_X_in
+  0       0                       0                       0                
+  6   769   # boundary.use_C_in
+  0       0                 -100000                  100000                
+  6   256   # boundary.m_flow
+  0  100000                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256   # boundary.h
+  0       1                       0                       1                
+  6   256   # boundary.X[1]
+  0       1                       0                       0                
+  6  1280   # boundary.X_in_internal[1]
+ -1 2.0000000000000000E+005       0                       0                
+  1   280   # valve.dp_nominal
+ -1       2                       0                       0                
+  1   280   # valve.m_flow_nominal
+  0       0                       0                       0                
+  6   256   # valve.k
+  0       0                       0                       0                
+  6   256   # valve.dp
+  0  100000                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260   # valve.port_a.h_outflow
+  0  100000                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260   # valve.port_b.p
+  0  100000                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260   # valve.port_b.h_outflow
   0       1                       0                       0                
   6   258   # boundary1.nPorts
-  0 1.0132500000000000E+005       0                 1.0000000000000000E+100
+  0  100000                       0                 1.0000000000000000E+100
   6   256   # boundary1.medium.p
   0     150                       0                  100000                
   6   256   # boundary1.medium.d
@@ -492,7 +438,7 @@ double initialValue(165,6)
   6   256   # boundary1.medium.MM
   0       1                       0                       2                
   6   258   # boundary1.medium.state.phase
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  0  100000                 6.1165700000000004E+002 1.0000000000000000E+008
   6   256   # boundary1.medium.state.p
   0       0                       0                       0                
   6   257   # boundary1.medium.preferredMediumStates
@@ -500,106 +446,46 @@ double initialValue(165,6)
   6   257   # boundary1.medium.standardOrderComponents
   0       0                       0                       0                
   6   256   # boundary1.medium.T_degC
-  0 1.0132500000000000E+000       0                       0                
+  0       1                       0                       0                
   6   256   # boundary1.medium.p_bar
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  0  100000                 6.1165700000000004E+002 1.0000000000000000E+008
   6   256   # boundary1.medium.sat.psat
-  0 3.7312430000048056E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  0 3.7275591861133785E+002 2.7314999999999998E+002 2.2731500000000001E+003
   6   256   # boundary1.medium.sat.Tsat
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  0  100000                 6.1165700000000004E+002 1.0000000000000000E+008
   6   260   # boundary1.ports[1].p
+  0  100000                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260   # boundary1.ports[1].h_outflow
   0       3                       1                       3                
   6  1282   # boundary1.flowDirection
   0       0                       0                       0                
   6   769   # boundary1.use_p_in
   0       0                       0                       0                
-  6   769   # boundary1.use_h_in
+  6   769   # boundary1.use_T_in
   0       0                       0                       0                
   6   769   # boundary1.use_X_in
   0       0                       0                       0                
   6   769   # boundary1.use_C_in
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  0  100000                 6.1165700000000004E+002 1.0000000000000000E+008
   6   256   # boundary1.p
-  0  100000                 -1.0000000000000000E+010 1.0000000000000000E+010
-  6   256   # boundary1.h
+  0 2.9314999999999998E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256   # boundary1.T
   0       1                       0                       1                
   6   256   # boundary1.X[1]
-  0 1.0132500000000000E+005       0                       0                
+  0  100000                       0                       0                
   6  1280   # boundary1.p_in_internal
+  0 2.9314999999999998E+002       0                       0                
+  6  1280   # boundary1.T_in_internal
   0       1                       0                       0                
   6  1280   # boundary1.X_in_internal[1]
-  0       1                       0                       0                
-  6   258   # boundary.nPorts
-  0 1.0132500000000000E+005       0                 1.0000000000000000E+100
-  6   256   # boundary.medium.p
-  0     150                       0                  100000                
-  6   256   # boundary.medium.d
-  0     500                 2.7314999999999998E+002 2.2731500000000001E+003
-  6   256   # boundary.medium.T
-  0       1                       0                       1                
-  6   256   # boundary.medium.X[1]
-  0       0                 -1.0000000000000000E+008 1.0000000000000000E+008
-  6   256   # boundary.medium.u
-  0 4.6152363650654542E+002       0                 1.0000000000000000E+007
-  6   256   # boundary.medium.R
-  0 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
-  6   256   # boundary.medium.MM
-  0       1                       0                       2                
-  6   258   # boundary.medium.state.phase
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
-  6   256   # boundary.medium.state.p
-  0       0                       0                       0                
-  6   257   # boundary.medium.preferredMediumStates
-  0       1                       0                       0                
-  6   257   # boundary.medium.standardOrderComponents
-  0       0                       0                       0                
-  6   256   # boundary.medium.T_degC
-  0 1.0132500000000000E+000       0                       0                
-  6   256   # boundary.medium.p_bar
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
-  6   256   # boundary.medium.sat.psat
-  0 3.7312430000048056E+002 2.7314999999999998E+002 2.2731500000000001E+003
-  6   256   # boundary.medium.sat.Tsat
-  0     -10                 -9.9999999999999995E+059 9.9999999999999995E+059
-  6   388   # boundary.ports[1].m_flow
-  0 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
-  6   260   # boundary.ports[1].p
-  0  100000                 -1.0000000000000000E+010 1.0000000000000000E+010
-  6   260   # boundary.ports[1].h_outflow
-  0       3                       1                       3                
-  6  1282   # boundary.flowDirection
-  0       0                       0                       0                
-  6   769   # boundary.use_m_flow_in
-  0       0                       0                       0                
-  6   769   # boundary.use_T_in
-  0       0                       0                       0                
-  6   769   # boundary.use_X_in
-  0       0                       0                       0                
-  6   769   # boundary.use_C_in
-  0      10                 -100000                  100000                
-  6   256   # boundary.m_flow
-  0 2.9314999999999998E+002 2.7314999999999998E+002 2.2731500000000001E+003
-  6   256   # boundary.T
-  0       1                       0                       1                
-  6   256   # boundary.X[1]
-  0      10                       0                       0                
-  6  1280   # boundary.m_flow_in_internal
-  0 2.9314999999999998E+002       0                       0                
-  6  1280   # boundary.T_in_internal
-  0       1                       0                       0                
-  6  1280   # boundary.X_in_internal[1]
- -1 2.9314999999999998E+002       0                 1.0000000000000000E+100
-  1   280   # fixedHeatFlow.T_ref
- -1       0                       0                       0                
-  1   280   # fixedHeatFlow.alpha
-  0       0                       0                       0                
-  6   320   # fixedHeatFlow.Q_flow
- -1 4.2000000000000000E+005       0                       0                
-  1   280   # step.height
- -1   42000                       0                       0                
-  1   280   # step.offset
- -1     500                       0                       0                
-  1   280   # step.startTime
+ -1    5000                       0                       0                
+  1   280   # ramp2.height
+ -1 8.0000000000000004E-001       0                 1.0000000000000000E+100
+  1   280   # ramp2.duration
+ -1   80000                       0                       0                
+  1   280   # ramp2.offset
+ -1 1.0000000000000001E-001       0                       0                
+  1   280   # ramp2.startTime
 
 
 # Matrix with 6 columns defining the initial value calculation
@@ -650,111 +536,22 @@ double initialValue(165,6)
 #   nominal value (and maybe minimum and maximum values given in 
 #   column 3 and 4). If these values are zero, scale(i)=1 is used).
 #
-char initialDescription(165,114)
-Default ambient pressure [Pa|bar]
-Default ambient temperature [K|degC]
-Constant gravity acceleration [m/s2]
-= false to restrict to design flow direction (port_a -> port_b) [:#(type=Boolean)]
-Default formulation of energy balances [:#(type=Modelica.Fluid.Types.Dynamics)]
-Default formulation of mass balances [:#(type=Modelica.Fluid.Types.Dynamics)]
-Default formulation of substance balances [:#(type=Modelica.Fluid.Types.Dynamics)]
-Default formulation of trace substance balances [:#(type=Modelica.Fluid.Types.Dynamics)]
-Default formulation of momentum balances, if options available [:#(type=Modelica.Fluid.Types.Dynamics)]
-Default start value for mass flow rates [kg/s]
-Default start value for pressures [Pa|bar]
-Default start value for temperatures [K|degC]
-= true to determine turbulent region automatically using Reynolds number [:#(type=Boolean)]
-Default nominal mass flow rate [kg/s]
-Regularization of zero flow for |m_flow| < eps_m_flow*m_flow_nominal
-Default small pressure drop for regularization of laminar and zero flow [Pa|bar]
-Default small mass flow rate for regularization of laminar and zero flow [kg/s]
-Absolute pressure of medium [Pa|bar]
-Specific enthalpy of medium [J/kg]
-der(Specific enthalpy of medium) [m2/s3]
-Density of medium [kg/m3|g/cm3]
-der(Density of medium) [Pa.m-2.s]
-Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
-Specific internal energy of medium [J/kg]
-Gas constant (of mixture if applicable) [J/(kg.K)]
-Molar mass (of mixture or single fluid) [kg/mol]
-Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
-Pressure [Pa|bar]
-= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
-If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
-Temperature of medium in [degC] [degC;]
-Absolute pressure of medium in [bar] [bar]
-Saturation pressure [Pa|bar]
-Saturation temperature [K|degC]
-Molar mass [kg/mol]
-Critical temperature [K|degC]
-Critical pressure [Pa|bar]
-Critical molar Volume [m3/mol]
-Pitzer acentric factor
-Triple point temperature [K|degC]
-Triple point pressure [Pa|bar]
-Melting point at 101325 Pa [K|degC]
-Normal boiling point (at 101325 Pa) [K|degC]
-Dipole moment of molecule in Debye (1 debye = 3.33564e10-30 C.m) [debye]
-True if ideal gas heat capacity is available [:#(type=Boolean)]
-True if critical data are known [:#(type=Boolean)]
-True if a dipole moment known [:#(type=Boolean)]
-True if a fundamental equation [:#(type=Boolean)]
-True if liquid heat capacity is available [:#(type=Boolean)]
-True if solid heat capacity is available [:#(type=Boolean)]
-True if accurate data for a viscosity function is available [:#(type=Boolean)]
-True if accurate data for thermal conductivity is available [:#(type=Boolean)]
-True if vapour pressure data, e.g., Antoine coefficents are known [:#(type=Boolean)]
-True if Pitzer accentric factor is known [:#(type=Boolean)]
-Critical specific enthalpy of the fundamental equation [J/kg]
-Critical specific entropy of the fundamental equation [J/(kg.K)]
-Difference between specific enthalpy model (h_m) and f.eq. (h_f) (h_m - h_f) [J/kg]
-Difference between specific enthalpy model (s_m) and f.eq. (s_f) (s_m - s_f) [J/(kg.K)]
-Molar mass [kg/mol]
-Critical temperature [K|degC]
-Critical pressure [Pa|bar]
-Critical molar Volume [m3/mol]
-Pitzer acentric factor
-Triple point temperature [K|degC]
-Triple point pressure [Pa|bar]
-Melting point at 101325 Pa [K|degC]
-Normal boiling point (at 101325 Pa) [K|degC]
-Dipole moment of molecule in Debye (1 debye = 3.33564e10-30 C.m) [debye]
-True if ideal gas heat capacity is available [:#(type=Boolean)]
-True if critical data are known [:#(type=Boolean)]
-True if a dipole moment known [:#(type=Boolean)]
-True if a fundamental equation [:#(type=Boolean)]
-True if liquid heat capacity is available [:#(type=Boolean)]
-True if solid heat capacity is available [:#(type=Boolean)]
-True if accurate data for a viscosity function is available [:#(type=Boolean)]
-True if accurate data for thermal conductivity is available [:#(type=Boolean)]
-True if vapour pressure data, e.g., Antoine coefficents are known [:#(type=Boolean)]
-True if Pitzer accentric factor is known [:#(type=Boolean)]
-Critical specific enthalpy of the fundamental equation [J/kg]
-Critical specific entropy of the fundamental equation [J/(kg.K)]
-Difference between specific enthalpy model (h_m) and f.eq. (h_f) (h_m - h_f) [J/kg]
-Difference between specific enthalpy model (s_m) and f.eq. (s_f) (s_m - s_f) [J/(kg.K)]
-[:#(type=Modelica.Fluid.Types.Dynamics)]
-[:#(type=Modelica.Fluid.Types.Dynamics)]
-Pipe Length [m]
-Pipe diameter [m]
-[m3]
-[kg]
+char initialDescription(127,114)
+dummy
+derdummy
+Height of ramps [kg/s]
+Duration of ramp (= 0.0 gives a Step) [s]
+Offset of output signal [kg/s]
+Output = offset for time < startTime [s]
+Height of ramps [1]
+Duration of ramp (= 0.0 gives a Step) [s]
+Offset of output signal [1]
+Output = offset for time < startTime [s]
+
 [kg/s]
-[J]
-[W]
-Start value of pressure at port a [Pa|bar]
-Use T_start if true, otherwise h_start [:#(type=Boolean)]
-Start value of temperature [K|degC]
-Start value of specific enthalpy [J/kg]
-Start value of mass fractions m_i/m [kg/kg]
-Mass flow rate from the connection point into the component [kg/s]
-Thermodynamic pressure in the connection point [Pa|bar]
-Mass flow rate from the connection point into the component [kg/s]
-Thermodynamic pressure in the connection point [Pa|bar]
-Port temperature [K|degC]
-Heat flow rate (positive if flowing from outside into the component) [W]
+[1]
+
 Number of ports [:#(type=Integer)]
-Absolute pressure of medium [Pa|bar]
 Density of medium [kg/m3|g/cm3]
 Temperature of medium [K|degC]
 Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
@@ -762,58 +559,109 @@ Specific internal energy of medium [J/kg]
 Gas constant (of mixture if applicable) [J/(kg.K)]
 Molar mass (of mixture or single fluid) [kg/mol]
 Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
-Pressure [Pa|bar]
 = true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
 If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
 Temperature of medium in [degC] [degC;]
 Absolute pressure of medium in [bar] [bar]
-Saturation pressure [Pa|bar]
 Saturation temperature [K|degC]
-Thermodynamic pressure in the connection point [Pa|bar]
-Allowed flow direction [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
-Get the pressure from the input connector [:#(type=Boolean)]
-Get the specific enthalpy from the input connector [:#(type=Boolean)]
-Get the composition from the input connector [:#(type=Boolean)]
-Get the trace substances from the input connector [:#(type=Boolean)]
-Fixed value of pressure [Pa|bar]
-Fixed value of specific enthalpy [J/kg]
-Fixed value of composition [kg/kg]
-Needed to connect to conditional connector [Pa]
-Needed to connect to conditional connector [1]
-Number of ports [:#(type=Integer)]
-Absolute pressure of medium [Pa|bar]
-Density of medium [kg/m3|g/cm3]
-Temperature of medium [K|degC]
-Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
-Specific internal energy of medium [J/kg]
-Gas constant (of mixture if applicable) [J/(kg.K)]
-Molar mass (of mixture or single fluid) [kg/mol]
-Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
-Pressure [Pa|bar]
-= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
-If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
-Temperature of medium in [degC] [degC;]
-Absolute pressure of medium in [bar] [bar]
-Saturation pressure [Pa|bar]
-Saturation temperature [K|degC]
+Molar mass [kg/mol]
+Critical temperature [K|degC]
+Critical pressure [Pa|bar]
+Critical molar Volume [m3/mol]
+Pitzer acentric factor
+Triple point temperature [K|degC]
+Triple point pressure [Pa|bar]
+Melting point at 101325 Pa [K|degC]
+Normal boiling point (at 101325 Pa) [K|degC]
+Dipole moment of molecule in Debye (1 debye = 3.33564e10-30 C.m) [debye]
+True if ideal gas heat capacity is available [:#(type=Boolean)]
+True if critical data are known [:#(type=Boolean)]
+True if a dipole moment known [:#(type=Boolean)]
+True if a fundamental equation [:#(type=Boolean)]
+True if liquid heat capacity is available [:#(type=Boolean)]
+True if solid heat capacity is available [:#(type=Boolean)]
+True if accurate data for a viscosity function is available [:#(type=Boolean)]
+True if accurate data for thermal conductivity is available [:#(type=Boolean)]
+True if vapour pressure data, e.g., Antoine coefficents are known [:#(type=Boolean)]
+True if Pitzer accentric factor is known [:#(type=Boolean)]
+Critical specific enthalpy of the fundamental equation [J/kg]
+Critical specific entropy of the fundamental equation [J/(kg.K)]
+Difference between specific enthalpy model (h_m) and f.eq. (h_f) (h_m - h_f) [J/kg]
+Difference between specific enthalpy model (s_m) and f.eq. (s_f) (s_m - s_f) [J/(kg.K)]
+Molar mass [kg/mol]
+Critical temperature [K|degC]
+Critical pressure [Pa|bar]
+Critical molar Volume [m3/mol]
+Pitzer acentric factor
+Triple point temperature [K|degC]
+Triple point pressure [Pa|bar]
+Melting point at 101325 Pa [K|degC]
+Normal boiling point (at 101325 Pa) [K|degC]
+Dipole moment of molecule in Debye (1 debye = 3.33564e10-30 C.m) [debye]
+True if ideal gas heat capacity is available [:#(type=Boolean)]
+True if critical data are known [:#(type=Boolean)]
+True if a dipole moment known [:#(type=Boolean)]
+True if a fundamental equation [:#(type=Boolean)]
+True if liquid heat capacity is available [:#(type=Boolean)]
+True if solid heat capacity is available [:#(type=Boolean)]
+True if accurate data for a viscosity function is available [:#(type=Boolean)]
+True if accurate data for thermal conductivity is available [:#(type=Boolean)]
+True if vapour pressure data, e.g., Antoine coefficents are known [:#(type=Boolean)]
+True if Pitzer accentric factor is known [:#(type=Boolean)]
+Critical specific enthalpy of the fundamental equation [J/kg]
+Critical specific entropy of the fundamental equation [J/(kg.K)]
+Difference between specific enthalpy model (h_m) and f.eq. (h_f) (h_m - h_f) [J/kg]
+Difference between specific enthalpy model (s_m) and f.eq. (s_f) (s_m - s_f) [J/(kg.K)]
 Mass flow rate from the connection point into the component [kg/s]
 Thermodynamic pressure in the connection point [Pa|bar]
 Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
 Allowed flow direction [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
 Get the mass flow rate from the input connector [:#(type=Boolean)]
-Get the temperature from the input connector [:#(type=Boolean)]
+Get the specific enthalpy from the input connector [:#(type=Boolean)]
 Get the composition from the input connector [:#(type=Boolean)]
 Get the trace substances from the input connector [:#(type=Boolean)]
 Fixed mass flow rate going out of the fluid port [kg/s]
+Fixed value of specific enthalpy [J/kg]
+Fixed value of composition [kg/kg]
+Needed to connect to conditional connector [1]
+Nominal pressure difference at full opening [Pa|bar]
+Nominal flow rate at full opening [kg/s]
+[m.s]
+[Pa|bar]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Thermodynamic pressure in the connection point [Pa|bar]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Number of ports [:#(type=Integer)]
+Absolute pressure of medium [Pa|bar]
+Density of medium [kg/m3|g/cm3]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Pressure [Pa|bar]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation pressure [Pa|bar]
+Saturation temperature [K|degC]
+Thermodynamic pressure in the connection point [Pa|bar]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Allowed flow direction [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Get the pressure from the input connector [:#(type=Boolean)]
+Get the temperature from the input connector [:#(type=Boolean)]
+Get the composition from the input connector [:#(type=Boolean)]
+Get the trace substances from the input connector [:#(type=Boolean)]
+Fixed value of pressure [Pa|bar]
 Fixed value of temperature [K|degC]
 Fixed value of composition [kg/kg]
-Needed to connect to conditional connector [kg/s]
+Needed to connect to conditional connector [Pa]
 Needed to connect to conditional connector [K]
 Needed to connect to conditional connector [1]
-Reference temperature [K|degC]
-Temperature coefficient of heat flow rate [1/K]
-[W]
-Height of step [W]
-Offset of output signal y [W]
-Output y = offset for time < startTime [s]
+Height of ramps
+Duration of ramp (= 0.0 gives a Step) [s]
+Offset of output signal
+Output = offset for time < startTime [s]
 

@@ -2,6 +2,9 @@ within Tutorial;
 model Valve
   parameter SI.PressureDifference dp_nominal
     "Nominal pressure difference at full opening";
+    replaceable package Medium = Modelica.Media.Water.StandardWater
+    constrainedby Modelica.Media.Interfaces.PartialMedium annotation (
+      choicesAllMatching=true);
   parameter SI.MassFlowRate m_flow_nominal "Nominal flow rate at full opening";
   final parameter Real k = m_flow_nominal / dp_nominal;
   SI.PressureDifference dp;
