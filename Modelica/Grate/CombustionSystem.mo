@@ -1,9 +1,10 @@
 within Grate;
 model CombustionSystem
   extends Modelica.Fluid.System;
-  package FlueGas = Modelica.Media.IdealGases.MixtureGases.FlueGasSixComponents;
-  //      constrainedby Modelica.Media.Interfaces.PartialMedium annotation (
-  //        choicesAllMatching=true)
+  replaceable package FlueGas =
+      Modelica.Media.IdealGases.MixtureGases.FlueGasSixComponents
+    constrainedby Modelica.Media.Interfaces.PartialMedium annotation (
+      choicesAllMatching=true);
 
 protected
   package Index
