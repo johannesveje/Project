@@ -3,6 +3,9 @@ model Evaporation
   outer Grate.CombustionSystem system "System wide properties";
   // package
 
+  //   package FlueGas = system.FlueGas;
+  //   package FlueGas = Modelica.Media.IdealGases.MixtureGases.FlueGasSixComponents;
+
   Fuels.BasePackage.fuelInput fuelInput annotation (Placement(transformation(
         extent={{-25,-23},{25,23}},
         rotation=90,
@@ -24,8 +27,9 @@ model Evaporation
         extent={{-20,20},{20,-20}},
         rotation=90,
         origin={90,0})));
-
+  parameter SI.Pressure k=system.p_ambient;
 equation
+  // system.
   // Mass balance
   0 = fuelInput.m_flow + flueGas_in.m_flow + flueGas_out.m_flow + fuelOutput.m_flow;
   // Energy balance
@@ -33,7 +37,8 @@ equation
     flueGas_in.h_outflow) + flueGas_out.m_flow*actualStream(flueGas_out.h_outflow)
      + fuelOutput.m_flow*fuelOutput.heating_value + heatPorts_a.Q_flow;
   // Spicies balance
-  zeros(6) = flueGas_in.Xi_outflow + flueGas_out.Xi_outflow;
+  zeros(6) = flueGas_in.m_flow*flueGas_in.Xi_outflow + flueGas_out.m_flow*
+    flueGas_out.Xi_outflow + fuelInput.m_flow*fuelInput.prox[1];
   annotation (preferredView="text",Icon(coordinateSystem(preserveAspectRatio=
             false, extent={{-100,-100},{100,100}}), graphics={Rectangle(
           extent={{-80,80},{80,-80}},

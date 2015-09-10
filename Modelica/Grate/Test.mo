@@ -1,6 +1,8 @@
 within Grate;
 model Test
 
-  Modelica.Fluid.Sources.FixedBoundary boundary
-    annotation (Placement(transformation(extent={{-70,14},{-50,34}})));
+  Evaporation evaporation
+    annotation (Placement(transformation(extent={{26,-2},{46,18}})));
+  CombustionSystem combustionSystem
+    annotation (Placement(transformation(extent={{-74,62},{-54,82}})));
 end Test;
