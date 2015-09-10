@@ -102,21 +102,19 @@ int settings(13,1)
 
 
 #    Names of initial variables
-char initialName(127,94)
+char initialName(170,94)
 _dummy
 _derdummy
 ramp.height
 ramp.duration
 ramp.offset
 ramp.startTime
+ramp.y
 ramp1.height
 ramp1.duration
 ramp1.offset
 ramp1.startTime
-fuelInput1.nXi
-fuelInput1.m_flow
-fuelInput1.k
-fuelInput1.j
+ramp1.y
 boundary.nPorts
 boundary.medium.d
 boundary.medium.T
@@ -197,6 +195,7 @@ valve.dp
 valve.port_a.h_outflow
 valve.port_b.p
 valve.port_b.h_outflow
+valve.opening
 boundary1.nPorts
 boundary1.medium.p
 boundary1.medium.d
@@ -230,8 +229,52 @@ ramp2.height
 ramp2.duration
 ramp2.offset
 ramp2.startTime
+ramp2.y
+fuelOutput.m_flow
+fuelOutput.LHV
+fuelOutput.rho
+fuelOutput.prox[1]
+fuelOutput.prox[2]
+fuelOutput.prox[3]
+fuelOutput.ulti[1]
+fuelOutput.ulti[2]
+fuelOutput.ulti[3]
+fuelOutput.ulti[4]
+fuelOutput.ulti[5]
+fuelOutput.spicies[1]
+fuelSource.m_flow
+fuelSource.LHV
+fuelSource.rho
+fuelSource.prox_moi
+fuelSource.prox_com
+fuelSource.prox_ash
+fuelSource.use_ultimate
+fuelSource.ulti_C
+fuelSource.ulti_H
+fuelSource.ulti_O
+fuelSource.ulti_N
+fuelSource.ulti_S
+fuelSource.use_spicies
+fuelSource.spicies_CO2
+fuelSource.prox[1]
+fuelSource.prox[2]
+fuelSource.prox[3]
+fuelSource.ulti[1]
+fuelSource.ulti[2]
+fuelSource.ulti[3]
+fuelSource.ulti[4]
+fuelSource.ulti[5]
+fuelSource.spicies[1]
+fuelSource.fuelOutput1.LHV
+fuelSource.fuelOutput1.prox[3]
+fuelSource.fuelOutput1.ulti[1]
+fuelSource.fuelOutput1.ulti[2]
+fuelSource.fuelOutput1.ulti[3]
+fuelSource.fuelOutput1.ulti[4]
+fuelSource.fuelOutput1.ulti[5]
+fuelSource.fuelOutput1.spicies[1]
 
-double initialValue(127,6)
+double initialValue(170,6)
  -2       1                       0                       0                
   2     0   # _dummy
  -2       0                       0                       0                
@@ -244,6 +287,8 @@ double initialValue(127,6)
   1   280   # ramp.offset
  -1 1.0000000000000001E-001       0                       0                
   1   280   # ramp.startTime
+ -2       1                       0                       0                
+  6   256   # ramp.y
  -1    5000                       0                       0                
   1   280   # ramp1.height
  -1 8.0000000000000004E-001       0                 1.0000000000000000E+100
@@ -252,39 +297,33 @@ double initialValue(127,6)
   1   280   # ramp1.offset
  -1 1.0000000000000001E-001       0                       0                
   1   280   # ramp1.startTime
- -2 6.0100000000000001E-002       0                       0                
-  6   260   # fuelInput1.nXi
- -2       1                       0                       0                
-  4   260   # fuelInput1.m_flow
- -2   85000                       0                       1                
-  4   260   # fuelInput1.k
  -2   85000                       0                       0                
-  4   260   # fuelInput1.j
+  6   256   # ramp1.y
  -2       1                       0                       0                
   6   258   # boundary.nPorts
- -2 9.9820064150149517E+002       0                  100000                
+ -2 9.9825105323676655E+002       0                  100000                
   6   256   # boundary.medium.d
- -2 2.9317348032439378E+002 2.7314999999999998E+002 2.2731500000000001E+003
+ -2 2.9315082969617572E+002 2.7314999999999998E+002 2.2731500000000001E+003
   6   256   # boundary.medium.T
  -2       1                       0                       1                
   6   256   # boundary.medium.X[1]
- -2 8.3912876713803023E+004 -1.0000000000000000E+008 1.0000000000000000E+008
+ -2 8.3812707750409478E+004 -1.0000000000000000E+008 1.0000000000000000E+008
   6   256   # boundary.medium.u
  -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
   6   256   # boundary.medium.R
  -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
   6   256   # boundary.medium.MM
  -2       1                       0                       2                
-  6   322   # boundary.medium.state.phase
+  6   258   # boundary.medium.state.phase
  -2       0                       0                       0                
   6   257   # boundary.medium.preferredMediumStates
  -2       1                       0                       0                
   6   257   # boundary.medium.standardOrderComponents
- -2 2.0023480324393802E+001       0                       0                
+ -2 2.0000829696175742E+001       0                       0                
   6   256   # boundary.medium.T_degC
- -2 1.0000117647058824E+000       0                       0                
+ -2       2                       0                       0                
   6   256   # boundary.medium.p_bar
- -2 3.7275624748618463E+002 2.7314999999999998E+002 2.2731500000000001E+003
+ -2 3.9336154593648871E+002 2.7314999999999998E+002 2.2731500000000001E+003
   6   256   # boundary.medium.sat.Tsat
  -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
   6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].molarMass
@@ -382,9 +421,9 @@ double initialValue(127,6)
   6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltah
  -2       0                 -1.0000000000000000E+007 1.0000000000000000E+007
   6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltas
- -2      -1                 -100000                  100000                
+ -2 -3.3333333333333331E-001      -1                       0                
   6   388   # boundary.ports[1].m_flow
- -2 1.0000117647058824E+005 6.1165700000000004E+002 1.0000000000000000E+008
+ -2 2.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
   6   260   # boundary.ports[1].p
  -2 8.4013058152596903E+004 -1.0000000000000000E+010 1.0000000000000000E+010
   6   260   # boundary.ports[1].h_outflow
@@ -412,7 +451,7 @@ double initialValue(127,6)
   1   280   # valve.m_flow_nominal
  -2 1.0000000000000001E-005       0                       0                
   6   256   # valve.k
- -2 1.1764705882352939E+000       0                       0                
+ -2  100000                       0                       0                
   6   256   # valve.dp
  -2 8.4011811167136795E+004 -1.0000000000000000E+010 1.0000000000000000E+010
   6   260   # valve.port_a.h_outflow
@@ -420,6 +459,8 @@ double initialValue(127,6)
   6   260   # valve.port_b.p
  -2 8.4013058152596903E+004 -1.0000000000000000E+010 1.0000000000000000E+010
   6   260   # valve.port_b.h_outflow
+ -2 3.3333333333333331E-001       0                       1                
+  6   256   # valve.opening
  -2       1                       0                       0                
   6   258   # boundary1.nPorts
  -2  100000                       0                 1.0000000000000000E+100
@@ -486,6 +527,94 @@ double initialValue(127,6)
   1   280   # ramp2.offset
  -1 1.0000000000000001E-001       0                       0                
   1   280   # ramp2.startTime
+ -2   85000                       0                       0                
+  6   256   # ramp2.y
+ -2       1                       0                       0                
+  4   260   # fuelOutput.m_flow
+ -2      15                       0                       0                
+  4   260   # fuelOutput.LHV
+ -2       1                       0                 1.0000000000000000E+100
+  4   260   # fuelOutput.rho
+ -2 3.3333333333333331E-001       0                       1                
+  4   260   # fuelOutput.prox[1]
+ -2 3.3333333333333331E-001       0                       1                
+  4   260   # fuelOutput.prox[2]
+ -2 3.3333333333333331E-001       0                       1                
+  4   260   # fuelOutput.prox[3]
+ -2 2.0000000000000001E-001       0                       1                
+  4   260   # fuelOutput.ulti[1]
+ -2 2.0000000000000001E-001       0                       1                
+  4   260   # fuelOutput.ulti[2]
+ -2 2.0000000000000001E-001       0                       1                
+  4   260   # fuelOutput.ulti[3]
+ -2 2.0000000000000001E-001       0                       1                
+  4   260   # fuelOutput.ulti[4]
+ -2 2.0000000000000001E-001       0                       1                
+  4   260   # fuelOutput.ulti[5]
+ -2       1                       0                       1                
+  4   260   # fuelOutput.spicies[1]
+ -1       1                       0                       0                
+  1   280   # fuelSource.m_flow
+ -2      15                       0                       0                
+  6   256   # fuelSource.LHV
+ -1       1                       0                 1.0000000000000000E+100
+  1   280   # fuelSource.rho
+ -1       1                       0                       1                
+  1   280   # fuelSource.prox_moi
+ -1       1                       0                       1                
+  1   280   # fuelSource.prox_com
+ -1       1                       0                       1                
+  1   280   # fuelSource.prox_ash
+ -2       1                       0                       0                
+  6   769   # fuelSource.use_ultimate
+ -1       1                       0                       1                
+  1   280   # fuelSource.ulti_C
+ -1       1                       0                       1                
+  1   280   # fuelSource.ulti_H
+ -1       1                       0                       1                
+  1   280   # fuelSource.ulti_O
+ -1       1                       0                       1                
+  1   280   # fuelSource.ulti_N
+ -1       1                       0                       1                
+  1   280   # fuelSource.ulti_S
+ -2       0                       0                       0                
+  6   769   # fuelSource.use_spicies
+ -1       1                       0                       1                
+  1   280   # fuelSource.spicies_CO2
+ -2       1                       0                       1                
+  6  1280   # fuelSource.prox[1]
+ -2       1                       0                       1                
+  6  1280   # fuelSource.prox[2]
+ -2       1                       0                       1                
+  6  1280   # fuelSource.prox[3]
+ -2       1                       0                       1                
+  6  1280   # fuelSource.ulti[1]
+ -2       1                       0                       1                
+  6  1280   # fuelSource.ulti[2]
+ -2       1                       0                       1                
+  6  1280   # fuelSource.ulti[3]
+ -2       1                       0                       1                
+  6  1280   # fuelSource.ulti[4]
+ -2       1                       0                       1                
+  6  1280   # fuelSource.ulti[5]
+ -2       1                       0                       1                
+  6  1280   # fuelSource.spicies[1]
+ -2      15                       0                       0                
+  6   260   # fuelSource.fuelOutput1.LHV
+ -2 3.3333333333333331E-001       0                       1                
+  6   260   # fuelSource.fuelOutput1.prox[3]
+ -2 2.0000000000000001E-001       0                       1                
+  6   260   # fuelSource.fuelOutput1.ulti[1]
+ -2 2.0000000000000001E-001       0                       1                
+  6   260   # fuelSource.fuelOutput1.ulti[2]
+ -2 2.0000000000000001E-001       0                       1                
+  6   260   # fuelSource.fuelOutput1.ulti[3]
+ -2 2.0000000000000001E-001       0                       1                
+  6   260   # fuelSource.fuelOutput1.ulti[4]
+ -2 2.0000000000000001E-001       0                       1                
+  6   260   # fuelSource.fuelOutput1.ulti[5]
+ -2       1                       0                       1                
+  6   260   # fuelSource.fuelOutput1.spicies[1]
 
 
 # Matrix with 6 columns defining the initial value calculation
@@ -536,21 +665,19 @@ double initialValue(127,6)
 #   nominal value (and maybe minimum and maximum values given in 
 #   column 3 and 4). If these values are zero, scale(i)=1 is used).
 #
-char initialDescription(127,114)
+char initialDescription(170,114)
 dummy
 derdummy
-Height of ramps [kg/s]
+Height of ramps
 Duration of ramp (= 0.0 gives a Step) [s]
-Offset of output signal [kg/s]
+Offset of output signal
 Output = offset for time < startTime [s]
-Height of ramps [1]
+Connector of Real output signal
+Height of ramps
 Duration of ramp (= 0.0 gives a Step) [s]
-Offset of output signal [1]
+Offset of output signal
 Output = offset for time < startTime [s]
-
-[kg/s]
-[1]
-
+Connector of Real output signal
 Number of ports [:#(type=Integer)]
 Density of medium [kg/m3|g/cm3]
 Temperature of medium [K|degC]
@@ -631,6 +758,7 @@ Nominal flow rate at full opening [kg/s]
 Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
 Thermodynamic pressure in the connection point [Pa|bar]
 Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+1 is full open, 0 is fully closed  [1]
 Number of ports [:#(type=Integer)]
 Absolute pressure of medium [Pa|bar]
 Density of medium [kg/m3|g/cm3]
@@ -664,4 +792,48 @@ Height of ramps
 Duration of ramp (= 0.0 gives a Step) [s]
 Offset of output signal
 Output = offset for time < startTime [s]
+Connector of Real output signal
+[kg/s]
+[J/kg]
+[kg/m3|g/cm3]
+[1]
+[1]
+[1]
+[1]
+[1]
+[1]
+[1]
+[1]
+[1]
+Mass flow of the fuel [kg/s]
+Lower Heating Value of the fuel [J/kg|MJ/kg]
+Density of the fuel [kg/m3|g/cm3]
+Mass fraction of Moisture [1]
+Mass fraction of Combustibles [1]
+Mass fraction of Ash [1]
+Use ultimate analasis data [:#(type=Boolean)]
+Mass fraction of Carbon (C) [1]
+Mass fraction of Hydrogen (H) [1]
+Mass fraction of Oxygen (O) [1]
+Mass fraction of Nitrogen (N) [1]
+Mass fraction of Sulfur (S) [1]
+Use spicies analasis data [:#(type=Boolean)]
+Mass fraction of CO2 [1]
+[1]
+[1]
+[1]
+[1]
+[1]
+[1]
+[1]
+[1]
+[1]
+[J/kg]
+[1]
+[1]
+[1]
+[1]
+[1]
+[1]
+[1]
 

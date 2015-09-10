@@ -20,7 +20,7 @@ model Mixer
   SI.InternalEnergy U;
 
   SI.MassFlowRate dm_dt=if massDynamics == Dynamics.SteadyState then 0 else der(
-       m);
+      m);
   SI.EnergyFlowRate dU_dt=if energyDynamics == Dynamics.SteadyState then 0
        else der(U);
   //Initialization
@@ -45,8 +45,8 @@ model Mixer
   parameter Medium.MassFraction X_start[Medium.nX]=Medium.X_default
     "Start value of mass fractions m_i/m"
     annotation (Dialog(tab="Initialization", enable=Medium.nXi > 0));
-  parameter Medium.ExtraProperty C_start[Medium.nC](quantity=Medium.extraPropertiesNames)=
-       fill(0, Medium.nC) "Start value of trace substances"
+  parameter Medium.ExtraProperty C_start[Medium.nC](quantity=Medium.extraPropertiesNames)
+     = fill(0, Medium.nC) "Start value of trace substances"
     annotation (Dialog(tab="Initialization", enable=Medium.nC > 0));
   Modelica.Fluid.Interfaces.FluidPort_a port_a(redeclare package Medium =
         Medium) annotation (Placement(transformation(extent={{-90,30},{-70,50}}),
@@ -103,8 +103,8 @@ initial equation
   end if;
   annotation (
     preferredView="text",
-    Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-        graphics={
+    Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
+            100}}), graphics={
         Rectangle(
           extent={{-20,72},{20,-72}},
           lineColor={28,108,200},
@@ -125,6 +125,6 @@ initial equation
           points={{52,-42},{40,-26},{52,-42},{38,-58}},
           color={0,0,0},
           thickness=1)}),
-    Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-            100}})));
+    Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
+            100,100}})));
 end Mixer;

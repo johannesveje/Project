@@ -9,15 +9,13 @@ model Bus
     height=5e3,
     offset=80e3)
     annotation (Placement(transformation(extent={{-70,-4},{-50,16}})));
-  Fuels.BasePackage.fuelInput fuelInput1 annotation (Placement(transformation(
-          extent={{-18,12},{2,32}}), iconTransformation(extent={{-188,14},{-148,
-            54}})));
   Modelica.Fluid.Sources.MassFlowSource_h boundary(
-    use_m_flow_in=true,
-    redeclare package Medium = Modelica.Media.Water.StandardWater,
     nPorts=1,
-    use_h_in=false)
-    annotation (Placement(transformation(extent={{12,4},{32,24}})));
+    use_h_in=false,
+    redeclare package Medium =
+        Modelica.Media.IdealGases.MixtureGases.FlueGasSixComponents,
+    use_m_flow_in=false)
+    annotation (Placement(transformation(extent={{24,4},{44,24}})));
   Tutorial.Valve valve(m_flow_nominal=2, dp_nominal=200000)
     annotation (Placement(transformation(extent={{44,4},{64,24}})));
   Modelica.Fluid.Sources.Boundary_pT boundary1(
@@ -30,53 +28,21 @@ model Bus
     height=5e3,
     offset=80e3)
     annotation (Placement(transformation(extent={{-68,-42},{-48,-22}})));
-  Fuels.BasePackage.FuelSource fuelSource(
-    prox_moi=0.2,
-    prox_com=0.5,
-    prox_ash=0.2,
-    ulti_C=0.2,
-    ulti_H=1,
-    ulti_O=1,
-    ulti_N=1,
-    ulti_S=1,
-    m_flow=1,
-    use_spicies=false,
-    spicies_CO2=1)
-    annotation (Placement(transformation(extent={{-10,-38},{10,-18}})));
+  Fuels.FuelSource fuelSource
+    annotation (Placement(transformation(extent={{-40,0},{-20,20}})));
+  Evaporation evaporation
+    annotation (Placement(transformation(extent={{-4,-12},{16,8}})));
+  CombustionSystem combustionSystem
+    annotation (Placement(transformation(extent={{-82,72},{-62,92}})));
 equation
   connect(boundary.ports[1], valve.port_a)
-    annotation (Line(points={{32,14},{38,14},{49,14}}, color={0,127,255}));
+    annotation (Line(points={{44,14},{44,14},{49,14}}, color={0,127,255}));
   connect(boundary1.ports[1], valve.port_b)
     annotation (Line(points={{96,14},{76,14},{59,14}}, color={0,127,255}));
-  connect(fuelInput1.m_flow, boundary.m_flow_in) annotation (Line(
-      points={{-7.95,22.05},{2,22},{12,22}},
+  connect(fuelSource.fuelOutput1, evaporation.fuelInput) annotation (Line(
+      points={{-21,10},{-3,10},{-3,-2}},
       color={255,204,51},
-      thickness=0.5), Text(
-      string="%first",
-      index=-1,
-      extent={{-6,3},{-6,3}}));
-  connect(fuelInput1.k, valve.opening) annotation (Line(
-      points={{-7.95,22.05},{0,22.05},{0,52},{54,52},{54,19.2}},
-      color={255,204,51},
-      thickness=0.5), Text(
-      string="%first",
-      index=-1,
-      extent={{-6,3},{-6,3}}));
-  connect(ramp1.y, fuelInput1.k) annotation (Line(points={{-49,6},{-28,6},{-28,
-          22.05},{-7.95,22.05}}, color={0,0,127}), Text(
-      string="%second",
-      index=1,
-      extent={{6,3},{6,3}}));
-  connect(ramp2.y, fuelInput1.j) annotation (Line(points={{-47,-32},{-28,-32},{
-          -28,22.05},{-7.95,22.05}}, color={0,0,127}), Text(
-      string="%second",
-      index=1,
-      extent={{6,3},{6,3}}));
-  connect(ramp.y, fuelInput1.m_flow) annotation (Line(points={{-49,44},{-28,44},
-          {-28,22.05},{-7.95,22.05}}, color={0,0,127}), Text(
-      string="%second",
-      index=1,
-      extent={{6,3},{6,3}}));
+      thickness=0.5));
   annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}})), Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}})));
