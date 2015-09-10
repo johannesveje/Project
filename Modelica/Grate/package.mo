@@ -6,6 +6,5 @@ import Modelica.Constants;
 import Modelica.Fluid.Types.Dynamics;
 
 
-
 annotation (uses(Modelica(version="3.2.1")));
 end Grate;

@@ -1,0 +1,9 @@
+model FuelSource
+  parameter Modelica.SIunits.MassFlowRate m_flow;
+  constant Integer n "Number of outputs";
+  parameter Modelica.SIunits.MassFraction prox[3] "Proximate analysis, Moisture, Combustibles, Ash";
+
+  output Modelica.Blocks.Interfaces.RealOutput y[n];
+
+
+end FuelSource;

@@ -1,27 +1,9 @@
 Log-file of program ./dymosim
-(generated: Wed Sep 09 13:30:00 2015)
+(generated: Wed Sep 09 18:22:35 2015)
 
 dymosim started
 ... "dsin.txt" loading (dymosim input file)
-... "Bus.mat" creating (simulation result file)
-
-Integration started at T = 0 using integration method DASSL
-(DAE multi-step solver (dassl/dasslrt of Petzold modified by Dynasim))
-Integration terminated successfully at T = 1
-   CPU-time for integration      : 0.013 seconds
-   CPU-time for one GRID interval: 0.026 milli-seconds
-   Number of result points       : 501
-   Number of GRID   points       : 501
-   Number of (successful) steps  : 51
-   Number of F-evaluations       : 96
-   Number of H-evaluations       : 551
-   Number of Jacobian-evaluations: 45
-   Number of (model) time events : 2
-   Number of (U) time events     : 0
-   Number of state    events     : 0
-   Number of step     events     : 0
-   Minimum integration stepsize  : 2e-006
-   Maximum integration stepsize  : 0.276
-   Maximum integration order     : 1
-Calling terminal section
-... "dsfinal.txt" creating (final states)
+sum(fuelSource.prox) == 1
+The following error was detected at time: 0
+Proximate analysis mass fractions do not add up to 1
+Error: Failed to start model.

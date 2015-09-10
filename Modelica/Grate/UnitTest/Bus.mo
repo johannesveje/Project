@@ -9,8 +9,9 @@ model Bus
     height=5e3,
     offset=80e3)
     annotation (Placement(transformation(extent={{-70,-4},{-50,16}})));
-  fuelInput fuelInput1 annotation (Placement(transformation(extent={{-18,12},{2,
-            32}}), iconTransformation(extent={{-188,14},{-148,54}})));
+  Fuels.BasePackage.fuelInput fuelInput1 annotation (Placement(transformation(
+          extent={{-18,12},{2,32}}), iconTransformation(extent={{-188,14},{-148,
+            54}})));
   Modelica.Fluid.Sources.MassFlowSource_h boundary(
     use_m_flow_in=true,
     redeclare package Medium = Modelica.Media.Water.StandardWater,
@@ -29,8 +30,19 @@ model Bus
     height=5e3,
     offset=80e3)
     annotation (Placement(transformation(extent={{-68,-42},{-48,-22}})));
-  FuelSource fuelSource
-    annotation (Placement(transformation(extent={{-2,-48},{18,-28}})));
+  Fuels.BasePackage.FuelSource fuelSource(
+    prox_moi=0.2,
+    prox_com=0.5,
+    prox_ash=0.2,
+    ulti_C=0.2,
+    ulti_H=1,
+    ulti_O=1,
+    ulti_N=1,
+    ulti_S=1,
+    m_flow=1,
+    use_spicies=false,
+    spicies_CO2=1)
+    annotation (Placement(transformation(extent={{-10,-38},{10,-18}})));
 equation
   connect(boundary.ports[1], valve.port_a)
     annotation (Line(points={{32,14},{38,14},{49,14}}, color={0,127,255}));
@@ -66,5 +78,6 @@ equation
       index=1,
       extent={{6,3},{6,3}}));
   annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-            -100},{100,100}})));
+            -100},{100,100}})), Icon(coordinateSystem(preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}})));
 end Bus;
