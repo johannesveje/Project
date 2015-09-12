@@ -4,17 +4,17 @@ model Evaporation
 
   package FlueGas = Grate.Fuels.FlueGas;
   package FuelData = Grate.Fuels.FuelData;
-  constant Real water_index=find("Water", FlueGas.substanceNames);
+  constant Real water_index=Grate.Utilities.findInVector("Water", FlueGas.substanceNames);
 
   parameter SI.MassFraction Xi_fuelInput[:];
 
-  // for i in 1:FlueGas.components loop
-  //   if i==water_index
-  //     Xi_fuelInput[i] = fuelInput[FuelData.Index.Proximate.Moisture];
-  //   else
-  //     Xi_fuelInput[i] = 0;
-  //   end
-  // end for;
+  //  for i in 1:FlueGas.components loop
+  //    if i==water_index then
+  //      Xi_fuelInput[i] = fuelInput[FuelData.Index.Proximate.Moisture];
+  //    else
+  //      Xi_fuelInput[i] = 0;
+  //    end if;
+  //  end for;
 
 protected
   Fuels.BasePackage.fuelInput fuelInput annotation (Placement(transformation(
@@ -40,10 +40,9 @@ protected
         origin={90,0})));
 
 equation
-  // system.
   for i in 1:FlueGas.components loop
     if i == water_index then
-      Xi_fuelInput[i] = fuelInput[FuelData.Index.Proximate.Moisture];
+      Xi_fuelInput[i] = fuelInput.prox[FuelData.Index.Proximate.Moisture];
     else
       Xi_fuelInput[i] = 0;
     end if;
@@ -55,9 +54,12 @@ equation
   0 = fuelInput.m_flow*fuelInput.heating_value + flueGas_in.m_flow*actualStream(
     flueGas_in.h_outflow) + flueGas_out.m_flow*actualStream(flueGas_out.h_outflow)
      + fuelOutput.m_flow*fuelOutput.heating_value + heatPorts_a.Q_flow;
+  // Pressure
+  flueGas_in.p = flueGas_out.p;
+
   // Spicies balance
   zeros(6) = flueGas_in.m_flow*flueGas_in.Xi_outflow + flueGas_out.m_flow*
-    flueGas_out.Xi_outflow + fuelInput.m_flow*fuelInput.prox[1];
+    flueGas_out.Xi_outflow + fuelInput.m_flow*Xi_fuelInput;
   annotation (preferredView="text",Icon(coordinateSystem(preserveAspectRatio=
             false, extent={{-100,-100},{100,100}}), graphics={Rectangle(
           extent={{-80,80},{80,-80}},

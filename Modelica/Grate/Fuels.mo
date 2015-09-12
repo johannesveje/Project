@@ -130,15 +130,15 @@ package Fuels
 
     annotation (preferredView="text", Icon(coordinateSystem(preserveAspectRatio
             =false, extent={{-100,-100},{100,100}}), graphics={Rectangle(
-            extent={{-80,80},{80,-80}},
-            lineColor={28,108,200},
-            fillColor={0,0,0},
-            fillPattern=FillPattern.Solid), Text(
-            extent={{-78,78},{78,-78}},
-            lineColor={128,255,0},
-            fillColor={0,0,0},
-            fillPattern=FillPattern.Solid,
-            textString="Fuel")}));
+              extent={{-80,80},{80,-80}},
+              lineColor={28,108,200},
+              fillColor={0,0,0},
+              fillPattern=FillPattern.Solid),Text(
+              extent={{-78,78},{78,-78}},
+              lineColor={128,255,0},
+              fillColor={0,0,0},
+              fillPattern=FillPattern.Solid,
+              textString="Fuel")}));
   end FuelSource;
 
   package FlueGas
