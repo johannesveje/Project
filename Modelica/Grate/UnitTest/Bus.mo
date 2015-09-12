@@ -34,15 +34,25 @@ model Bus
     annotation (Placement(transformation(extent={{-4,-12},{16,8}})));
   CombustionSystem combustionSystem
     annotation (Placement(transformation(extent={{-82,72},{-62,92}})));
+  Fuels.BasePackage.fuelInput fuelInput annotation (Placement(transformation(
+          extent={{8,48},{28,68}}), iconTransformation(extent={{-220,44},{-180,
+            84}})));
 equation
   connect(boundary.ports[1], valve.port_a)
     annotation (Line(points={{44,14},{44,14},{49,14}}, color={0,127,255}));
   connect(boundary1.ports[1], valve.port_b)
     annotation (Line(points={{96,14},{76,14},{59,14}}, color={0,127,255}));
   connect(fuelSource.fuelOutput1, evaporation.fuelInput) annotation (Line(
-      points={{-21,10},{-3,10},{-3,-2}},
+      points={{-21,10},{-6,10},{-6,-2},{-3,-2}},
       color={255,204,51},
       thickness=0.5));
+  connect(fuelSource.fuelOutput1, fuelInput) annotation (Line(
+      points={{-21,10},{-2,10},{-2,58},{18,58}},
+      color={255,204,51},
+      thickness=0.5), Text(
+      string="%second",
+      index=1,
+      extent={{6,3},{6,3}}));
   annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}})), Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}})));

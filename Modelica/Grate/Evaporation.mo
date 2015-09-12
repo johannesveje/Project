@@ -1,11 +1,22 @@
 within Grate;
 model Evaporation
-  outer Grate.CombustionSystem system "System wide properties";
-  // package
+  // outer Grate.CombustionSystem system "System wide properties";
 
-  //   package FlueGas = system.FlueGas;
-  //   package FlueGas = Modelica.Media.IdealGases.MixtureGases.FlueGasSixComponents;
+  package FlueGas = Grate.Fuels.FlueGas;
+  package FuelData = Grate.Fuels.FuelData;
+  constant Real water_index=find("Water", FlueGas.substanceNames);
 
+  parameter SI.MassFraction Xi_fuelInput[:];
+
+  // for i in 1:FlueGas.components loop
+  //   if i==water_index
+  //     Xi_fuelInput[i] = fuelInput[FuelData.Index.Proximate.Moisture];
+  //   else
+  //     Xi_fuelInput[i] = 0;
+  //   end
+  // end for;
+
+protected
   Fuels.BasePackage.fuelInput fuelInput annotation (Placement(transformation(
         extent={{-25,-23},{25,23}},
         rotation=90,
@@ -14,11 +25,11 @@ model Evaporation
         rotation=90,
         origin={-90,0})));
   Modelica.Fluid.Interfaces.FluidPort_a flueGas_in(redeclare package Medium =
-        system.FlueGas) annotation (Placement(transformation(extent={{-10,-100},
-            {10,-80}}), iconTransformation(extent={{-10,-100},{10,-80}})));
+        FlueGas) annotation (Placement(transformation(extent={{-10,-100},{10,-80}}),
+        iconTransformation(extent={{-10,-100},{10,-80}})));
   Modelica.Fluid.Interfaces.FluidPort_b flueGas_out(redeclare package Medium =
-        system.FlueGas) annotation (Placement(transformation(extent={{-40,80},{
-            -20,100}}), iconTransformation(extent={{-40,80},{-20,100}})));
+        FlueGas) annotation (Placement(transformation(extent={{-40,80},{-20,100}}),
+        iconTransformation(extent={{-40,80},{-20,100}})));
   Modelica.Fluid.Interfaces.HeatPorts_a heatPorts_a annotation (Placement(
         transformation(extent={{18,80},{38,100}}), iconTransformation(extent={{
             18,80},{38,100}})));
@@ -27,9 +38,17 @@ model Evaporation
         extent={{-20,20},{20,-20}},
         rotation=90,
         origin={90,0})));
-  parameter SI.Pressure k=system.p_ambient;
+
 equation
   // system.
+  for i in 1:FlueGas.components loop
+    if i == water_index then
+      Xi_fuelInput[i] = fuelInput[FuelData.Index.Proximate.Moisture];
+    else
+      Xi_fuelInput[i] = 0;
+    end if;
+  end for;
+
   // Mass balance
   0 = fuelInput.m_flow + flueGas_in.m_flow + flueGas_out.m_flow + fuelOutput.m_flow;
   // Energy balance
