@@ -14,6 +14,7 @@ package Fuels
       SI.MassFraction prox[3] annotation ();
       SI.MassFraction ulti[5] annotation ();
       SI.MassFraction spicies[1] annotation ();
+      SI.MolarMass MM;
 
       annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
                 -100,-100},{100,100}})));
@@ -29,13 +30,14 @@ package Fuels
       SI.MassFraction prox[3] annotation ();
       SI.MassFraction ulti[5] annotation ();
       SI.MassFraction spicies[1] annotation ();
+      SI.MolarMass MM;
 
       annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
                 -100,-100},{100,100}})));
     end fuelOutput;
   end BasePackage;
 
-  model FuelSource
+  block FuelSource
     package FuelData = Grate.Fuels.FuelData;
 
     parameter SI.MassFlowRate m_flow=1 "Mass flow of the fuel";
@@ -84,6 +86,10 @@ package Fuels
     parameter String prox_names[:];
     parameter String ulti_names[:];
     parameter String spicies_names[:];
+    // parameter SI.MassFraction prox_uni[:];
+    // parameter SI.MassFraction ulti_uni[:];
+    // parameter SI.MassFraction prox_uni[:];
+    parameter SI.MolarMass M;
 
   public
     output BasePackage.fuelOutput fuelOutput1 annotation (Placement(
@@ -95,50 +101,66 @@ package Fuels
           rotation=90,
           origin={90,0})));
 
-  equation
+  algorithm
     // Proximate index //
-    prox[FuelData.Index.Proximate.Ash] = prox_ash;
-    prox_names[FuelData.Index.Proximate.Ash] = "Ash";
-    prox[FuelData.Index.Proximate.Combustibles] = prox_com;
-    prox_names[FuelData.Index.Proximate.Combustibles] = "Combustibles";
-    prox[FuelData.Index.Proximate.Moisture] = prox_moi;
-    prox_names[FuelData.Index.Proximate.Moisture] = "Moisture";
+    prox[FuelData.Index.Proximate.Ash] := prox_ash;
+    prox_names[FuelData.Index.Proximate.Ash] := "Ash";
+    prox[FuelData.Index.Proximate.Combustibles] := prox_com;
+    prox_names[FuelData.Index.Proximate.Combustibles] := "Combustibles";
+    prox[FuelData.Index.Proximate.Moisture] := prox_moi;
+    prox_names[FuelData.Index.Proximate.Moisture] := "Moisture";
+    prox := prox/sum(prox);
 
     // Ultimate index //
-    ulti[FuelData.Index.Ultimate.Carbon] = ulti_C;
-    ulti_names[FuelData.Index.Ultimate.Carbon] = "Carbon";
-    ulti[FuelData.Index.Ultimate.Hydrogen] = ulti_H;
-    ulti_names[FuelData.Index.Ultimate.Hydrogen] = "Hydrogen";
-    ulti[FuelData.Index.Ultimate.Nitrogen] = ulti_N;
-    ulti_names[FuelData.Index.Ultimate.Nitrogen] = "Nitrogen";
-    ulti[FuelData.Index.Ultimate.Oxygen] = ulti_O;
-    ulti_names[FuelData.Index.Ultimate.Oxygen] = "Oxygen";
-    ulti[FuelData.Index.Ultimate.Sulfur] = ulti_S;
-    ulti_names[FuelData.Index.Ultimate.Sulfur] = "Sulfur";
+    ulti[FuelData.Index.Ultimate.Carbon] := ulti_C;
+    ulti_names[FuelData.Index.Ultimate.Carbon] := "Carbon";
+    ulti[FuelData.Index.Ultimate.Hydrogen] := ulti_H;
+    ulti_names[FuelData.Index.Ultimate.Hydrogen] := "Hydrogen";
+    ulti[FuelData.Index.Ultimate.Nitrogen] := ulti_N;
+    ulti_names[FuelData.Index.Ultimate.Nitrogen] := "Nitrogen";
+    ulti[FuelData.Index.Ultimate.Oxygen] := ulti_O;
+    ulti_names[FuelData.Index.Ultimate.Oxygen] := "Oxygen";
+    ulti[FuelData.Index.Ultimate.Sulfur] := ulti_S;
+    ulti_names[FuelData.Index.Ultimate.Sulfur] := "Sulfur";
+    ulti := ulti/sum(ulti);
 
     // Spicies index //
-    spicies[FuelData.Index.Spicies.CO2] = spicies_CO2;
-    spicies_names[FuelData.Index.Spicies.CO2] = "CO2";
+    spicies[FuelData.Index.Spicies.CO2] := spicies_CO2;
+    spicies_names[FuelData.Index.Spicies.CO2] := "CO2";
+    spicies := spicies/sum(spicies);
 
-    fuelOutput1.m_flow = m_flow;
-    fuelOutput1.heating_value = heating_value;
-    fuelOutput1.rho = rho;
-    fuelOutput1.T = T;
-    fuelOutput1.prox = prox/sum(prox);
-    fuelOutput1.ulti = ulti/sum(ulti);
-    fuelOutput1.spicies = spicies/sum(spicies);
+    // Molar Mass //
+    M := (ulti[FuelData.Index.Ultimate.Carbon]/Modelica.Media.IdealGases.Common.SingleGasesData.C.MM
+       + ulti[FuelData.Index.Ultimate.Hydrogen]/Modelica.Media.IdealGases.Common.SingleGasesData.H.MM
+       + ulti[FuelData.Index.Ultimate.Oxygen]/Modelica.Media.IdealGases.Common.SingleGasesData.O.MM
+       + ulti[FuelData.Index.Ultimate.Nitrogen]/Modelica.Media.IdealGases.Common.SingleGasesData.N.MM
+       + ulti[FuelData.Index.Ultimate.Sulfur]/Modelica.Media.IdealGases.Common.SingleGasesData.S.MM)
+      ^(-1);
+
+    // Writing to output //
+    fuelOutput1.m_flow := m_flow;
+    fuelOutput1.heating_value := heating_value;
+    fuelOutput1.rho := rho;
+    fuelOutput1.T := T;
+    fuelOutput1.prox := prox;
+    fuelOutput1.ulti := ulti;
+    fuelOutput1.spicies := spicies;
+    fuelOutput1.MM := M;
+
+    Modelica.Media.IdealGases.Common.Functions.cp_T(Modelica.Media.IdealGases.Common.SingleGasesData.C,
+      T);
 
     annotation (preferredView="text", Icon(coordinateSystem(preserveAspectRatio
             =false, extent={{-100,-100},{100,100}}), graphics={Rectangle(
-              extent={{-80,80},{80,-80}},
-              lineColor={28,108,200},
-              fillColor={0,0,0},
-              fillPattern=FillPattern.Solid),Text(
-              extent={{-78,78},{78,-78}},
-              lineColor={128,255,0},
-              fillColor={0,0,0},
-              fillPattern=FillPattern.Solid,
-              textString="Fuel")}));
+            extent={{-80,80},{80,-80}},
+            lineColor={28,108,200},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid), Text(
+            extent={{-78,78},{78,-78}},
+            lineColor={128,255,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid,
+            textString="Fuel")}));
   end FuelSource;
 
   package FlueGas

@@ -7,16 +7,14 @@ model Evaporation
   constant Real water_index=Grate.Utilities.findInVector("Water", FlueGas.substanceNames);
 
   parameter SI.MassFraction Xi_fuelInput[:];
+  parameter SI.MassFraction Xi_fuelOutput[:];
 
-  //  for i in 1:FlueGas.components loop
-  //    if i==water_index then
-  //      Xi_fuelInput[i] = fuelInput[FuelData.Index.Proximate.Moisture];
-  //    else
-  //      Xi_fuelInput[i] = 0;
-  //    end if;
-  //  end for;
+  SI.MassFlowRate dmw_dt=der(mw)
+    "Change of water content in fuel as function of time";
+  SI.Mass mw(start=(fuelInput.m_flow*fuelInput.prox[FuelData.Index.Proximate.Moisture]));
 
-protected
+  FlueGas.BaseProperties flueGas;
+
   Fuels.BasePackage.fuelInput fuelInput annotation (Placement(transformation(
         extent={{-25,-23},{25,23}},
         rotation=90,
@@ -31,8 +29,8 @@ protected
         FlueGas) annotation (Placement(transformation(extent={{-40,80},{-20,100}}),
         iconTransformation(extent={{-40,80},{-20,100}})));
   Modelica.Fluid.Interfaces.HeatPorts_a heatPorts_a annotation (Placement(
-        transformation(extent={{18,80},{38,100}}), iconTransformation(extent={{
-            18,80},{38,100}})));
+        transformation(extent={{20,80},{40,100}}), iconTransformation(extent={{
+            20,80},{40,100}})));
   Fuels.BasePackage.fuelOutput fuelOutput annotation (Placement(transformation(
           extent={{78,-12},{98,8}}), iconTransformation(
         extent={{-20,20},{20,-20}},
@@ -45,11 +43,15 @@ equation
       Xi_fuelInput[i] = fuelInput.prox[FuelData.Index.Proximate.Moisture];
     else
       Xi_fuelInput[i] = 0;
+      Xi_fuelOutput[i] = 0;
     end if;
   end for;
 
+  // Medium properties
+  flueGas.p = flueGas_in.p;
   // Mass balance
-  0 = fuelInput.m_flow + flueGas_in.m_flow + flueGas_out.m_flow + fuelOutput.m_flow;
+  // dmw_dt =
+  //   0 = fuelInput.m_flow + flueGas_in.m_flow + flueGas_out.m_flow + fuelOutput.m_flow;
   // Energy balance
   0 = fuelInput.m_flow*fuelInput.heating_value + flueGas_in.m_flow*actualStream(
     flueGas_in.h_outflow) + flueGas_out.m_flow*actualStream(flueGas_out.h_outflow)

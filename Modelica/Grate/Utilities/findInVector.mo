@@ -10,9 +10,12 @@ function findInVector
 
 algorithm
   for i in 1:size(string2, 1) loop
-    if Modelica.Utilities.Strings.isEqual(string1, string2[i]) then
-      index := 1;
+    if Modelica.Utilities.Strings.isEqual(
+        string1,
+        string2[i],
+        caseSensitive) then
+      index := i;
     end if;
   end for;
-
+  annotation (preferredView="text");
 end findInVector;
