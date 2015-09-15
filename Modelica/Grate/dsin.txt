@@ -9,14 +9,14 @@ Modelica experiment file
 double experiment(7,1)
        0                   # StartTime    Time at which integration starts
                            #              (and linearization and trimming time)
-       0                   # StopTime     Time at which integration stops
+       1                   # StopTime     Time at which integration stops
        0                   # Increment    Communication step size, if > 0
-     100                   # nInterval    Number of communication intervals, if > 0
+     500                   # nInterval    Number of communication intervals, if > 0
  1.0000000000000000E-004   # Tolerance    Relative precision of signals for
                            #              simulation, linearization and trimming
        0                   # MaxFixedStep Maximum step size of fixed step size
                            #              integrators, if > 0.0
-       1                   # Algorithm    Integration algorithm as integer (1...28)
+       8                   # Algorithm    Integration algorithm as integer (1...28)
                            #
                            #             | model|       |        | dense | state |
                            # Algorithm   | typ  | stiff | order  | output| event |
@@ -70,10 +70,10 @@ double method(27,1)
        0                   # hmax     Maximum absolute stepsize, if > 0
        0                   # hmin     Minimum absolute stepsize, if > 0 (use with care!)
        0                   # h0       Stepsize to be attempted on first step, if > 0
- 9.9999999999999998E-013   # teps     Bound to check, if 2 equal time instants
+ 2.0000000000000000E-014   # teps     Bound to check, if 2 equal time instants
  1.0000000000000000E-010   # eveps    Hysteresis epsilon at event points
       20                   # eviter   Maximum number of event iterations
-       0                   # delaym   Minimum time increment in delay buffers
+ 9.9999999999999995E-007   # delaym   Minimum time increment in delay buffers
        1                   # fexcep   0/1 floating exception crashes/stops dymosim
        1                   # tscale   clock-time = tscale*simulation-time, if grid = 5
                            #          > 1: simulation too slow
@@ -87,7 +87,7 @@ double method(27,1)
 int settings(13,1)
  0                         # lprec    0/1 do not/store result data in double
  1                         # lx       0/1 do not/store x  (state variables)
- 0                         # lxd      0/1 do not/store xd (derivative of states)
+ 1                         # lxd      0/1 do not/store xd (derivative of states)
  1                         # lu       0/1 do not/store u  (input     signals)
  1                         # ly       0/1 do not/store y  (output    signals)
  0                         # lz       0/1 do not/store z  (indicator signals)
@@ -102,91 +102,384 @@ int settings(13,1)
 
 
 #    Names of initial variables
-char initialName(41,25)
+char initialName(125,94)
 _dummy
 _derdummy
-m_flow
-heating_value
-rho
-T
-prox_moi
-prox_com
-prox_ash
-use_ultimate
-ulti_C
-ulti_H
-ulti_O
-ulti_N
-ulti_S
-use_spicies
-spicies_CO2
-prox[1]
-prox[2]
-prox[3]
-ulti[1]
-ulti[2]
-ulti[3]
-ulti[4]
-ulti[5]
-spicies[1]
-fuelOutput1.m_flow
-fuelOutput1.heating_value
-fuelOutput1.rho
-fuelOutput1.T
-fuelOutput1.prox[1]
-fuelOutput1.prox[2]
-fuelOutput1.prox[3]
-fuelOutput1.ulti[1]
-fuelOutput1.ulti[2]
-fuelOutput1.ulti[3]
-fuelOutput1.ulti[4]
-fuelOutput1.ulti[5]
-fuelOutput1.spicies[1]
+valve.dp_nominal
+valve.m_flow_nominal
+valve.k
+valve.dp
+valve.nXi
+valve.port_a.m_flow
+valve.port_a.p
+valve.port_a.h_outflow
+valve.port_b.p
+valve.port_b.h_outflow
+valve.opening
+boundary.nPorts
+boundary.medium.h
+boundary.medium.d
+boundary.medium.T
+boundary.medium.X[1]
+boundary.medium.u
+boundary.medium.R
+boundary.medium.MM
+boundary.medium.state.phase
+boundary.medium.state.h
+boundary.medium.preferredMediumStates
+boundary.medium.standardOrderComponents
+boundary.medium.T_degC
+boundary.medium.p_bar
+boundary.medium.sat.Tsat
+_GlobalScope.Modelica.Media.Water.waterConstants[1].molarMass
+_GlobalScope.Modelica.Media.Water.waterConstants[1].criticalTemperature
+_GlobalScope.Modelica.Media.Water.waterConstants[1].criticalPressure
+_GlobalScope.Modelica.Media.Water.waterConstants[1].criticalMolarVolume
+_GlobalScope.Modelica.Media.Water.waterConstants[1].acentricFactor
+_GlobalScope.Modelica.Media.Water.waterConstants[1].triplePointTemperature
+_GlobalScope.Modelica.Media.Water.waterConstants[1].triplePointPressure
+_GlobalScope.Modelica.Media.Water.waterConstants[1].meltingPoint
+_GlobalScope.Modelica.Media.Water.waterConstants[1].normalBoilingPoint
+_GlobalScope.Modelica.Media.Water.waterConstants[1].dipoleMoment
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasIdealGasHeatCapacity
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasCriticalData
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasDipoleMoment
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasFundamentalEquation
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasLiquidHeatCapacity
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasSolidHeatCapacity
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasAccurateViscosityData
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasAccurateConductivityData
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasVapourPressureCurve
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasAcentricFactor
+_GlobalScope.Modelica.Media.Water.waterConstants[1].HCRIT0
+_GlobalScope.Modelica.Media.Water.waterConstants[1].SCRIT0
+_GlobalScope.Modelica.Media.Water.waterConstants[1].deltah
+_GlobalScope.Modelica.Media.Water.waterConstants[1].deltas
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].molarMass
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalTemperature
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalPressure
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalMolarVolume
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].acentricFactor
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].triplePointTemperature
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].triplePointPressure
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].meltingPoint
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].normalBoilingPoint
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].dipoleMoment
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasIdealGasHeatCapacity
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasCriticalData
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasDipoleMoment
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasFundamentalEquation
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasLiquidHeatCapacity
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasSolidHeatCapacity
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAccurateViscosityData
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAccurateConductivityData
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasVapourPressureCurve
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAcentricFactor
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].HCRIT0
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].SCRIT0
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltah
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltas
+boundary.ports[1].h_outflow
+boundary.flowDirection
+boundary.use_p_in
+boundary.use_h_in
+boundary.use_X_in
+boundary.use_C_in
+boundary.p
+boundary.h
+boundary.X[1]
+boundary.h_in_internal
+boundary.X_in_internal[1]
+boundary1.nPorts
+boundary1.medium.p
+boundary1.medium.d
+boundary1.medium.T
+boundary1.medium.X[1]
+boundary1.medium.u
+boundary1.medium.R
+boundary1.medium.MM
+boundary1.medium.state.phase
+boundary1.medium.state.p
+boundary1.medium.preferredMediumStates
+boundary1.medium.standardOrderComponents
+boundary1.medium.T_degC
+boundary1.medium.p_bar
+boundary1.medium.sat.psat
+boundary1.medium.sat.Tsat
+boundary1.ports[1].p
+boundary1.flowDirection
+boundary1.use_p_in
+boundary1.use_h_in
+boundary1.use_X_in
+boundary1.use_C_in
+boundary1.p
+boundary1.h
+boundary1.X[1]
+boundary1.p_in_internal
+boundary1.X_in_internal[1]
+ramp.height
+ramp.duration
+ramp.offset
+ramp.startTime
+ramp1.height
+ramp1.duration
+ramp1.offset
+ramp1.startTime
+ramp1.y
 CPUtime
 EventCounter
 
-double initialValue(41,6)
- -1       1                  0       0                  2     0   # _dummy
-  0       0                  0       0                  3     0   # _derdummy
- -1       1                  0       0                  1   280   # m_flow
-  0 1.5000000000000000E+007  0       0                  6   256   # heating_value
- -1       1                  0 1.0000000000000000E+100  1   280   # rho
- -1 2.9814999999999998E+002  0 1.0000000000000000E+100  1   280   # T
- -1       1                  0       1                  1   280   # prox_moi
- -1       1                  0       1                  1   280   # prox_com
- -1       1                  0       1                  1   280   # prox_ash
-  0       1                  0       0                  6   769   # use_ultimate
- -1       1                  0       1                  1   280   # ulti_C
- -1       1                  0       1                  1   280   # ulti_H
- -1       1                  0       1                  1   280   # ulti_O
- -1       1                  0       1                  1   280   # ulti_N
- -1       1                  0       1                  1   280   # ulti_S
-  0       0                  0       0                  6   769   # use_spicies
- -1       1                  0       1                  1   280   # spicies_CO2
- -1       1                  0       1                  1  1304   # prox[1]
- -1       1                  0       1                  1  1304   # prox[2]
- -1       1                  0       1                  1  1304   # prox[3]
-  0       0                  0       1                  6  1280   # ulti[1]
-  0       0                  0       1                  6  1280   # ulti[2]
-  0       0                  0       1                  6  1280   # ulti[3]
-  0       0                  0       1                  6  1280   # ulti[4]
-  0       0                  0       1                  6  1280   # ulti[5]
-  0       0                  0       1                  6  1280   # spicies[1]
-  0       0                  0       0                  4   260   # fuelOutput1.m_flow
-  0 1.5000000000000000E+007  0       0                  4   260   # fuelOutput1.heating_value
-  0       0                  0 1.0000000000000000E+100  4   260   # fuelOutput1.rho
-  0 2.8814999999999998E+002  0 1.0000000000000000E+100  4   260   # fuelOutput1.T
-  0       0                  0       1                  4   260   # fuelOutput1.prox[1]
-  0       0                  0       1                  4   260   # fuelOutput1.prox[2]
-  0       0                  0       1                  4   260   # fuelOutput1.prox[3]
-  0       0                  0       1                  4   260   # fuelOutput1.ulti[1]
-  0       0                  0       1                  4   260   # fuelOutput1.ulti[2]
-  0       0                  0       1                  4   260   # fuelOutput1.ulti[3]
-  0       0                  0       1                  4   260   # fuelOutput1.ulti[4]
-  0       0                  0       1                  4   260   # fuelOutput1.ulti[5]
-  0       1                  0       1                  4   260   # fuelOutput1.spicies[1]
-  0       0                  0       0                  4   256   # CPUtime
-  0       0                  0       0                  4   256   # EventCounter
+double initialValue(125,6)
+ -1       1                       0                       0                
+  2     0   # _dummy
+  0       0                       0                       0                
+  3     0   # _derdummy
+ -1 4.0000000000000000E+005       0                       0                
+  1   280   # valve.dp_nominal
+ -1      10                       0                       0                
+  1   280   # valve.m_flow_nominal
+  0       0                       0                       0                
+  6   256   # valve.k
+  0       0                       0                       0                
+  6   256   # valve.dp
+  0       0                       0                       0                
+  6   256   # valve.nXi
+  0       0                 -100000                  100000                
+  6   388   # valve.port_a.m_flow
+  0 5.0000000000000000E+006 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260   # valve.port_a.p
+  0  100000                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260   # valve.port_a.h_outflow
+  0 5.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260   # valve.port_b.p
+  0  100000                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260   # valve.port_b.h_outflow
+  0       0                       0                       1                
+  6   256   # valve.opening
+  0       1                       0                       0                
+  6   258   # boundary.nPorts
+  0 2.0000000000000000E+006       0                       0                
+  6   256   # boundary.medium.h
+  0     150                       0                  100000                
+  6   256   # boundary.medium.d
+  0     500                 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256   # boundary.medium.T
+  0       1                       0                       1                
+  6   256   # boundary.medium.X[1]
+  0       0                 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256   # boundary.medium.u
+  0 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256   # boundary.medium.R
+  0 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256   # boundary.medium.MM
+  0       1                       0                       2                
+  6   322   # boundary.medium.state.phase
+  0 2.0000000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256   # boundary.medium.state.h
+  0       0                       0                       0                
+  6   257   # boundary.medium.preferredMediumStates
+  0       1                       0                       0                
+  6   257   # boundary.medium.standardOrderComponents
+  0       0                       0                       0                
+  6   256   # boundary.medium.T_degC
+  0       0                       0                       0                
+  6   256   # boundary.medium.p_bar
+  0     500                 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256   # boundary.medium.sat.Tsat
+  0 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].molarMass
+  0 6.4709600000000000E+002       1                   10000                
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].criticalTemperature
+  0 2.2064000000000000E+007       0                 1.0000000000000000E+008
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].criticalPressure
+  0 5.5948037267080745E-005 9.9999999999999995E-007 1.0000000000000000E+006
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].criticalMolarVolume
+  0 3.4399999999999997E-001       0                       0                
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].acentricFactor
+  0 2.7316000000000003E+002       1                   10000                
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].triplePointTemperature
+  0 6.1165700000000004E+002       0                 1.0000000000000000E+008
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].triplePointPressure
+  0 2.7314999999999998E+002       1                   10000                
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].meltingPoint
+  0 3.7312400000000002E+002       1                   10000                
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].normalBoilingPoint
+  0 1.8000000000000000E+000       0                       2                
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].dipoleMoment
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasIdealGasHeatCapacity
+  0       1                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasCriticalData
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasDipoleMoment
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasFundamentalEquation
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasLiquidHeatCapacity
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasSolidHeatCapacity
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasAccurateViscosityData
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasAccurateConductivityData
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasVapourPressureCurve
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasAcentricFactor
+  0       0                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].HCRIT0
+  0       0                 -1.0000000000000000E+007 1.0000000000000000E+007
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].SCRIT0
+  0       0                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].deltah
+  0       0                 -1.0000000000000000E+007 1.0000000000000000E+007
+  6  1280   # _GlobalScope.Modelica.Media.Water.waterConstants[1].deltas
+  0 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].molarMass
+  0 6.4709600000000000E+002       1                   10000                
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalTemperature
+  0 2.2064000000000000E+007       0                 1.0000000000000000E+008
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalPressure
+  0 5.5948037267080745E-005 9.9999999999999995E-007 1.0000000000000000E+006
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalMolarVolume
+  0 3.4399999999999997E-001       0                       0                
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].acentricFactor
+  0 2.7316000000000003E+002       1                   10000                
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].triplePointTemperature
+  0 6.1165700000000004E+002       0                 1.0000000000000000E+008
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].triplePointPressure
+  0 2.7314999999999998E+002       1                   10000                
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].meltingPoint
+  0 3.7312400000000002E+002       1                   10000                
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].normalBoilingPoint
+  0 1.8000000000000000E+000       0                       2                
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].dipoleMoment
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasIdealGasHeatCapacity
+  0       1                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasCriticalData
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasDipoleMoment
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasFundamentalEquation
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasLiquidHeatCapacity
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasSolidHeatCapacity
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAccurateViscosityData
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAccurateConductivityData
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasVapourPressureCurve
+  0       0                       0                       0                
+  6  1281   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAcentricFactor
+  0       0                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].HCRIT0
+  0       0                 -1.0000000000000000E+007 1.0000000000000000E+007
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].SCRIT0
+  0       0                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltah
+  0       0                 -1.0000000000000000E+007 1.0000000000000000E+007
+  6  1280   # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltas
+  0 2.0000000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260   # boundary.ports[1].h_outflow
+  0       3                       1                       3                
+  6  1282   # boundary.flowDirection
+  0       1                       0                       0                
+  6   769   # boundary.use_p_in
+  0       0                       0                       0                
+  6   769   # boundary.use_h_in
+  0       0                       0                       0                
+  6   769   # boundary.use_X_in
+  0       0                       0                       0                
+  6   769   # boundary.use_C_in
+  0  100000                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256   # boundary.p
+  0 2.0000000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256   # boundary.h
+  0       1                       0                       1                
+  6   256   # boundary.X[1]
+  0 2.0000000000000000E+006       0                       0                
+  6  1280   # boundary.h_in_internal
+  0       1                       0                       0                
+  6  1280   # boundary.X_in_internal[1]
+  0       1                       0                       0                
+  6   258   # boundary1.nPorts
+  0 5.0000000000000000E+005       0                 1.0000000000000000E+100
+  6   256   # boundary1.medium.p
+  0     150                       0                  100000                
+  6   256   # boundary1.medium.d
+  0     500                 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256   # boundary1.medium.T
+  0       1                       0                       1                
+  6   256   # boundary1.medium.X[1]
+  0       0                 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256   # boundary1.medium.u
+  0 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256   # boundary1.medium.R
+  0 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256   # boundary1.medium.MM
+  0       1                       0                       2                
+  6   258   # boundary1.medium.state.phase
+  0 5.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256   # boundary1.medium.state.p
+  0       0                       0                       0                
+  6   257   # boundary1.medium.preferredMediumStates
+  0       1                       0                       0                
+  6   257   # boundary1.medium.standardOrderComponents
+  0       0                       0                       0                
+  6   256   # boundary1.medium.T_degC
+  0       5                       0                       0                
+  6   256   # boundary1.medium.p_bar
+  0 5.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256   # boundary1.medium.sat.psat
+  0 4.2498624387684492E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256   # boundary1.medium.sat.Tsat
+  0 5.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260   # boundary1.ports[1].p
+  0       3                       1                       3                
+  6  1282   # boundary1.flowDirection
+  0       0                       0                       0                
+  6   769   # boundary1.use_p_in
+  0       0                       0                       0                
+  6   769   # boundary1.use_h_in
+  0       0                       0                       0                
+  6   769   # boundary1.use_X_in
+  0       0                       0                       0                
+  6   769   # boundary1.use_C_in
+  0 5.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256   # boundary1.p
+  0  100000                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256   # boundary1.h
+  0       1                       0                       1                
+  6   256   # boundary1.X[1]
+  0 5.0000000000000000E+005       0                       0                
+  6  1280   # boundary1.p_in_internal
+  0       1                       0                       0                
+  6  1280   # boundary1.X_in_internal[1]
+ -1      -1                       0                       0                
+  1   280   # ramp.height
+ -1       8                       0                 1.0000000000000000E+100
+  1   280   # ramp.duration
+ -1       1                       0                       0                
+  1   280   # ramp.offset
+ -1      11                       0                       0                
+  1   280   # ramp.startTime
+ -1      -8                       0                       0                
+  1   280   # ramp1.height
+ -1       8                       0                 1.0000000000000000E+100
+  1   280   # ramp1.duration
+ -1       9                       0                       0                
+  1   280   # ramp1.offset
+ -1       1                       0                       0                
+  1   280   # ramp1.startTime
+  0       0                       0                       0                
+  6   256   # ramp1.y
+  0       0                       0                       0                
+  4   256   # CPUtime
+  0       0                       0                       0                
+  4   256   # EventCounter
 
 
 # Matrix with 6 columns defining the initial value calculation
@@ -237,46 +530,130 @@ double initialValue(41,6)
 #   nominal value (and maybe minimum and maximum values given in 
 #   column 3 and 4). If these values are zero, scale(i)=1 is used).
 #
-char initialDescription(41,55)
+char initialDescription(125,114)
 dummy
 derdummy
-Mass flow of the fuel [kg/s]
-Heating Value of the fuel at temperature T [J/kg|MJ/kg]
-Density of the fuel [kg/m3|g/cm3]
-Temperature of the fuel [K|degC]
-Mass fraction of Moisture [1]
-Mass fraction of Combustibles [1]
-Mass fraction of Ash [1]
-Use ultimate analasis data [:#(type=Boolean)]
-Mass fraction of Carbon (C) [1]
-Mass fraction of Hydrogen (H) [1]
-Mass fraction of Oxygen (O) [1]
-Mass fraction of Nitrogen (N) [1]
-Mass fraction of Sulfur (S) [1]
-Use spicies analasis data [:#(type=Boolean)]
-Mass fraction of CO2 [1]
-[1]
-[1]
-[1]
-[1]
-[1]
-[1]
-[1]
-[1]
-[1]
-[kg/s]
-[J/kg]
-[kg/m3|g/cm3]
-[K|degC]
-[1]
-[1]
-[1]
-[1]
-[1]
-[1]
-[1]
-[1]
-[1]
+Nominal pressure difference at full opening [Pa|bar]
+Nominal flow rate at full opening [kg/s]
+[m.s]
+[Pa|bar]
+
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Thermodynamic pressure in the connection point [Pa|bar]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+1 is full open, 0 is fully closed  [1]
+Number of ports [:#(type=Integer)]
+Specific enthalpy of medium [J/kg]
+Density of medium [kg/m3|g/cm3]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Specific enthalpy [J/kg]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation temperature [K|degC]
+Molar mass [kg/mol]
+Critical temperature [K|degC]
+Critical pressure [Pa|bar]
+Critical molar Volume [m3/mol]
+Pitzer acentric factor
+Triple point temperature [K|degC]
+Triple point pressure [Pa|bar]
+Melting point at 101325 Pa [K|degC]
+Normal boiling point (at 101325 Pa) [K|degC]
+Dipole moment of molecule in Debye (1 debye = 3.33564e10-30 C.m) [debye]
+True if ideal gas heat capacity is available [:#(type=Boolean)]
+True if critical data are known [:#(type=Boolean)]
+True if a dipole moment known [:#(type=Boolean)]
+True if a fundamental equation [:#(type=Boolean)]
+True if liquid heat capacity is available [:#(type=Boolean)]
+True if solid heat capacity is available [:#(type=Boolean)]
+True if accurate data for a viscosity function is available [:#(type=Boolean)]
+True if accurate data for thermal conductivity is available [:#(type=Boolean)]
+True if vapour pressure data, e.g., Antoine coefficents are known [:#(type=Boolean)]
+True if Pitzer accentric factor is known [:#(type=Boolean)]
+Critical specific enthalpy of the fundamental equation [J/kg]
+Critical specific entropy of the fundamental equation [J/(kg.K)]
+Difference between specific enthalpy model (h_m) and f.eq. (h_f) (h_m - h_f) [J/kg]
+Difference between specific enthalpy model (s_m) and f.eq. (s_f) (s_m - s_f) [J/(kg.K)]
+Molar mass [kg/mol]
+Critical temperature [K|degC]
+Critical pressure [Pa|bar]
+Critical molar Volume [m3/mol]
+Pitzer acentric factor
+Triple point temperature [K|degC]
+Triple point pressure [Pa|bar]
+Melting point at 101325 Pa [K|degC]
+Normal boiling point (at 101325 Pa) [K|degC]
+Dipole moment of molecule in Debye (1 debye = 3.33564e10-30 C.m) [debye]
+True if ideal gas heat capacity is available [:#(type=Boolean)]
+True if critical data are known [:#(type=Boolean)]
+True if a dipole moment known [:#(type=Boolean)]
+True if a fundamental equation [:#(type=Boolean)]
+True if liquid heat capacity is available [:#(type=Boolean)]
+True if solid heat capacity is available [:#(type=Boolean)]
+True if accurate data for a viscosity function is available [:#(type=Boolean)]
+True if accurate data for thermal conductivity is available [:#(type=Boolean)]
+True if vapour pressure data, e.g., Antoine coefficents are known [:#(type=Boolean)]
+True if Pitzer accentric factor is known [:#(type=Boolean)]
+Critical specific enthalpy of the fundamental equation [J/kg]
+Critical specific entropy of the fundamental equation [J/(kg.K)]
+Difference between specific enthalpy model (h_m) and f.eq. (h_f) (h_m - h_f) [J/kg]
+Difference between specific enthalpy model (s_m) and f.eq. (s_f) (s_m - s_f) [J/(kg.K)]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Allowed flow direction [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Get the pressure from the input connector [:#(type=Boolean)]
+Get the specific enthalpy from the input connector [:#(type=Boolean)]
+Get the composition from the input connector [:#(type=Boolean)]
+Get the trace substances from the input connector [:#(type=Boolean)]
+Fixed value of pressure [Pa|bar]
+Fixed value of specific enthalpy [J/kg]
+Fixed value of composition [kg/kg]
+Needed to connect to conditional connector [J/kg]
+Needed to connect to conditional connector [1]
+Number of ports [:#(type=Integer)]
+Absolute pressure of medium [Pa|bar]
+Density of medium [kg/m3|g/cm3]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Pressure [Pa|bar]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation pressure [Pa|bar]
+Saturation temperature [K|degC]
+Thermodynamic pressure in the connection point [Pa|bar]
+Allowed flow direction [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Get the pressure from the input connector [:#(type=Boolean)]
+Get the specific enthalpy from the input connector [:#(type=Boolean)]
+Get the composition from the input connector [:#(type=Boolean)]
+Get the trace substances from the input connector [:#(type=Boolean)]
+Fixed value of pressure [Pa|bar]
+Fixed value of specific enthalpy [J/kg]
+Fixed value of composition [kg/kg]
+Needed to connect to conditional connector [Pa]
+Needed to connect to conditional connector [1]
+Height of ramps [1]
+Duration of ramp (= 0.0 gives a Step) [s]
+Offset of output signal [1]
+Output = offset for time < startTime [s]
+Height of ramps [bar]
+Duration of ramp (= 0.0 gives a Step) [s]
+Offset of output signal [bar]
+Output = offset for time < startTime [s]
+Connector of Real output signal [bar]
 
 
 

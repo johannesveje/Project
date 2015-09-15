@@ -4,14 +4,20 @@ model Evaporation
 
   package FlueGas = Grate.Fuels.FlueGas;
   package FuelData = Grate.Fuels.FuelData;
-  constant Real water_index=Grate.Utilities.findInVector("Water", FlueGas.substanceNames);
+  constant Integer water_index=Grate.Utilities.findInVector("Water", FlueGas.substanceNames);
 
   parameter SI.MassFraction Xi_fuelInput[:];
   parameter SI.MassFraction Xi_fuelOutput[:];
 
-  SI.MassFlowRate dmw_dt=der(mw)
+  parameter SI.Length width=1 "Width of the bed";
+  parameter SI.Length length=1 "Length of the evaporation section of the bed";
+  parameter SI.Velocity v=0.1 "Velocity of the fuel in the bed";
+
+  parameter Real A0(final unit="1/(s.K)") = 100;
+
+  SI.MassFlow dmw_dt=der(mw)
     "Change of water content in fuel as function of time";
-  SI.Mass mw(start=(fuelInput.m_flow*fuelInput.prox[FuelData.Index.Proximate.Moisture]));
+  SI.Mass mw(start=0);
 
   FlueGas.BaseProperties flueGas;
 
@@ -49,9 +55,17 @@ equation
 
   // Medium properties
   flueGas.p = flueGas_in.p;
-  // Mass balance
-  // dmw_dt =
-  //   0 = fuelInput.m_flow + flueGas_in.m_flow + flueGas_out.m_flow + fuelOutput.m_flow;
+  flueGas.p = flueGas_out.p;
+
+  // Source term water
+  dmw_dt = -A0*(T - T_sat)*(fuelInput.m_flow*fuelInput.prox[FuelData.Index.Proximate.Moisture]
+     - fuelOutput.m_flow);
+
+  // Mass balances
+  0 = fuelInput.m_flow + flueGas_in.m_flow + flueGas_out.m_flow + fuelOutput.m_flow;
+  0 = flueGas_in.m_flow*flueGas_in.Xi_outflow[water_index] + flueGas_out.m_flow
+    *flueGas_out.Xi_outflow[water_index];
+
   // Energy balance
   0 = fuelInput.m_flow*fuelInput.heating_value + flueGas_in.m_flow*actualStream(
     flueGas_in.h_outflow) + flueGas_out.m_flow*actualStream(flueGas_out.h_outflow)

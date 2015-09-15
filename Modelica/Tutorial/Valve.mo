@@ -8,6 +8,7 @@ model Valve
   parameter SI.MassFlowRate m_flow_nominal "Nominal flow rate at full opening";
   final parameter Real k=m_flow_nominal/dp_nominal;
   SI.PressureDifference dp;
+  Real nXi=Medium.nXi;
   Modelica.Fluid.Interfaces.FluidPort_a port_a(redeclare package Medium =
         Medium) annotation (Placement(transformation(extent={{-60,-10},{-40,10}}),
         iconTransformation(extent={{-60,-10},{-40,10}})));
