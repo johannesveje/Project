@@ -1,0 +1,220 @@
+p > 611.657
+The following error was detected at time: 0
+IF97 medium function tsat called with too low pressure
+p = -31102.1 Pa <= 611.657 Pa (triple point pressure)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.dewcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.rhovl_p(
+simpleBackPressurePlant.bleedHP12.medium.p, 
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.dewcurve_p(simpleBackPressurePlant.bleedHP12.medium.p))
+Non-linear solver will attempt to handle this problem.
+
+p > 611.657
+The following error was detected at time: 0
+IF97 medium function tsat called with too low pressure
+p = -6047.87 Pa <= 611.657 Pa (triple point pressure)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.sl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ps
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ps
+Modelica.Media.Water.IF97_Utilities.isentropicEnthalpy_props(
+simpleBackPressurePlant.mixer_DH1.medium.p, 
+Modelica.Media.Water.IF97_Utilities.s_props_ph(
+simpleBackPressurePlant.LP.splitter.medium.p, 
+simpleBackPressurePlant.LP.splitter.medium.h, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.LP.splitter.medium.p, simpleBackPressurePlant.LP.splitter.medium.h, 0, ...
+Non-linear solver will attempt to handle this problem.
+
+p > 611.657
+The following error was detected at time: 0
+IF97 medium function tsat called with too low pressure
+p = -150131 Pa <= 611.657 Pa (triple point pressure)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.s_props_ph(
+simpleBackPressurePlant.HP.splitter.medium.p, 
+simpleBackPressurePlant.HP.splitter.medium.h, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.splitter.medium.p, simpleBackPressurePlant.HP.splitter.medium.h, 0, 0))
+Non-linear solver will attempt to handle this problem.
+
+p > 611.657
+The following error was detected at time: 0
+IF97 medium function tsat called with too low pressure
+p = -31102.1 Pa <= 611.657 Pa (triple point pressure)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.dewcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.rhovl_p(
+simpleBackPressurePlant.bleedHP12.medium.p, 
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.dewcurve_p(simpleBackPressurePlant.bleedHP12.medium.p))
+Non-linear solver will attempt to handle this problem.
+
+p > 611.657
+The following error was detected at time: 0
+IF97 medium function tsat called with too low pressure
+p = -6047.86 Pa <= 611.657 Pa (triple point pressure)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.sl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ps
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ps
+Modelica.Media.Water.IF97_Utilities.isentropicEnthalpy_props(
+simpleBackPressurePlant.mixer_DH1.medium.p, 
+Modelica.Media.Water.IF97_Utilities.s_props_ph(
+simpleBackPressurePlant.LP.splitter.medium.p, 
+simpleBackPressurePlant.LP.splitter.medium.h, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.LP.splitter.medium.p, simpleBackPressurePlant.LP.splitter.medium.h, 0, ...
+Non-linear solver will attempt to handle this problem.
+
+p > 611.657
+The following error was detected at time: 0
+IF97 medium function tsat called with too low pressure
+p = -150131 Pa <= 611.657 Pa (triple point pressure)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.s_props_ph(
+simpleBackPressurePlant.HP.splitter.medium.p, 
+simpleBackPressurePlant.HP.splitter.medium.h, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.splitter.medium.p, simpleBackPressurePlant.HP.splitter.medium.h, 0, 0))
+Non-linear solver will attempt to handle this problem.
+
+false
+The following error was detected at time: 0
+Error in region computation of IF97 steam tables(p = 153602, h = -1.05305e+006)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.s_props_ph(
+simpleBackPressurePlant.HP.splitter.medium.p, 
+simpleBackPressurePlant.HP.splitter.medium.h, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.splitter.medium.p, simpleBackPressurePlant.HP.splitter.medium.h, 0, 0))
+Non-linear solver will attempt to handle this problem.
+
+p > 611.657
+The following error was detected at time: 0
+IF97 medium function tsat called with too low pressure
+p = -614431 Pa <= 611.657 Pa (triple point pressure)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.s_props_ph(
+simpleBackPressurePlant.HP.splitter.medium.p, 
+simpleBackPressurePlant.HP.splitter.medium.h, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.splitter.medium.p, simpleBackPressurePlant.HP.splitter.medium.h, 0, 0))
+Non-linear solver will attempt to handle this problem.
+
+Model: REFA.Proces.UnitTest.BypassTest1
+Integration started at 0 using integration method:
+RK-method: radau IIa
+Local extrapolation
+FSAL
+Continuous extension
+
+p > 611.657
+The following error was detected at time: 91.50600160599952
+IF97 medium function tsat called with too low pressure
+p = -6.23665e+006 Pa <= 611.657 Pa (triple point pressure)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.port_a.p, simpleBackPressurePlant.splitBypass.medium.h, 0, 0)
+First evaluation failed for non-linear solver.
+
+p > 611.657
+The following error was detected at time: 91.50600160599952
+IF97 medium function tsat called with too low pressure
+p = -6.23665e+006 Pa <= 611.657 Pa (triple point pressure)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.port_a.p, simpleBackPressurePlant.splitBypass.medium.h, 0, 0)
+Non-linear solver will attempt to handle this problem.
+
+p > 611.657
+The following error was detected at time: 91.50600160599952
+IF97 medium function tsat called with too low pressure
+p = -6.23665e+006 Pa <= 611.657 Pa (triple point pressure)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.port_a.p, simpleBackPressurePlant.splitBypass.medium.h, 0, 0)
+Non-linear solver will attempt to handle this problem.
+
+ERROR: Failed to solve non-linear system using Newton solver.
+To get more information: Turn on Simulation/Setup/Debug/Nonlinear solver diagnostics/Details
+Solution to systems of equations not found at time = 91.506
+   Nonlinear system of equations number = 5
+   Failed to evaluate any residual. Try to give better start-values.
+   Iteration is not making good progress.
+   Accumulated number of residue       calc.: 7611
+   Accumulated number of symbolic Jacobian calc.: 2264
+   Last values of solution vector:
+simpleBackPressurePlant.HP.port_a.p = -6.23665E+006
+T <= 1073.15
+The following error was detected at time: 90.75300080299975
+IF97 medium function g2: the input temperature (= 48099.9 K) is higher than the limit of 1073.15 K
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.splitter.medium.p, simpleBackPressurePlant.HP.splitter.medium.h, simpleBackPressurePlant.HP.splitter.medium.state.phase, 0)
+T <= 1073.15
+The following error was detected at time: 90.37650040149988
+IF97 medium function g2: the input temperature (= 1256.13 K) is higher than the limit of 1073.15 K
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.splitter.medium.p, simpleBackPressurePlant.HP.splitter.medium.h, simpleBackPressurePlant.HP.splitter.medium.state.phase, 0)
+T <= 1073.15
+The following error was detected at time: 90.78304399030095
+IF97 medium function g2: the input temperature (= 5735.59 K) is higher than the limit of 1073.15 K
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.splitter.medium.p, simpleBackPressurePlant.HP.splitter.medium.h, simpleBackPressurePlant.HP.splitter.medium.state.phase, 0)
+T <= 1073.15
+The following error was detected at time: 90.10808139673064
+IF97 medium function g2: the input temperature (= 1833.23 K) is higher than the limit of 1073.15 K
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.splitter.medium.p, simpleBackPressurePlant.HP.splitter.medium.h, simpleBackPressurePlant.HP.splitter.medium.state.phase, 0)
+T <= 1073.15
+The following error was detected at time: 90.08379065712259
+IF97 medium function g2: the input temperature (= 77430.8 K) is higher than the limit of 1073.15 K
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(simpleBackPressurePlant.HP.splitter.medium.p, simpleBackPressurePlant.HP.splitter.medium.h, simpleBackPressurePlant.HP.splitter.medium.state.phase, 0)
+Integration terminated successfully at T = 120
+   CPU time for integration                  : 39.638 seconds
+   Number of result points                   : 524
+   Number of grid points                     : 500
+   Number of (successful) steps              : 3683
+   Number of rejected steps                  : 2251
+   Number of F-evaluations                   : 63072
+   Number of crossing function evaluations   : 11195
+   Number of Jacobian-evaluations            : 2717
+   Number of (model) time events             : 5
+   Number of state    events                 : 7
+   Number of step     events                 : 0

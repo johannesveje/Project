@@ -1,0 +1,8 @@
+openModel("C:\Projects\Modelica\Existing libraries\ClaRa\ClaRa\package.mo");
+
+Advanced.LogStartValuesForIterationVariables:=true;
+Advanced.AutoFormatting:=true;
+Advanced.OnlineParameterChanges:=true;
+Advanced.TransparentImageBackground:=true;
+Evaluate:=true;
+OutputCPUtime:=true;

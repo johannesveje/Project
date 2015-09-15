@@ -1,0 +1,3299 @@
+#1
+char Aclass(3,24)
+Adymosim
+1.4
+Modelica experiment file
+
+# Experiment parameters
+double experiment(7,1)
+     120                
+     240                
+       0                
+     500                
+ 9.9999999999999995E-007
+       0                
+      15                
+
+# Method parameters
+double method(27,1)
+       1                
+       1                
+       3                
+       1                
+       1                
+       0                
+       0                
+       0                
+       0                
+       0                
+       0                
+       0                
+       0                
+     100                
+       0                
+       0                
+       0                
+       0                
+       0                
+ 2.0000000000000000E-014
+ 1.0000000000000000E-010
+      20                
+ 9.9999999999999995E-007
+       1                
+       1                
+       1                
+    2473                
+
+# Input/output settings
+int settings(13,1)
+ 0
+ 1
+ 1
+ 1
+ 1
+ 0
+ 1
+ 1
+ 0
+ 0
+ 1
+ 0
+ 1
+
+# initialName
+char initialName(807,94)
+system.p_ambient
+system.T_ambient
+system.g
+system.allowFlowReversal
+system.energyDynamics
+system.massDynamics
+system.substanceDynamics
+system.traceDynamics
+system.momentumDynamics
+system.m_flow_start
+system.p_start
+system.T_start
+system.use_eps_Re
+system.m_flow_nominal
+system.eps_m_flow
+system.dp_small
+system.m_flow_small
+CoolantInlet.nPorts
+CoolantInlet.medium.p
+CoolantInlet.medium.d
+CoolantInlet.medium.T
+CoolantInlet.medium.X[1]
+CoolantInlet.medium.u
+CoolantInlet.medium.R
+CoolantInlet.medium.MM
+CoolantInlet.medium.state.phase
+CoolantInlet.medium.state.p
+CoolantInlet.medium.preferredMediumStates
+CoolantInlet.medium.standardOrderComponents
+CoolantInlet.medium.T_degC
+CoolantInlet.medium.p_bar
+CoolantInlet.medium.sat.psat
+CoolantInlet.medium.sat.Tsat
+_GlobalScope.Modelica.Media.Water.waterConstants[1].molarMass
+_GlobalScope.Modelica.Media.Water.waterConstants[1].criticalTemperature
+_GlobalScope.Modelica.Media.Water.waterConstants[1].criticalPressure
+_GlobalScope.Modelica.Media.Water.waterConstants[1].criticalMolarVolume
+_GlobalScope.Modelica.Media.Water.waterConstants[1].acentricFactor
+_GlobalScope.Modelica.Media.Water.waterConstants[1].triplePointTemperature
+_GlobalScope.Modelica.Media.Water.waterConstants[1].triplePointPressure
+_GlobalScope.Modelica.Media.Water.waterConstants[1].meltingPoint
+_GlobalScope.Modelica.Media.Water.waterConstants[1].normalBoilingPoint
+_GlobalScope.Modelica.Media.Water.waterConstants[1].dipoleMoment
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasIdealGasHeatCapacity
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasCriticalData
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasDipoleMoment
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasFundamentalEquation
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasLiquidHeatCapacity
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasSolidHeatCapacity
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasAccurateViscosityData
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasAccurateConductivityData
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasVapourPressureCurve
+_GlobalScope.Modelica.Media.Water.waterConstants[1].hasAcentricFactor
+_GlobalScope.Modelica.Media.Water.waterConstants[1].HCRIT0
+_GlobalScope.Modelica.Media.Water.waterConstants[1].SCRIT0
+_GlobalScope.Modelica.Media.Water.waterConstants[1].deltah
+_GlobalScope.Modelica.Media.Water.waterConstants[1].deltas
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].molarMass
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalTemperature
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalPressure
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalMolarVolume
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].acentricFactor
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].triplePointTemperature
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].triplePointPressure
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].meltingPoint
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].normalBoilingPoint
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].dipoleMoment
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasIdealGasHeatCapacity
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasCriticalData
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasDipoleMoment
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasFundamentalEquation
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasLiquidHeatCapacity
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasSolidHeatCapacity
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAccurateViscosityData
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAccurateConductivityData
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasVapourPressureCurve
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAcentricFactor
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].HCRIT0
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].SCRIT0
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltah
+_GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltas
+CoolantInlet.ports[1].m_flow
+CoolantInlet.ports[1].p
+CoolantInlet.ports[1].h_outflow
+CoolantInlet.flowDirection
+CoolantInlet.use_m_flow_in
+CoolantInlet.use_T_in
+CoolantInlet.use_X_in
+CoolantInlet.use_C_in
+CoolantInlet.m_flow
+CoolantInlet.T
+CoolantInlet.X[1]
+CoolantInlet.m_flow_in_internal
+CoolantInlet.T_in_internal
+CoolantInlet.X_in_internal[1]
+CoolantOutlet.nPorts
+CoolantOutlet.medium.p
+CoolantOutlet.medium.d
+CoolantOutlet.medium.T
+CoolantOutlet.medium.X[1]
+CoolantOutlet.medium.u
+CoolantOutlet.medium.R
+CoolantOutlet.medium.MM
+CoolantOutlet.medium.state.phase
+CoolantOutlet.medium.state.p
+CoolantOutlet.medium.preferredMediumStates
+CoolantOutlet.medium.standardOrderComponents
+CoolantOutlet.medium.T_degC
+CoolantOutlet.medium.p_bar
+CoolantOutlet.medium.sat.psat
+CoolantOutlet.medium.sat.Tsat
+CoolantOutlet.ports[1].m_flow
+CoolantOutlet.ports[1].p
+CoolantOutlet.ports[1].h_outflow
+CoolantOutlet.flowDirection
+CoolantOutlet.use_p_in
+CoolantOutlet.use_T_in
+CoolantOutlet.use_X_in
+CoolantOutlet.use_C_in
+CoolantOutlet.p
+CoolantOutlet.T
+CoolantOutlet.X[1]
+CoolantOutlet.p_in_internal
+CoolantOutlet.T_in_internal
+CoolantOutlet.X_in_internal[1]
+temperature.height
+temperature.duration
+temperature.offset
+temperature.startTime
+temperature.y
+toKelvin.Kelvin
+T_fwd.allowFlowReversal
+T_fwd.port_a.m_flow
+T_fwd.port_a.p
+T_fwd.port_b.m_flow
+T_fwd.port_b.p
+T_fwd.port_a_exposesState
+T_fwd.port_b_exposesState
+T_fwd.showDesignFlowDirection
+T_fwd.m_flow_nominal
+T_fwd.m_flow_small
+T_fwd.T
+bypassDegree.height
+bypassDegree.duration
+bypassDegree.offset
+bypassDegree.startTime
+bypassDegree.y
+simpleBackPressurePlant.Q
+simpleBackPressurePlant.P
+simpleBackPressurePlant.DH1.mediumCold.p
+simpleBackPressurePlant.DH1.mediumCold.h
+simpleBackPressurePlant.DH1.mediumCold.der(h)
+simpleBackPressurePlant.DH1.mediumCold.T
+simpleBackPressurePlant.DH1.mediumCold.X[1]
+simpleBackPressurePlant.DH1.mediumCold.u
+simpleBackPressurePlant.DH1.mediumCold.der(u)
+simpleBackPressurePlant.DH1.mediumCold.R
+simpleBackPressurePlant.DH1.mediumCold.MM
+simpleBackPressurePlant.DH1.mediumCold.state.phase
+simpleBackPressurePlant.DH1.mediumCold.state.p
+simpleBackPressurePlant.DH1.mediumCold.preferredMediumStates
+simpleBackPressurePlant.DH1.mediumCold.standardOrderComponents
+simpleBackPressurePlant.DH1.mediumCold.T_degC
+simpleBackPressurePlant.DH1.mediumCold.p_bar
+simpleBackPressurePlant.DH1.mediumCold.sat.psat
+simpleBackPressurePlant.DH1.mediumCold.sat.Tsat
+simpleBackPressurePlant.DH1.T_sat_nominal
+simpleBackPressurePlant.DH1.p_sat_nominal
+simpleBackPressurePlant.DH1.p_c_nominal
+simpleBackPressurePlant.DH1.m_flow_c_nominal
+simpleBackPressurePlant.DH1.K
+simpleBackPressurePlant.DH1.allowFlowReversal
+simpleBackPressurePlant.DH1.energyDynamics_cold
+simpleBackPressurePlant.DH1.V_cold
+simpleBackPressurePlant.DH1.p_cold_start
+simpleBackPressurePlant.DH1.use_T_cold_start
+simpleBackPressurePlant.DH1.T_cold_start
+simpleBackPressurePlant.DH1.h_cold_start
+simpleBackPressurePlant.DH1.m_flow_c_start
+simpleBackPressurePlant.DH1.Q
+simpleBackPressurePlant.DH1.h_sat
+simpleBackPressurePlant.DH1.p_sat
+simpleBackPressurePlant.DH1.m_cold
+simpleBackPressurePlant.DH1.der(m_cold)
+simpleBackPressurePlant.DH1.dp_hot_nominal
+simpleBackPressurePlant.DH1.Uc
+simpleBackPressurePlant.DH1.der(Uc)
+simpleBackPressurePlant.DH1.dp_hot
+simpleBackPressurePlant.DH1.port_a.m_flow
+simpleBackPressurePlant.DH1.port_a.p
+simpleBackPressurePlant.DH1.port_b.m_flow
+simpleBackPressurePlant.DH1.port_b.p
+simpleBackPressurePlant.DH1.port_c.m_flow
+simpleBackPressurePlant.DH2.mediumCold.p
+simpleBackPressurePlant.DH2.mediumCold.h
+simpleBackPressurePlant.DH2.mediumCold.der(h)
+simpleBackPressurePlant.DH2.mediumCold.T
+simpleBackPressurePlant.DH2.mediumCold.X[1]
+simpleBackPressurePlant.DH2.mediumCold.u
+simpleBackPressurePlant.DH2.mediumCold.der(u)
+simpleBackPressurePlant.DH2.mediumCold.R
+simpleBackPressurePlant.DH2.mediumCold.MM
+simpleBackPressurePlant.DH2.mediumCold.state.phase
+simpleBackPressurePlant.DH2.mediumCold.state.p
+simpleBackPressurePlant.DH2.mediumCold.preferredMediumStates
+simpleBackPressurePlant.DH2.mediumCold.standardOrderComponents
+simpleBackPressurePlant.DH2.mediumCold.T_degC
+simpleBackPressurePlant.DH2.mediumCold.p_bar
+simpleBackPressurePlant.DH2.mediumCold.sat.psat
+simpleBackPressurePlant.DH2.mediumCold.sat.Tsat
+simpleBackPressurePlant.DH2.T_sat_nominal
+simpleBackPressurePlant.DH2.p_sat_nominal
+simpleBackPressurePlant.DH2.p_c_nominal
+simpleBackPressurePlant.DH2.m_flow_c_nominal
+simpleBackPressurePlant.DH2.K
+simpleBackPressurePlant.DH2.allowFlowReversal
+simpleBackPressurePlant.DH2.energyDynamics_cold
+simpleBackPressurePlant.DH2.V_cold
+simpleBackPressurePlant.DH2.p_cold_start
+simpleBackPressurePlant.DH2.use_T_cold_start
+simpleBackPressurePlant.DH2.T_cold_start
+simpleBackPressurePlant.DH2.h_cold_start
+simpleBackPressurePlant.DH2.m_flow_c_start
+simpleBackPressurePlant.DH2.Q
+simpleBackPressurePlant.DH2.h_sat
+simpleBackPressurePlant.DH2.p_sat
+simpleBackPressurePlant.DH2.m_cold
+simpleBackPressurePlant.DH2.der(m_cold)
+simpleBackPressurePlant.DH2.dp_hot_nominal
+simpleBackPressurePlant.DH2.Uc
+simpleBackPressurePlant.DH2.der(Uc)
+simpleBackPressurePlant.DH2.dp_hot
+simpleBackPressurePlant.DH2.port_a.m_flow
+simpleBackPressurePlant.DH2.port_a.p
+simpleBackPressurePlant.DH2.port_b.m_flow
+simpleBackPressurePlant.DH2.port_b.p
+simpleBackPressurePlant.DH2.port_c.m_flow
+simpleBackPressurePlant.T_DH1.allowFlowReversal
+simpleBackPressurePlant.T_DH1.port_a.m_flow
+simpleBackPressurePlant.T_DH1.port_a.p
+simpleBackPressurePlant.T_DH1.port_b.m_flow
+simpleBackPressurePlant.T_DH1.port_b.p
+simpleBackPressurePlant.T_DH1.port_a_exposesState
+simpleBackPressurePlant.T_DH1.port_b_exposesState
+simpleBackPressurePlant.T_DH1.showDesignFlowDirection
+simpleBackPressurePlant.T_DH1.m_flow_nominal
+simpleBackPressurePlant.T_DH1.m_flow_small
+simpleBackPressurePlant.T_DH1.T
+simpleBackPressurePlant.LPH2.nPorts
+simpleBackPressurePlant.LPH2.medium.h
+simpleBackPressurePlant.LPH2.medium.d
+simpleBackPressurePlant.LPH2.medium.T
+simpleBackPressurePlant.LPH2.medium.X[1]
+simpleBackPressurePlant.LPH2.medium.u
+simpleBackPressurePlant.LPH2.medium.R
+simpleBackPressurePlant.LPH2.medium.MM
+simpleBackPressurePlant.LPH2.medium.state.phase
+simpleBackPressurePlant.LPH2.medium.state.h
+simpleBackPressurePlant.LPH2.medium.preferredMediumStates
+simpleBackPressurePlant.LPH2.medium.standardOrderComponents
+simpleBackPressurePlant.LPH2.medium.T_degC
+simpleBackPressurePlant.LPH2.medium.p_bar
+simpleBackPressurePlant.LPH2.medium.sat.Tsat
+simpleBackPressurePlant.LPH2.ports[1].m_flow
+simpleBackPressurePlant.LPH2.ports[1].p
+simpleBackPressurePlant.LPH2.ports[1].h_outflow
+simpleBackPressurePlant.LPH2.flowDirection
+simpleBackPressurePlant.LPH2.use_m_flow_in
+simpleBackPressurePlant.LPH2.use_h_in
+simpleBackPressurePlant.LPH2.use_X_in
+simpleBackPressurePlant.LPH2.use_C_in
+simpleBackPressurePlant.LPH2.m_flow
+simpleBackPressurePlant.LPH2.h
+simpleBackPressurePlant.LPH2.X[1]
+simpleBackPressurePlant.LPH2.m_flow_in_internal
+simpleBackPressurePlant.LPH2.h_in_internal
+simpleBackPressurePlant.LPH2.X_in_internal[1]
+simpleBackPressurePlant.bleedHP12.port_1.m_flow
+simpleBackPressurePlant.bleedHP12.port_2.m_flow
+simpleBackPressurePlant.bleedHP12.port_3.m_flow
+simpleBackPressurePlant.bleedHP12.portFlowDirection_1
+simpleBackPressurePlant.bleedHP12.portFlowDirection_2
+simpleBackPressurePlant.bleedHP12.portFlowDirection_3
+simpleBackPressurePlant.bleedHP12.fluidVolume
+simpleBackPressurePlant.bleedHP12.energyDynamics
+simpleBackPressurePlant.bleedHP12.massDynamics
+simpleBackPressurePlant.bleedHP12.substanceDynamics
+simpleBackPressurePlant.bleedHP12.traceDynamics
+simpleBackPressurePlant.bleedHP12.p_start
+simpleBackPressurePlant.bleedHP12.use_T_start
+simpleBackPressurePlant.bleedHP12.T_start
+simpleBackPressurePlant.bleedHP12.h_start
+simpleBackPressurePlant.bleedHP12.X_start[1]
+simpleBackPressurePlant.bleedHP12.medium.p
+simpleBackPressurePlant.bleedHP12.medium.der(p)
+simpleBackPressurePlant.bleedHP12.medium.h
+simpleBackPressurePlant.bleedHP12.medium.der(h)
+simpleBackPressurePlant.bleedHP12.medium.d
+simpleBackPressurePlant.bleedHP12.medium.der(d)
+simpleBackPressurePlant.bleedHP12.medium.T
+simpleBackPressurePlant.bleedHP12.medium.X[1]
+simpleBackPressurePlant.bleedHP12.medium.u
+simpleBackPressurePlant.bleedHP12.medium.der(u)
+simpleBackPressurePlant.bleedHP12.medium.R
+simpleBackPressurePlant.bleedHP12.medium.MM
+simpleBackPressurePlant.bleedHP12.medium.state.phase
+simpleBackPressurePlant.bleedHP12.medium.preferredMediumStates
+simpleBackPressurePlant.bleedHP12.medium.standardOrderComponents
+simpleBackPressurePlant.bleedHP12.medium.T_degC
+simpleBackPressurePlant.bleedHP12.medium.p_bar
+simpleBackPressurePlant.bleedHP12.medium.sat.Tsat
+simpleBackPressurePlant.bleedHP12.U
+simpleBackPressurePlant.bleedHP12.der(U)
+simpleBackPressurePlant.bleedHP12.m
+simpleBackPressurePlant.bleedHP12.der(m)
+simpleBackPressurePlant.bleedHP12.Qb_flow
+simpleBackPressurePlant.bleedHP12.Wb_flow
+simpleBackPressurePlant.bleedHP12.initialize_p
+simpleBackPressurePlant.bleedHP12.V
+simpleBackPressurePlant.mixer_DH1.port_1.m_flow
+simpleBackPressurePlant.mixer_DH1.port_3.m_flow
+simpleBackPressurePlant.mixer_DH1.portFlowDirection_1
+simpleBackPressurePlant.mixer_DH1.portFlowDirection_2
+simpleBackPressurePlant.mixer_DH1.portFlowDirection_3
+simpleBackPressurePlant.mixer_DH1.fluidVolume
+simpleBackPressurePlant.mixer_DH1.energyDynamics
+simpleBackPressurePlant.mixer_DH1.massDynamics
+simpleBackPressurePlant.mixer_DH1.substanceDynamics
+simpleBackPressurePlant.mixer_DH1.traceDynamics
+simpleBackPressurePlant.mixer_DH1.p_start
+simpleBackPressurePlant.mixer_DH1.use_T_start
+simpleBackPressurePlant.mixer_DH1.T_start
+simpleBackPressurePlant.mixer_DH1.h_start
+simpleBackPressurePlant.mixer_DH1.X_start[1]
+simpleBackPressurePlant.mixer_DH1.medium.p
+simpleBackPressurePlant.mixer_DH1.medium.der(p)
+simpleBackPressurePlant.mixer_DH1.medium.h
+simpleBackPressurePlant.mixer_DH1.medium.der(h)
+simpleBackPressurePlant.mixer_DH1.medium.d
+simpleBackPressurePlant.mixer_DH1.medium.der(d)
+simpleBackPressurePlant.mixer_DH1.medium.T
+simpleBackPressurePlant.mixer_DH1.medium.X[1]
+simpleBackPressurePlant.mixer_DH1.medium.u
+simpleBackPressurePlant.mixer_DH1.medium.der(u)
+simpleBackPressurePlant.mixer_DH1.medium.R
+simpleBackPressurePlant.mixer_DH1.medium.MM
+simpleBackPressurePlant.mixer_DH1.medium.state.phase
+simpleBackPressurePlant.mixer_DH1.medium.preferredMediumStates
+simpleBackPressurePlant.mixer_DH1.medium.standardOrderComponents
+simpleBackPressurePlant.mixer_DH1.medium.T_degC
+simpleBackPressurePlant.mixer_DH1.medium.p_bar
+simpleBackPressurePlant.mixer_DH1.medium.sat.Tsat
+simpleBackPressurePlant.mixer_DH1.U
+simpleBackPressurePlant.mixer_DH1.der(U)
+simpleBackPressurePlant.mixer_DH1.m
+simpleBackPressurePlant.mixer_DH1.der(m)
+simpleBackPressurePlant.mixer_DH1.Qb_flow
+simpleBackPressurePlant.mixer_DH1.Wb_flow
+simpleBackPressurePlant.mixer_DH1.initialize_p
+simpleBackPressurePlant.mixer_DH1.V
+simpleBackPressurePlant.ve_DH2.allowFlowReversal
+simpleBackPressurePlant.ve_DH2.port_a.m_flow
+simpleBackPressurePlant.ve_DH2.port_b.m_flow
+simpleBackPressurePlant.ve_DH2.port_a_exposesState
+simpleBackPressurePlant.ve_DH2.port_b_exposesState
+simpleBackPressurePlant.ve_DH2.showDesignFlowDirection
+simpleBackPressurePlant.ve_DH2.medium.p
+simpleBackPressurePlant.ve_DH2.medium.der(p)
+simpleBackPressurePlant.ve_DH2.medium.h
+simpleBackPressurePlant.ve_DH2.medium.der(h)
+simpleBackPressurePlant.ve_DH2.medium.X[1]
+simpleBackPressurePlant.ve_DH2.medium.u
+simpleBackPressurePlant.ve_DH2.medium.der(u)
+simpleBackPressurePlant.ve_DH2.medium.R
+simpleBackPressurePlant.ve_DH2.medium.MM
+simpleBackPressurePlant.ve_DH2.medium.state.phase
+simpleBackPressurePlant.ve_DH2.medium.preferredMediumStates
+simpleBackPressurePlant.ve_DH2.medium.standardOrderComponents
+simpleBackPressurePlant.ve_DH2.medium.T_degC
+simpleBackPressurePlant.ve_DH2.medium.p_bar
+simpleBackPressurePlant.ve_DH2.medium.sat.Tsat
+simpleBackPressurePlant.ve_DH2.V
+simpleBackPressurePlant.ve_DH2.use_HeatTransfer
+simpleBackPressurePlant.ve_DH2.use_UA_exponent
+simpleBackPressurePlant.ve_DH2.UA_nominal
+simpleBackPressurePlant.ve_DH2.m_flow_nominal
+simpleBackPressurePlant.ve_DH2.UA_exponent
+simpleBackPressurePlant.ve_DH2.energyDynamics
+simpleBackPressurePlant.ve_DH2.massDynamics
+simpleBackPressurePlant.ve_DH2.p_start
+simpleBackPressurePlant.ve_DH2.use_T_start
+simpleBackPressurePlant.ve_DH2.T_start
+simpleBackPressurePlant.ve_DH2.h_start
+simpleBackPressurePlant.ve_DH2.X_start[1]
+simpleBackPressurePlant.ve_DH2.use_homotopy
+simpleBackPressurePlant.ve_DH2.U
+simpleBackPressurePlant.ve_DH2.der(U)
+simpleBackPressurePlant.ve_DH2.T
+simpleBackPressurePlant.ve_DH2.m
+simpleBackPressurePlant.ve_DH2.der(m)
+simpleBackPressurePlant.ve_DH2.UA
+simpleBackPressurePlant.ve_DH2.heatPort.Q_flow
+simpleBackPressurePlant.ve_DH2.initialize_p
+simpleBackPressurePlant.ve_DH2.h_a
+simpleBackPressurePlant.FWT.nPorts
+simpleBackPressurePlant.FWT.medium.p
+simpleBackPressurePlant.FWT.medium.h
+simpleBackPressurePlant.FWT.medium.d
+simpleBackPressurePlant.FWT.medium.T
+simpleBackPressurePlant.FWT.medium.X[1]
+simpleBackPressurePlant.FWT.medium.u
+simpleBackPressurePlant.FWT.medium.R
+simpleBackPressurePlant.FWT.medium.MM
+simpleBackPressurePlant.FWT.medium.state.phase
+simpleBackPressurePlant.FWT.medium.state.h
+simpleBackPressurePlant.FWT.medium.state.p
+simpleBackPressurePlant.FWT.medium.preferredMediumStates
+simpleBackPressurePlant.FWT.medium.standardOrderComponents
+simpleBackPressurePlant.FWT.medium.T_degC
+simpleBackPressurePlant.FWT.medium.p_bar
+simpleBackPressurePlant.FWT.medium.sat.psat
+simpleBackPressurePlant.FWT.medium.sat.Tsat
+simpleBackPressurePlant.FWT.ports[1].m_flow
+simpleBackPressurePlant.FWT.ports[1].p
+simpleBackPressurePlant.FWT.ports[1].h_outflow
+simpleBackPressurePlant.FWT.flowDirection
+simpleBackPressurePlant.FWT.use_p_in
+simpleBackPressurePlant.FWT.use_h_in
+simpleBackPressurePlant.FWT.use_X_in
+simpleBackPressurePlant.FWT.use_C_in
+simpleBackPressurePlant.FWT.p
+simpleBackPressurePlant.FWT.h
+simpleBackPressurePlant.FWT.X[1]
+simpleBackPressurePlant.FWT.p_in_internal
+simpleBackPressurePlant.FWT.h_in_internal
+simpleBackPressurePlant.FWT.X_in_internal[1]
+simpleBackPressurePlant.overStreamClap.p_a_nominal
+simpleBackPressurePlant.overStreamClap.p_b_nominal
+simpleBackPressurePlant.overStreamClap.m_flow_nominal
+simpleBackPressurePlant.overStreamClap.K
+simpleBackPressurePlant.FWT_valve.p_a_nominal
+simpleBackPressurePlant.FWT_valve.p_b_nominal
+simpleBackPressurePlant.FWT_valve.m_flow_nominal
+simpleBackPressurePlant.FWT_valve.K
+simpleBackPressurePlant.FWT_valve.port_a.h_outflow
+simpleBackPressurePlant.FWT_valve.port_b.p
+simpleBackPressurePlant.bypassValve.allowFlowReversal
+simpleBackPressurePlant.bypassValve.port_a_exposesState
+simpleBackPressurePlant.bypassValve.port_b_exposesState
+simpleBackPressurePlant.bypassValve.showDesignFlowDirection
+simpleBackPressurePlant.bypassValve.dp_start
+simpleBackPressurePlant.bypassValve.m_flow_start
+simpleBackPressurePlant.bypassValve.m_flow_small
+simpleBackPressurePlant.bypassValve.show_T
+simpleBackPressurePlant.bypassValve.show_V_flow
+simpleBackPressurePlant.bypassValve.dp
+simpleBackPressurePlant.bypassValve.V_flow
+simpleBackPressurePlant.bypassValve.port_a_T
+simpleBackPressurePlant.bypassValve.port_b_T
+simpleBackPressurePlant.bypassValve.state_a.phase
+simpleBackPressurePlant.bypassValve.state_a.d
+simpleBackPressurePlant.bypassValve.state_a.T
+simpleBackPressurePlant.bypassValve.state_b.phase
+simpleBackPressurePlant.bypassValve.state_b.d
+simpleBackPressurePlant.bypassValve.state_b.T
+simpleBackPressurePlant.bypassValve.dp_nominal
+simpleBackPressurePlant.bypassValve.m_flow_nominal
+simpleBackPressurePlant.bypassValve.k
+simpleBackPressurePlant.splitBypass.port_1.m_flow
+simpleBackPressurePlant.splitBypass.port_3.m_flow
+simpleBackPressurePlant.splitBypass.portFlowDirection_1
+simpleBackPressurePlant.splitBypass.portFlowDirection_2
+simpleBackPressurePlant.splitBypass.portFlowDirection_3
+simpleBackPressurePlant.splitBypass.fluidVolume
+simpleBackPressurePlant.splitBypass.energyDynamics
+simpleBackPressurePlant.splitBypass.massDynamics
+simpleBackPressurePlant.splitBypass.substanceDynamics
+simpleBackPressurePlant.splitBypass.traceDynamics
+simpleBackPressurePlant.splitBypass.p_start
+simpleBackPressurePlant.splitBypass.use_T_start
+simpleBackPressurePlant.splitBypass.T_start
+simpleBackPressurePlant.splitBypass.h_start
+simpleBackPressurePlant.splitBypass.X_start[1]
+simpleBackPressurePlant.splitBypass.medium.p
+simpleBackPressurePlant.splitBypass.medium.der(p)
+simpleBackPressurePlant.splitBypass.medium.h
+simpleBackPressurePlant.splitBypass.medium.der(h)
+simpleBackPressurePlant.splitBypass.medium.d
+simpleBackPressurePlant.splitBypass.medium.der(d)
+simpleBackPressurePlant.splitBypass.medium.T
+simpleBackPressurePlant.splitBypass.medium.X[1]
+simpleBackPressurePlant.splitBypass.medium.u
+simpleBackPressurePlant.splitBypass.medium.der(u)
+simpleBackPressurePlant.splitBypass.medium.R
+simpleBackPressurePlant.splitBypass.medium.MM
+simpleBackPressurePlant.splitBypass.medium.state.phase
+simpleBackPressurePlant.splitBypass.medium.preferredMediumStates
+simpleBackPressurePlant.splitBypass.medium.standardOrderComponents
+simpleBackPressurePlant.splitBypass.medium.T_degC
+simpleBackPressurePlant.splitBypass.medium.p_bar
+simpleBackPressurePlant.splitBypass.medium.sat.Tsat
+simpleBackPressurePlant.splitBypass.U
+simpleBackPressurePlant.splitBypass.der(U)
+simpleBackPressurePlant.splitBypass.m
+simpleBackPressurePlant.splitBypass.der(m)
+simpleBackPressurePlant.splitBypass.Qb_flow
+simpleBackPressurePlant.splitBypass.Wb_flow
+simpleBackPressurePlant.splitBypass.initialize_p
+simpleBackPressurePlant.splitBypass.V
+simpleBackPressurePlant.generator.eta
+simpleBackPressurePlant.generator.omega
+simpleBackPressurePlant.generator.shaft.der(phi)
+simpleBackPressurePlant.generator.shaft.tau
+simpleBackPressurePlant.LP.V_bleed
+simpleBackPressurePlant.LP.K1
+simpleBackPressurePlant.LP.K2
+simpleBackPressurePlant.LP.m_flow_nominal1
+simpleBackPressurePlant.LP.m_flow_nominal2
+simpleBackPressurePlant.LP.p_a_nominal
+simpleBackPressurePlant.LP.p_b_nominal
+simpleBackPressurePlant.LP.p_c_nominal
+simpleBackPressurePlant.LP.h_a_nominal
+simpleBackPressurePlant.LP.h_c_nominal
+simpleBackPressurePlant.LP.allowFlowReversal
+simpleBackPressurePlant.LP.energyDynamics
+simpleBackPressurePlant.LP.massDynamics
+simpleBackPressurePlant.LP.p_a_start
+simpleBackPressurePlant.LP.use_T_a_start
+simpleBackPressurePlant.LP.T_a_start
+simpleBackPressurePlant.LP.h_a_start
+simpleBackPressurePlant.LP.W
+simpleBackPressurePlant.LP.flange_a.phi
+simpleBackPressurePlant.LP.flange_a.tau
+simpleBackPressurePlant.LP.flange_b.phi
+simpleBackPressurePlant.LP.port_c.h_outflow
+simpleBackPressurePlant.LP.stage1.state_a.phase
+simpleBackPressurePlant.LP.stage1.state_a.d
+simpleBackPressurePlant.LP.stage1.state_a.T
+simpleBackPressurePlant.LP.stage1.W
+simpleBackPressurePlant.LP.stage1.eta_is
+simpleBackPressurePlant.LP.stage1.h_b_is
+simpleBackPressurePlant.LP.stage1.tau
+simpleBackPressurePlant.LP.stage1.allowFlowReversal
+simpleBackPressurePlant.LP.stage1.flange_a.phi
+simpleBackPressurePlant.LP.stage1.flange_a.der(phi)
+simpleBackPressurePlant.LP.stage1.flange_a.tau
+simpleBackPressurePlant.LP.stage1.flange_b.phi
+simpleBackPressurePlant.LP.stage1.K
+simpleBackPressurePlant.LP.stage1.h_a_nominal
+simpleBackPressurePlant.LP.stage1.m_flow_nominal
+simpleBackPressurePlant.LP.stage1.p_a_nominal
+simpleBackPressurePlant.LP.stage1.p_b_nominal
+simpleBackPressurePlant.LP.stage2.state_a.phase
+simpleBackPressurePlant.LP.stage2.state_a.d
+simpleBackPressurePlant.LP.stage2.state_a.T
+simpleBackPressurePlant.LP.stage2.W
+simpleBackPressurePlant.LP.stage2.eta_is
+simpleBackPressurePlant.LP.stage2.h_b_is
+simpleBackPressurePlant.LP.stage2.tau
+simpleBackPressurePlant.LP.stage2.allowFlowReversal
+simpleBackPressurePlant.LP.stage2.flange_a.phi
+simpleBackPressurePlant.LP.stage2.flange_a.der(phi)
+simpleBackPressurePlant.LP.stage2.flange_b.phi
+simpleBackPressurePlant.LP.stage2.K
+simpleBackPressurePlant.LP.stage2.h_a_nominal
+simpleBackPressurePlant.LP.stage2.m_flow_nominal
+simpleBackPressurePlant.LP.stage2.p_a_nominal
+simpleBackPressurePlant.LP.stage2.p_b_nominal
+simpleBackPressurePlant.LP.splitter.portFlowDirection_1
+simpleBackPressurePlant.LP.splitter.portFlowDirection_2
+simpleBackPressurePlant.LP.splitter.portFlowDirection_3
+simpleBackPressurePlant.LP.splitter.fluidVolume
+simpleBackPressurePlant.LP.splitter.energyDynamics
+simpleBackPressurePlant.LP.splitter.massDynamics
+simpleBackPressurePlant.LP.splitter.substanceDynamics
+simpleBackPressurePlant.LP.splitter.traceDynamics
+simpleBackPressurePlant.LP.splitter.p_start
+simpleBackPressurePlant.LP.splitter.use_T_start
+simpleBackPressurePlant.LP.splitter.T_start
+simpleBackPressurePlant.LP.splitter.h_start
+simpleBackPressurePlant.LP.splitter.X_start[1]
+simpleBackPressurePlant.LP.splitter.medium.p
+simpleBackPressurePlant.LP.splitter.medium.der(p)
+simpleBackPressurePlant.LP.splitter.medium.h
+simpleBackPressurePlant.LP.splitter.medium.der(h)
+simpleBackPressurePlant.LP.splitter.medium.d
+simpleBackPressurePlant.LP.splitter.medium.der(d)
+simpleBackPressurePlant.LP.splitter.medium.T
+simpleBackPressurePlant.LP.splitter.medium.X[1]
+simpleBackPressurePlant.LP.splitter.medium.u
+simpleBackPressurePlant.LP.splitter.medium.der(u)
+simpleBackPressurePlant.LP.splitter.medium.R
+simpleBackPressurePlant.LP.splitter.medium.MM
+simpleBackPressurePlant.LP.splitter.medium.state.phase
+simpleBackPressurePlant.LP.splitter.medium.preferredMediumStates
+simpleBackPressurePlant.LP.splitter.medium.standardOrderComponents
+simpleBackPressurePlant.LP.splitter.medium.T_degC
+simpleBackPressurePlant.LP.splitter.medium.p_bar
+simpleBackPressurePlant.LP.splitter.medium.sat.Tsat
+simpleBackPressurePlant.LP.splitter.U
+simpleBackPressurePlant.LP.splitter.der(U)
+simpleBackPressurePlant.LP.splitter.m
+simpleBackPressurePlant.LP.splitter.der(m)
+simpleBackPressurePlant.LP.splitter.Qb_flow
+simpleBackPressurePlant.LP.splitter.Wb_flow
+simpleBackPressurePlant.LP.splitter.initialize_p
+simpleBackPressurePlant.LP.splitter.V
+simpleBackPressurePlant.HP.V_bleed
+simpleBackPressurePlant.HP.K1
+simpleBackPressurePlant.HP.K2
+simpleBackPressurePlant.HP.m_flow_nominal1
+simpleBackPressurePlant.HP.m_flow_nominal2
+simpleBackPressurePlant.HP.p_a_nominal
+simpleBackPressurePlant.HP.p_b_nominal
+simpleBackPressurePlant.HP.p_c_nominal
+simpleBackPressurePlant.HP.h_a_nominal
+simpleBackPressurePlant.HP.h_c_nominal
+simpleBackPressurePlant.HP.allowFlowReversal
+simpleBackPressurePlant.HP.energyDynamics
+simpleBackPressurePlant.HP.massDynamics
+simpleBackPressurePlant.HP.p_c_start
+simpleBackPressurePlant.HP.use_T_c_start
+simpleBackPressurePlant.HP.T_c_start
+simpleBackPressurePlant.HP.h_c_start
+simpleBackPressurePlant.HP.W
+simpleBackPressurePlant.HP.port_a.p
+simpleBackPressurePlant.HP.port_a.h_outflow
+simpleBackPressurePlant.HP.port_b.h_outflow
+simpleBackPressurePlant.HP.flange_a.phi
+simpleBackPressurePlant.HP.flange_a.tau
+simpleBackPressurePlant.HP.flange_b.phi
+simpleBackPressurePlant.HP.stage1.state_a.phase
+simpleBackPressurePlant.HP.stage1.state_a.d
+simpleBackPressurePlant.HP.stage1.state_a.T
+simpleBackPressurePlant.HP.stage1.W
+simpleBackPressurePlant.HP.stage1.eta_is
+simpleBackPressurePlant.HP.stage1.h_b_is
+simpleBackPressurePlant.HP.stage1.tau
+simpleBackPressurePlant.HP.stage1.allowFlowReversal
+simpleBackPressurePlant.HP.stage1.flange_a.phi
+simpleBackPressurePlant.HP.stage1.flange_a.der(phi)
+simpleBackPressurePlant.HP.stage1.flange_a.tau
+simpleBackPressurePlant.HP.stage1.flange_b.phi
+simpleBackPressurePlant.HP.stage1.K
+simpleBackPressurePlant.HP.stage1.h_a_nominal
+simpleBackPressurePlant.HP.stage1.m_flow_nominal
+simpleBackPressurePlant.HP.stage1.p_a_nominal
+simpleBackPressurePlant.HP.stage1.p_b_nominal
+simpleBackPressurePlant.HP.stage2.state_a.phase
+simpleBackPressurePlant.HP.stage2.state_a.d
+simpleBackPressurePlant.HP.stage2.state_a.T
+simpleBackPressurePlant.HP.stage2.W
+simpleBackPressurePlant.HP.stage2.eta_is
+simpleBackPressurePlant.HP.stage2.h_b_is
+simpleBackPressurePlant.HP.stage2.tau
+simpleBackPressurePlant.HP.stage2.allowFlowReversal
+simpleBackPressurePlant.HP.stage2.flange_a.phi
+simpleBackPressurePlant.HP.stage2.flange_a.der(phi)
+simpleBackPressurePlant.HP.stage2.flange_b.phi
+simpleBackPressurePlant.HP.stage2.K
+simpleBackPressurePlant.HP.stage2.h_a_nominal
+simpleBackPressurePlant.HP.stage2.m_flow_nominal
+simpleBackPressurePlant.HP.stage2.p_a_nominal
+simpleBackPressurePlant.HP.stage2.p_b_nominal
+simpleBackPressurePlant.HP.splitter.portFlowDirection_1
+simpleBackPressurePlant.HP.splitter.portFlowDirection_2
+simpleBackPressurePlant.HP.splitter.portFlowDirection_3
+simpleBackPressurePlant.HP.splitter.fluidVolume
+simpleBackPressurePlant.HP.splitter.energyDynamics
+simpleBackPressurePlant.HP.splitter.massDynamics
+simpleBackPressurePlant.HP.splitter.substanceDynamics
+simpleBackPressurePlant.HP.splitter.traceDynamics
+simpleBackPressurePlant.HP.splitter.p_start
+simpleBackPressurePlant.HP.splitter.use_T_start
+simpleBackPressurePlant.HP.splitter.T_start
+simpleBackPressurePlant.HP.splitter.h_start
+simpleBackPressurePlant.HP.splitter.X_start[1]
+simpleBackPressurePlant.HP.splitter.medium.p
+simpleBackPressurePlant.HP.splitter.medium.der(p)
+simpleBackPressurePlant.HP.splitter.medium.h
+simpleBackPressurePlant.HP.splitter.medium.der(h)
+simpleBackPressurePlant.HP.splitter.medium.d
+simpleBackPressurePlant.HP.splitter.medium.der(d)
+simpleBackPressurePlant.HP.splitter.medium.T
+simpleBackPressurePlant.HP.splitter.medium.X[1]
+simpleBackPressurePlant.HP.splitter.medium.u
+simpleBackPressurePlant.HP.splitter.medium.der(u)
+simpleBackPressurePlant.HP.splitter.medium.R
+simpleBackPressurePlant.HP.splitter.medium.MM
+simpleBackPressurePlant.HP.splitter.medium.state.phase
+simpleBackPressurePlant.HP.splitter.medium.preferredMediumStates
+simpleBackPressurePlant.HP.splitter.medium.standardOrderComponents
+simpleBackPressurePlant.HP.splitter.medium.T_degC
+simpleBackPressurePlant.HP.splitter.medium.p_bar
+simpleBackPressurePlant.HP.splitter.medium.sat.Tsat
+simpleBackPressurePlant.HP.splitter.U
+simpleBackPressurePlant.HP.splitter.der(U)
+simpleBackPressurePlant.HP.splitter.m
+simpleBackPressurePlant.HP.splitter.der(m)
+simpleBackPressurePlant.HP.splitter.Qb_flow
+simpleBackPressurePlant.HP.splitter.Wb_flow
+simpleBackPressurePlant.HP.splitter.initialize_p
+simpleBackPressurePlant.HP.splitter.V
+simpleBackPressurePlant.T_liveSteam.allowFlowReversal
+simpleBackPressurePlant.T_liveSteam.port_a.m_flow
+simpleBackPressurePlant.T_liveSteam.port_b.m_flow
+simpleBackPressurePlant.T_liveSteam.port_b.h_outflow
+simpleBackPressurePlant.T_liveSteam.port_a_exposesState
+simpleBackPressurePlant.T_liveSteam.port_b_exposesState
+simpleBackPressurePlant.T_liveSteam.showDesignFlowDirection
+simpleBackPressurePlant.T_liveSteam.m_flow_nominal
+simpleBackPressurePlant.T_liveSteam.m_flow_small
+simpleBackPressurePlant.T_liveSteam.T
+simpleBackPressurePlant.liveSteam.nPorts
+simpleBackPressurePlant.liveSteam.medium.h
+simpleBackPressurePlant.liveSteam.medium.d
+simpleBackPressurePlant.liveSteam.medium.T
+simpleBackPressurePlant.liveSteam.medium.X[1]
+simpleBackPressurePlant.liveSteam.medium.u
+simpleBackPressurePlant.liveSteam.medium.R
+simpleBackPressurePlant.liveSteam.medium.MM
+simpleBackPressurePlant.liveSteam.medium.state.phase
+simpleBackPressurePlant.liveSteam.medium.state.h
+simpleBackPressurePlant.liveSteam.medium.preferredMediumStates
+simpleBackPressurePlant.liveSteam.medium.standardOrderComponents
+simpleBackPressurePlant.liveSteam.medium.T_degC
+simpleBackPressurePlant.liveSteam.medium.p_bar
+simpleBackPressurePlant.liveSteam.medium.sat.Tsat
+simpleBackPressurePlant.liveSteam.ports[1].m_flow
+simpleBackPressurePlant.liveSteam.ports[1].p
+simpleBackPressurePlant.liveSteam.ports[1].h_outflow
+simpleBackPressurePlant.liveSteam.flowDirection
+simpleBackPressurePlant.liveSteam.use_m_flow_in
+simpleBackPressurePlant.liveSteam.use_h_in
+simpleBackPressurePlant.liveSteam.use_X_in
+simpleBackPressurePlant.liveSteam.use_C_in
+simpleBackPressurePlant.liveSteam.m_flow
+simpleBackPressurePlant.liveSteam.h
+simpleBackPressurePlant.liveSteam.X[1]
+simpleBackPressurePlant.liveSteam.m_flow_in
+simpleBackPressurePlant.liveSteam.m_flow_in_internal
+simpleBackPressurePlant.liveSteam.h_in_internal
+simpleBackPressurePlant.liveSteam.X_in_internal[1]
+simpleBackPressurePlant.dh_return.m_flow
+simpleBackPressurePlant.dh_return.p
+simpleBackPressurePlant.dh_forward.m_flow
+simpleBackPressurePlant.dh_forward.p
+simpleBackPressurePlant.u_load
+simpleBackPressurePlant.turbineValve.allowFlowReversal
+simpleBackPressurePlant.turbineValve.port_a_exposesState
+simpleBackPressurePlant.turbineValve.port_b_exposesState
+simpleBackPressurePlant.turbineValve.showDesignFlowDirection
+simpleBackPressurePlant.turbineValve.dp_start
+simpleBackPressurePlant.turbineValve.m_flow_start
+simpleBackPressurePlant.turbineValve.m_flow_small
+simpleBackPressurePlant.turbineValve.show_T
+simpleBackPressurePlant.turbineValve.show_V_flow
+simpleBackPressurePlant.turbineValve.dp
+simpleBackPressurePlant.turbineValve.V_flow
+simpleBackPressurePlant.turbineValve.port_a_T
+simpleBackPressurePlant.turbineValve.port_b_T
+simpleBackPressurePlant.turbineValve.state_a.phase
+simpleBackPressurePlant.turbineValve.state_a.d
+simpleBackPressurePlant.turbineValve.state_a.T
+simpleBackPressurePlant.turbineValve.state_b.phase
+simpleBackPressurePlant.turbineValve.state_b.d
+simpleBackPressurePlant.turbineValve.state_b.T
+simpleBackPressurePlant.turbineValve.dp_nominal
+simpleBackPressurePlant.turbineValve.m_flow_nominal
+simpleBackPressurePlant.turbineValve.k
+simpleBackPressurePlant.turbineValve.opening_min
+simpleBackPressurePlant.u_TAV
+simpleBackPressurePlant.deaerator.sat.Tsat
+simpleBackPressurePlant.deaerator.Vt
+simpleBackPressurePlant.deaerator.p_start
+simpleBackPressurePlant.deaerator.Vl_start
+simpleBackPressurePlant.deaerator.hv
+simpleBackPressurePlant.deaerator.der(hv)
+simpleBackPressurePlant.deaerator.hl
+simpleBackPressurePlant.deaerator.der(hl)
+simpleBackPressurePlant.deaerator.rho_v
+simpleBackPressurePlant.deaerator.der(rho_v)
+simpleBackPressurePlant.deaerator.rho_l
+simpleBackPressurePlant.deaerator.der(rho_l)
+simpleBackPressurePlant.deaerator.U
+simpleBackPressurePlant.deaerator.der(U)
+simpleBackPressurePlant.deaerator.m
+simpleBackPressurePlant.deaerator.der(m)
+simpleBackPressurePlant.deaerator.mv
+simpleBackPressurePlant.deaerator.der(mv)
+simpleBackPressurePlant.deaerator.ml
+simpleBackPressurePlant.deaerator.der(ml)
+simpleBackPressurePlant.deaerator.Vv
+simpleBackPressurePlant.deaerator.Vl
+simpleBackPressurePlant.deaerator.der(Vl)
+simpleBackPressurePlant.deaerator.mc
+simpleBackPressurePlant.deaerator.condensate.m_flow
+simpleBackPressurePlant.deaerator.VlVt_ratio
+load.height
+load.duration
+load.offset
+load.startTime
+load.y
+closeTAV.startTime
+closeTAV.startValue
+CPUtime
+EventCounter
+
+# initialValue
+double initialValue(807,6)
+ -2 1.0132500000000000E+005       0                 1.0000000000000000E+100
+  6   256 # system.p_ambient
+ -2 2.9314999999999998E+002       0                 1.0000000000000000E+100
+  6   256 # system.T_ambient
+ -2 9.8066499999999994E+000       0                       0                
+  6   256 # system.g
+ -2       0                       0                       0                
+  6   257 # system.allowFlowReversal
+ -2       3                       1                       4                
+  6   258 # system.energyDynamics
+ -2       3                       1                       4                
+  6   258 # system.massDynamics
+ -2       3                       1                       4                
+  6   258 # system.substanceDynamics
+ -2       3                       1                       4                
+  6   258 # system.traceDynamics
+ -2       4                       1                       4                
+  6   258 # system.momentumDynamics
+ -2       0                       0                       0                
+  6   256 # system.m_flow_start
+ -2 1.0132500000000000E+005       0                 1.0000000000000000E+100
+  6   256 # system.p_start
+ -2 2.9314999999999998E+002       0                 1.0000000000000000E+100
+  6   256 # system.T_start
+ -2       0                       0                       0                
+  6   257 # system.use_eps_Re
+ -2       1                       0                       0                
+  6   256 # system.m_flow_nominal
+ -2 1.0000000000000000E-004       0                 1.0000000000000000E+100
+  6   256 # system.eps_m_flow
+ -2       1                       0                 1.0000000000000000E+100
+  6   256 # system.dp_small
+ -2 1.0000000000000000E-002       0                 1.0000000000000000E+100
+  6   256 # system.m_flow_small
+ -2       1                       0                       0                
+  6   258 # CoolantInlet.nPorts
+ -2 6.0000000000000000E+005       0                 1.0000000000000000E+100
+  6   256 # CoolantInlet.medium.p
+ -2 9.8906261645882012E+002       0                  100000                
+  6   256 # CoolantInlet.medium.d
+ -2 3.2136019548932529E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # CoolantInlet.medium.T
+ -2       1                       0                       1                
+  6   256 # CoolantInlet.medium.X[1]
+ -2 2.0171558161934352E+005 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # CoolantInlet.medium.u
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # CoolantInlet.medium.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # CoolantInlet.medium.MM
+ -2       1                       0                       2                
+  6   258 # CoolantInlet.medium.state.phase
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # CoolantInlet.medium.state.p
+ -2       0                       0                       0                
+  6   257 # CoolantInlet.medium.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # CoolantInlet.medium.standardOrderComponents
+ -2 4.8210195489325315E+001       0                       0                
+  6   256 # CoolantInlet.medium.T_degC
+ -2 6.0000000000000009E+000       0                       0                
+  6   256 # CoolantInlet.medium.p_bar
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # CoolantInlet.medium.sat.psat
+ -2 4.3198242395448477E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # CoolantInlet.medium.sat.Tsat
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].molarMass
+ -2 6.4709600000000000E+002       1                   10000                
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].criticalTemperature
+ -2 2.2064000000000000E+007       0                 1.0000000000000000E+008
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].criticalPressure
+ -2 5.5948037267080745E-005 9.9999999999999995E-007 1.0000000000000000E+006
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].criticalMolarVolume
+ -2 3.4399999999999997E-001       0                       0                
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].acentricFactor
+ -2 2.7316000000000003E+002       1                   10000                
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].triplePointTemperature
+ -2 6.1165700000000004E+002       0                 1.0000000000000000E+008
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].triplePointPressure
+ -2 2.7314999999999998E+002       1                   10000                
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].meltingPoint
+ -2 3.7312400000000002E+002       1                   10000                
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].normalBoilingPoint
+ -2 1.8000000000000000E+000       0                       2                
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].dipoleMoment
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasIdealGasHeatCapacity
+ -2       1                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasCriticalData
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasDipoleMoment
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasFundamentalEquation
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasLiquidHeatCapacity
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasSolidHeatCapacity
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasAccurateViscosityData
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasAccurateConductivityData
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasVapourPressureCurve
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.waterConstants[1].hasAcentricFactor
+ -2       0                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].HCRIT0
+ -2       0                 -1.0000000000000000E+007 1.0000000000000000E+007
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].SCRIT0
+ -2       0                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].deltah
+ -2       0                 -1.0000000000000000E+007 1.0000000000000000E+007
+  6  1280 # _GlobalScope.Modelica.Media.Water.waterConstants[1].deltas
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].molarMass
+ -2 6.4709600000000000E+002       1                   10000                
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalTemperature
+ -2 2.2064000000000000E+007       0                 1.0000000000000000E+008
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalPressure
+ -2 5.5948037267080745E-005 9.9999999999999995E-007 1.0000000000000000E+006
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].criticalMolarVolume
+ -2 3.4399999999999997E-001       0                       0                
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].acentricFactor
+ -2 2.7316000000000003E+002       1                   10000                
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].triplePointTemperature
+ -2 6.1165700000000004E+002       0                 1.0000000000000000E+008
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].triplePointPressure
+ -2 2.7314999999999998E+002       1                   10000                
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].meltingPoint
+ -2 3.7312400000000002E+002       1                   10000                
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].normalBoilingPoint
+ -2 1.8000000000000000E+000       0                       2                
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].dipoleMoment
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasIdealGasHeatCapacity
+ -2       1                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasCriticalData
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasDipoleMoment
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasFundamentalEquation
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasLiquidHeatCapacity
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasSolidHeatCapacity
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAccurateViscosityData
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAccurateConductivityData
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasVapourPressureCurve
+ -2       0                       0                       0                
+  6  1281 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].hasAcentricFactor
+ -2       0                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].HCRIT0
+ -2       0                 -1.0000000000000000E+007 1.0000000000000000E+007
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].SCRIT0
+ -2       0                 -1.0000000000000000E+010 1.0000000000000000E+010
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltah
+ -2       0                 -1.0000000000000000E+007 1.0000000000000000E+007
+  6  1280 # _GlobalScope.Modelica.Media.Water.WaterIF97_base.fluidConstants[1].deltas
+ -2 -1.1967000000000000E+002 -9.9999999999999995E+059 9.9999999999999995E+059
+  6   388 # CoolantInlet.ports[1].m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # CoolantInlet.ports[1].p
+ -2 2.0232221661900432E+005 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260 # CoolantInlet.ports[1].h_outflow
+ -2       3                       1                       3                
+  6  1282 # CoolantInlet.flowDirection
+ -2       0                       0                       0                
+  6   769 # CoolantInlet.use_m_flow_in
+ -2       0                       0                       0                
+  6   769 # CoolantInlet.use_T_in
+ -2       0                       0                       0                
+  6   769 # CoolantInlet.use_X_in
+ -2       0                       0                       0                
+  6   769 # CoolantInlet.use_C_in
+ -2 1.1967000000000000E+002 -100000                  100000                
+  6   256 # CoolantInlet.m_flow
+ -2 3.2135000000000002E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # CoolantInlet.T
+ -2       1                       0                       1                
+  6   256 # CoolantInlet.X[1]
+ -2 1.1967000000000000E+002       0                       0                
+  6  1280 # CoolantInlet.m_flow_in_internal
+ -2 3.2135000000000002E+002       0                       0                
+  6  1280 # CoolantInlet.T_in_internal
+ -2       1                       0                       0                
+  6  1280 # CoolantInlet.X_in_internal[1]
+ -2       1                       0                       0                
+  6  1282 # CoolantOutlet.nPorts
+ -2 6.0000000000000000E+005       0                 1.0000000000000000E+100
+  6  1280 # CoolantOutlet.medium.p
+ -2 9.7799858475515077E+002       0                  100000                
+  6  1280 # CoolantOutlet.medium.d
+ -2 3.4315012505251048E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6  1280 # CoolantOutlet.medium.T
+ -2       1                       0                       1                
+  6  1280 # CoolantOutlet.medium.X[1]
+ -2 2.9286956288095663E+005 -1.0000000000000000E+008 1.0000000000000000E+008
+  6  1280 # CoolantOutlet.medium.u
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6  1280 # CoolantOutlet.medium.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6  1280 # CoolantOutlet.medium.MM
+ -2       1                       0                       2                
+  6  1282 # CoolantOutlet.medium.state.phase
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6  1280 # CoolantOutlet.medium.state.p
+ -2       0                       0                       0                
+  6  1281 # CoolantOutlet.medium.preferredMediumStates
+ -2       1                       0                       0                
+  6  1281 # CoolantOutlet.medium.standardOrderComponents
+ -2 7.0000125052510498E+001       0                       0                
+  6  1280 # CoolantOutlet.medium.T_degC
+ -2 6.0000000000000009E+000       0                       0                
+  6  1280 # CoolantOutlet.medium.p_bar
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6  1280 # CoolantOutlet.medium.sat.psat
+ -2 4.3198242395448477E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6  1280 # CoolantOutlet.medium.sat.Tsat
+ -2 1.1967000000000000E+002 -9.9999999999999995E+059 9.9999999999999995E+059
+  6  1412 # CoolantOutlet.ports[1].m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6  1284 # CoolantOutlet.ports[1].p
+ -2 2.9348306070125278E+005 -1.0000000000000000E+010 1.0000000000000000E+010
+  6  1284 # CoolantOutlet.ports[1].h_outflow
+ -2       3                       1                       3                
+  6  1282 # CoolantOutlet.flowDirection
+ -2       0                       0                       0                
+  6   769 # CoolantOutlet.use_p_in
+ -2       0                       0                       0                
+  6   769 # CoolantOutlet.use_T_in
+ -2       0                       0                       0                
+  6   769 # CoolantOutlet.use_X_in
+ -2       0                       0                       0                
+  6   769 # CoolantOutlet.use_C_in
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6  1280 # CoolantOutlet.p
+ -2 3.4314999999999998E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6  1280 # CoolantOutlet.T
+ -2       1                       0                       1                
+  6  1280 # CoolantOutlet.X[1]
+ -2 6.0000000000000000E+005       0                       0                
+  6  1280 # CoolantOutlet.p_in_internal
+ -2 3.4314999999999998E+002       0                       0                
+  6  1280 # CoolantOutlet.T_in_internal
+ -2       1                       0                       0                
+  6  1280 # CoolantOutlet.X_in_internal[1]
+ -2     -10                       0                       0                
+  6   256 # temperature.height
+ -2      20                       0                 1.0000000000000000E+100
+  6   256 # temperature.duration
+ -2      40                       0                       0                
+  6   256 # temperature.offset
+ -2      40                       0                       0                
+  6   256 # temperature.startTime
+ -2      30                       0                       0                
+  6   256 # temperature.y
+ -2 3.0314999999999998E+002       0                       0                
+  6  1280 # toKelvin.Kelvin
+ -2       0                       0                       0                
+  6   257 # T_fwd.allowFlowReversal
+ -2 1.1967000000000000E+002       0                  100000                
+  6   388 # T_fwd.port_a.m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # T_fwd.port_a.p
+ -2 -1.1967000000000000E+002 -100000                       0                
+  6   388 # T_fwd.port_b.m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # T_fwd.port_b.p
+ -2       0                       0                       0                
+  6  1281 # T_fwd.port_a_exposesState
+ -2       0                       0                       0                
+  6  1281 # T_fwd.port_b_exposesState
+ -2       1                       0                       0                
+  6  1281 # T_fwd.showDesignFlowDirection
+ -2       1                 -100000                  100000                
+  6   256 # T_fwd.m_flow_nominal
+ -2 1.0000000000000000E-002       0                  100000                
+  6   256 # T_fwd.m_flow_small
+ -2 3.6729378084512962E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # T_fwd.T
+ -2       1                       0                       0                
+  6   256 # bypassDegree.height
+ -2      60                       0                 1.0000000000000000E+100
+  6   256 # bypassDegree.duration
+ -2       0                       0                       0                
+  6   256 # bypassDegree.offset
+ -2      20                       0                       0                
+  6   256 # bypassDegree.startTime
+ -2       1                       0                       1                
+  6   256 # bypassDegree.y
+ -2 2.3514711953879517E+007       0                       0                
+  6   256 # simpleBackPressurePlant.Q
+ -2 2.3195121742475021E+002       0                       0                
+  6   256 # simpleBackPressurePlant.P
+ -2 6.0000000000000000E+005       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.p
+ -2 3.9731315785402327E+005 -1.0000000000000000E+010 1.0000000000000000E+010
+  2   272 # simpleBackPressurePlant.DH1.mediumCold.h
+ -2 2.6041327349789350E+002       0                       0                
+  3   256 # simpleBackPressurePlant.DH1.mediumCold.der(h)
+ -2 3.6788874706279614E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.T
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.X[1]
+ -2 3.9668965631472500E+005 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.u
+ -2 2.6038542563732437E+002       0                       0                
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.der(u)
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.MM
+ -2       1                       0                       2                
+  6   354 # simpleBackPressurePlant.DH1.mediumCold.state.phase
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.state.p
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.DH1.mediumCold.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.DH1.mediumCold.standardOrderComponents
+ -2 9.4738747062796165E+001       0                       0                
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.T_degC
+ -2 6.0000000000000009E+000       0                       0                
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.p_bar
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.sat.psat
+ -2 4.3198242395448477E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.DH1.mediumCold.sat.Tsat
+ -2 3.4314999999999998E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.DH1.T_sat_nominal
+ -2 3.1200635696061850E+004 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH1.p_sat_nominal
+ -2   45400                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH1.p_c_nominal
+ -2 5.0739999999999998E+000       0                       0                
+  6   256 # simpleBackPressurePlant.DH1.m_flow_c_nominal
+ -2 5.5152852112495998E+002       0                       0                
+  6   256 # simpleBackPressurePlant.DH1.K
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.DH1.allowFlowReversal
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.DH1.energyDynamics_cold
+ -2       1                       0                       0                
+  6   256 # simpleBackPressurePlant.DH1.V_cold
+ -2 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH1.p_cold_start
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.DH1.use_T_cold_start
+ -2 3.4313270213327638E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.DH1.T_cold_start
+ -2 2.9300000000000000E+005 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.DH1.h_cold_start
+ -2 5.0739999999999998E+000       0                       0                
+  6   256 # simpleBackPressurePlant.DH1.m_flow_c_start
+ -2 2.3568086914075855E+007       0                       0                
+  6   256 # simpleBackPressurePlant.DH1.Q
+ -2 3.9691792833879945E+005 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.DH1.h_sat
+ -2 8.3798594000981277E+004 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH1.p_sat
+ -2 9.6230716715679171E+002       0                  100000                
+  6   256 # simpleBackPressurePlant.DH1.m_cold
+ -2 -4.2980159833827865E-002       0                       0                
+  6   256 # simpleBackPressurePlant.DH1.der(m_cold)
+ -2 1.4199364303938150E+004       0                       0                
+  6  1280 # simpleBackPressurePlant.DH1.dp_hot_nominal
+ -2 3.8173729940862435E+008       0                       0                
+  6  1280 # simpleBackPressurePlant.DH1.Uc
+ -2 2.3352097648113593E+005       0                       0                
+  6  1280 # simpleBackPressurePlant.DH1.der(Uc)
+ -2 3.8191994204304705E+004       0                       0                
+  6  1280 # simpleBackPressurePlant.DH1.dp_hot
+ -2 1.1967000000000000E+002       0                  100000                
+  6   388 # simpleBackPressurePlant.DH1.port_a.m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.DH1.port_a.p
+ -2 -1.1967000000000000E+002 -100000                       0                
+  6   388 # simpleBackPressurePlant.DH1.port_b.m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.DH1.port_b.p
+ -2 8.3215107756545201E+000       0                  100000                
+  6   388 # simpleBackPressurePlant.DH1.port_c.m_flow
+ -2 6.0000000000000000E+005       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.p
+ -2 3.9480963383256079E+005 -1.0000000000000000E+010 1.0000000000000000E+010
+  2   272 # simpleBackPressurePlant.DH2.mediumCold.h
+ -2 2.7424738713380475E+002       0                       0                
+  3   256 # simpleBackPressurePlant.DH2.mediumCold.der(h)
+ -2 3.6729378084512962E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.T
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.X[1]
+ -2 3.9418639944353065E+005 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.u
+ -2 2.7421819790135930E+002       0                       0                
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.der(u)
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.MM
+ -2       1                       0                       2                
+  6   354 # simpleBackPressurePlant.DH2.mediumCold.state.phase
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.state.p
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.DH2.mediumCold.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.DH2.mediumCold.standardOrderComponents
+ -2 9.4143780845129641E+001       0                       0                
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.T_degC
+ -2 6.0000000000000009E+000       0                       0                
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.p_bar
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.sat.psat
+ -2 4.3198242395448477E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.DH2.mediumCold.sat.Tsat
+ -2 3.5735000000000002E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.DH2.T_sat_nominal
+ -2 5.6076068642834216E+004 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH2.p_sat_nominal
+ -2   62200                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH2.p_c_nominal
+ -2 3.2460000000000000E+000       0                       0                
+  6   256 # simpleBackPressurePlant.DH2.m_flow_c_nominal
+ -2 5.8121027455050455E+002       0                       0                
+  6   256 # simpleBackPressurePlant.DH2.K
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.DH2.allowFlowReversal
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.DH2.energyDynamics_cold
+ -2       1                       0                       0                
+  6   256 # simpleBackPressurePlant.DH2.V_cold
+ -2 1.0132500000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH2.p_cold_start
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.DH2.use_T_cold_start
+ -2 3.5743921815814969E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.DH2.T_cold_start
+ -2 3.5300000000000000E+005 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.DH2.h_cold_start
+ -2 3.2460000000000000E+000       0                       0                
+  6   256 # simpleBackPressurePlant.DH2.m_flow_c_start
+ -2 -5.3374960196338063E+004       0                       0                
+  6   256 # simpleBackPressurePlant.DH2.Q
+ -2 3.9441175259638054E+005 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.DH2.h_sat
+ -2 8.1977192546957711E+004 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.DH2.p_sat
+ -2 9.6271966143222528E+002       0                  100000                
+  6   256 # simpleBackPressurePlant.DH2.m_cold
+ -2 -4.5089052324396382E-002       0                       0                
+  6   256 # simpleBackPressurePlant.DH2.der(m_cold)
+ -2 6.1239313571657840E+003       0                       0                
+  6  1280 # simpleBackPressurePlant.DH2.dp_hot_nominal
+ -2 3.7949099701346374E+008       0                       0                
+  6  1280 # simpleBackPressurePlant.DH2.Uc
+ -2 2.4622175945207680E+005       0                       0                
+  6  1280 # simpleBackPressurePlant.DH2.der(Uc)
+ -2 3.9927296283039439E+004       0                       0                
+  6  1280 # simpleBackPressurePlant.DH2.dp_hot
+ -2 1.1967000000000000E+002       0                  100000                
+  6   388 # simpleBackPressurePlant.DH2.port_a.m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.DH2.port_a.p
+ -2 -1.1967000000000000E+002 -100000                       0                
+  6   388 # simpleBackPressurePlant.DH2.port_b.m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.DH2.port_b.p
+ -2 8.2883543428011883E+000       0                  100000                
+  6   420 # simpleBackPressurePlant.DH2.port_c.m_flow
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.T_DH1.allowFlowReversal
+ -2 1.1967000000000000E+002       0                  100000                
+  6   388 # simpleBackPressurePlant.T_DH1.port_a.m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.T_DH1.port_a.p
+ -2 -1.1967000000000000E+002 -100000                       0                
+  6   388 # simpleBackPressurePlant.T_DH1.port_b.m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.T_DH1.port_b.p
+ -2       0                       0                       0                
+  6  1281 # simpleBackPressurePlant.T_DH1.port_a_exposesState
+ -2       0                       0                       0                
+  6  1281 # simpleBackPressurePlant.T_DH1.port_b_exposesState
+ -2       1                       0                       0                
+  6  1281 # simpleBackPressurePlant.T_DH1.showDesignFlowDirection
+ -2       1                 -100000                  100000                
+  6   256 # simpleBackPressurePlant.T_DH1.m_flow_nominal
+ -2 1.0000000000000000E-002       0                  100000                
+  6   256 # simpleBackPressurePlant.T_DH1.m_flow_small
+ -2 3.6788874706279614E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.T_DH1.T
+ -2       1                       0                       0                
+  6   258 # simpleBackPressurePlant.LPH2.nPorts
+ -2 2.5636000000000000E+006       0                       0                
+  6   256 # simpleBackPressurePlant.LPH2.medium.h
+ -2 7.4874926171936351E-001       0                  100000                
+  6   256 # simpleBackPressurePlant.LPH2.medium.d
+ -2 3.7831476297902174E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.LPH2.medium.T
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.LPH2.medium.X[1]
+ -2 2.4012161124001285E+006 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.LPH2.medium.u
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # simpleBackPressurePlant.LPH2.medium.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # simpleBackPressurePlant.LPH2.medium.MM
+ -2       2                       0                       2                
+  6   322 # simpleBackPressurePlant.LPH2.medium.state.phase
+ -2 2.5636000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.LPH2.medium.state.h
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.LPH2.medium.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.LPH2.medium.standardOrderComponents
+ -2 1.0516476297902176E+002       0                       0                
+  6   256 # simpleBackPressurePlant.LPH2.medium.T_degC
+ -2 1.2158481595552386E+000       0                       0                
+  6   256 # simpleBackPressurePlant.LPH2.medium.p_bar
+ -2 3.7831276780922894E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.LPH2.medium.sat.Tsat
+ -2 1.6800000000000001E-001 -9.9999999999999995E+059 9.9999999999999995E+059
+  6   388 # simpleBackPressurePlant.LPH2.ports[1].m_flow
+ -2 1.2158481595552385E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.LPH2.ports[1].p
+ -2 2.5636000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260 # simpleBackPressurePlant.LPH2.ports[1].h_outflow
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.LPH2.flowDirection
+ -2       0                       0                       0                
+  6   769 # simpleBackPressurePlant.LPH2.use_m_flow_in
+ -2       0                       0                       0                
+  6   769 # simpleBackPressurePlant.LPH2.use_h_in
+ -2       0                       0                       0                
+  6   769 # simpleBackPressurePlant.LPH2.use_X_in
+ -2       0                       0                       0                
+  6   769 # simpleBackPressurePlant.LPH2.use_C_in
+ -2 -1.6800000000000001E-001 -100000                  100000                
+  6   256 # simpleBackPressurePlant.LPH2.m_flow
+ -2 2.5636000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.LPH2.h
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.LPH2.X[1]
+ -2 -1.6800000000000001E-001       0                       0                
+  6  1280 # simpleBackPressurePlant.LPH2.m_flow_in_internal
+ -2 2.5636000000000000E+006       0                       0                
+  6  1280 # simpleBackPressurePlant.LPH2.h_in_internal
+ -2       1                       0                       0                
+  6  1280 # simpleBackPressurePlant.LPH2.X_in_internal[1]
+ -2 2.1061494382279480E-001       0                  100000                
+  6   388 # simpleBackPressurePlant.bleedHP12.port_1.m_flow
+ -2 7.3163072776908122E-001 -100000                       0                
+  6   388 # simpleBackPressurePlant.bleedHP12.port_2.m_flow
+ -2 -9.4214774096157183E-001 -100000                  100000                
+  6   388 # simpleBackPressurePlant.bleedHP12.port_3.m_flow
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.bleedHP12.portFlowDirection_1
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.bleedHP12.portFlowDirection_2
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.bleedHP12.portFlowDirection_3
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.bleedHP12.fluidVolume
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.bleedHP12.energyDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.bleedHP12.massDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.bleedHP12.substanceDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.bleedHP12.traceDynamics
+ -2 1.0100000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.bleedHP12.p_start
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.bleedHP12.use_T_start
+ -2 3.7303733702036590E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.bleedHP12.T_start
+ -2 2.5636000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.bleedHP12.h_start
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.bleedHP12.X_start[1]
+ -2 1.2158481595552385E+005       0                 1.0000000000000000E+100
+  2   304 # simpleBackPressurePlant.bleedHP12.medium.p
+ -2 2.9529360176776839E+002       0                       0                
+  3   256 # simpleBackPressurePlant.bleedHP12.medium.der(p)
+ -2 2.6878170350641017E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  2   304 # simpleBackPressurePlant.bleedHP12.medium.h
+ -2 7.5293509237068156E+002       0                       0                
+  3   256 # simpleBackPressurePlant.bleedHP12.medium.der(h)
+ -2 7.0465709208123839E-001       0                  100000                
+  6   256 # simpleBackPressurePlant.bleedHP12.medium.d
+ -2 9.7930630304112094E-004       0                       0                
+  6   256 # simpleBackPressurePlant.bleedHP12.medium.der(d)
+ -2 3.8030454975399937E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.bleedHP12.medium.T
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.bleedHP12.medium.X[1]
+ -2 2.5152723784901965E+006 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.bleedHP12.medium.u
+ -2 5.7367125830383520E+002       0                       0                
+  6   256 # simpleBackPressurePlant.bleedHP12.medium.der(u)
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # simpleBackPressurePlant.bleedHP12.medium.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # simpleBackPressurePlant.bleedHP12.medium.MM
+ -2       1                       0                       2                
+  6   322 # simpleBackPressurePlant.bleedHP12.medium.state.phase
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.bleedHP12.medium.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.bleedHP12.medium.standardOrderComponents
+ -2 1.0715454975399939E+002       0                       0                
+  6   256 # simpleBackPressurePlant.bleedHP12.medium.T_degC
+ -2 1.2158481595552386E+000       0                       0                
+  6   256 # simpleBackPressurePlant.bleedHP12.medium.p_bar
+ -2 3.7831276780922894E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.bleedHP12.medium.sat.Tsat
+ -2 1.7724045200191619E+005       0                       0                
+  6   256 # simpleBackPressurePlant.bleedHP12.U
+ -2 2.8674636148076473E+002       0                       0                
+  6   256 # simpleBackPressurePlant.bleedHP12.der(U)
+ -2 7.0465709208123839E-002       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.bleedHP12.m
+ -2 9.7930630304112105E-005       0                       0                
+  6   256 # simpleBackPressurePlant.bleedHP12.der(m)
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.bleedHP12.Qb_flow
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.bleedHP12.Wb_flow
+ -2       1                       0                       0                
+  6  1281 # simpleBackPressurePlant.bleedHP12.initialize_p
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.bleedHP12.V
+ -2 -7.0129496094222998E-001       0                  100000                
+  6   388 # simpleBackPressurePlant.mixer_DH1.port_1.m_flow
+ -2 9.0229021212961271E+000       0                  100000                
+  6   388 # simpleBackPressurePlant.mixer_DH1.port_3.m_flow
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.mixer_DH1.portFlowDirection_1
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.mixer_DH1.portFlowDirection_2
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.mixer_DH1.portFlowDirection_3
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.mixer_DH1.fluidVolume
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.mixer_DH1.energyDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.mixer_DH1.massDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.mixer_DH1.substanceDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.mixer_DH1.traceDynamics
+ -2   45400                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.mixer_DH1.p_start
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.mixer_DH1.use_T_start
+ -2 3.5208439632243091E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.mixer_DH1.T_start
+ -2 2.5170000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.mixer_DH1.h_start
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.mixer_DH1.X_start[1]
+ -2 1.2199058820528598E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  2   304 # simpleBackPressurePlant.mixer_DH1.medium.p
+ -2 2.8823399775413861E+002       0                       0                
+  3   256 # simpleBackPressurePlant.mixer_DH1.medium.der(p)
+ -2 3.2291064034203729E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  2   304 # simpleBackPressurePlant.mixer_DH1.medium.h
+ -2 -3.3863210591482584E-001       0                       0                
+  3   256 # simpleBackPressurePlant.mixer_DH1.medium.der(h)
+ -2 4.0778713323661409E-001       0                  100000                
+  6   256 # simpleBackPressurePlant.mixer_DH1.medium.d
+ -2 9.6384699377338734E-004       0                       0                
+  6   256 # simpleBackPressurePlant.mixer_DH1.medium.der(d)
+ -2 6.4936454730894752E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.mixer_DH1.medium.T
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.mixer_DH1.medium.X[1]
+ -2 2.9299537861294732E+006 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.mixer_DH1.medium.u
+ -2 -8.5183449221112775E-002       0                       0                
+  6   256 # simpleBackPressurePlant.mixer_DH1.medium.der(u)
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # simpleBackPressurePlant.mixer_DH1.medium.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # simpleBackPressurePlant.mixer_DH1.medium.MM
+ -2       1                       0                       2                
+  6   322 # simpleBackPressurePlant.mixer_DH1.medium.state.phase
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.mixer_DH1.medium.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.mixer_DH1.medium.standardOrderComponents
+ -2 3.7621454730894754E+002       0                       0                
+  6   256 # simpleBackPressurePlant.mixer_DH1.medium.T_degC
+ -2 1.2199058820528599E+000       0                       0                
+  6   256 # simpleBackPressurePlant.mixer_DH1.medium.p_bar
+ -2 3.7840914608465323E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.mixer_DH1.medium.sat.Tsat
+ -2 1.1947974549615015E+005       0                       0                
+  6   256 # simpleBackPressurePlant.mixer_DH1.U
+ -2 2.8239924119412899E+002       0                       0                
+  6   256 # simpleBackPressurePlant.mixer_DH1.der(U)
+ -2 4.0778713323661411E-002       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.mixer_DH1.m
+ -2 9.6384699377338734E-005       0                       0                
+  6   256 # simpleBackPressurePlant.mixer_DH1.der(m)
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.mixer_DH1.Qb_flow
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.mixer_DH1.Wb_flow
+ -2       1                       0                       0                
+  6  1281 # simpleBackPressurePlant.mixer_DH1.initialize_p
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.mixer_DH1.V
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.ve_DH2.allowFlowReversal
+ -2 -3.0376920889859951E-002       0                  100000                
+  6   388 # simpleBackPressurePlant.ve_DH2.port_a.m_flow
+ -2 3.3156432853331808E-002 -100000                       0                
+  6   388 # simpleBackPressurePlant.ve_DH2.port_b.m_flow
+ -2       0                       0                       0                
+  6  1281 # simpleBackPressurePlant.ve_DH2.port_a_exposesState
+ -2       0                       0                       0                
+  6  1281 # simpleBackPressurePlant.ve_DH2.port_b_exposesState
+ -2       0                       0                       0                
+  6  1281 # simpleBackPressurePlant.ve_DH2.showDesignFlowDirection
+ -2 1.2190448882999715E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  2   272 # simpleBackPressurePlant.ve_DH2.medium.p
+ -2 2.9068606690287265E+002       0                       0                
+  3   256 # simpleBackPressurePlant.ve_DH2.medium.der(p)
+ -2 2.6331968767657895E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  2   304 # simpleBackPressurePlant.ve_DH2.medium.h
+ -2 -3.3856792880662406E+003       0                       0                
+  3   256 # simpleBackPressurePlant.ve_DH2.medium.der(h)
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.ve_DH2.medium.X[1]
+ -2 2.4654739365125154E+006 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.ve_DH2.medium.u
+ -2 -3.1442141301115967E+003       0                       0                
+  6   256 # simpleBackPressurePlant.ve_DH2.medium.der(u)
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # simpleBackPressurePlant.ve_DH2.medium.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # simpleBackPressurePlant.ve_DH2.medium.MM
+ -2       2                       0                       2                
+  6   322 # simpleBackPressurePlant.ve_DH2.medium.state.phase
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.ve_DH2.medium.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.ve_DH2.medium.standardOrderComponents
+ -2 1.0524064540351281E+002       0                       0                
+  6   256 # simpleBackPressurePlant.ve_DH2.medium.T_degC
+ -2 1.2190448882999716E+000       0                       0                
+  6   256 # simpleBackPressurePlant.ve_DH2.medium.p_bar
+ -2 3.7838871804795633E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.ve_DH2.medium.sat.Tsat
+ -2       1                       0                       0                
+  6   256 # simpleBackPressurePlant.ve_DH2.V
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.ve_DH2.use_HeatTransfer
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.ve_DH2.use_UA_exponent
+ -2   10000                       0                       0                
+  6   256 # simpleBackPressurePlant.ve_DH2.UA_nominal
+ -2       1                 1.0000000000000000E-004 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.ve_DH2.m_flow_nominal
+ -2 8.0000000000000004E-001       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.ve_DH2.UA_exponent
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.ve_DH2.energyDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.ve_DH2.massDynamics
+ -2   62100                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.ve_DH2.p_start
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.ve_DH2.use_T_start
+ -2 3.5996476984032296E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.ve_DH2.T_start
+ -2 2.5360000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.ve_DH2.h_start
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.ve_DH2.X_start[1]
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.ve_DH2.use_homotopy
+ -2 1.7919572570119693E+006       0                       0                
+  6   256 # simpleBackPressurePlant.ve_DH2.U
+ -2 4.5675346873157978E+003       0                       0                
+  6   256 # simpleBackPressurePlant.ve_DH2.der(U)
+ -2 3.7839064540351279E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.ve_DH2.T
+ -2 7.2682060453932240E-001       0                  100000                
+  6   256 # simpleBackPressurePlant.ve_DH2.m
+ -2 2.7795119634718563E-003       0                       0                
+  6   256 # simpleBackPressurePlant.ve_DH2.der(m)
+ -2 6.1099126318143612E+002       0                       0                
+  6   256 # simpleBackPressurePlant.ve_DH2.UA
+ -2       0                       0                       0                
+  6   388 # simpleBackPressurePlant.ve_DH2.heatPort.Q_flow
+ -2       1                       0                       0                
+  6  1281 # simpleBackPressurePlant.ve_DH2.initialize_p
+ -2 2.7237744420103929E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6  1280 # simpleBackPressurePlant.ve_DH2.h_a
+ -2       1                       0                       0                
+  6   258 # simpleBackPressurePlant.FWT.nPorts
+ -2 2.7000000000000000E+005       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.FWT.medium.p
+ -2 2.5636000000000000E+006       0                       0                
+  6   256 # simpleBackPressurePlant.FWT.medium.h
+ -2 1.6112701505536255E+000       0                  100000                
+  6   256 # simpleBackPressurePlant.FWT.medium.d
+ -2 4.0311316565365246E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.FWT.medium.T
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.FWT.medium.X[1]
+ -2 2.3960303345983112E+006 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.FWT.medium.u
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # simpleBackPressurePlant.FWT.medium.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # simpleBackPressurePlant.FWT.medium.MM
+ -2       2                       0                       2                
+  6   258 # simpleBackPressurePlant.FWT.medium.state.phase
+ -2 2.5636000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.FWT.medium.state.h
+ -2 2.7000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.FWT.medium.state.p
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.FWT.medium.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.FWT.medium.standardOrderComponents
+ -2 1.2996316565365248E+002       0                       0                
+  6   256 # simpleBackPressurePlant.FWT.medium.T_degC
+ -2 2.7000000000000002E+000       0                       0                
+  6   256 # simpleBackPressurePlant.FWT.medium.p_bar
+ -2 2.7000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.FWT.medium.sat.psat
+ -2 4.0311786982589780E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.FWT.medium.sat.Tsat
+ -2 -2.1078671941569052E-001       0                  100000                
+  6   388 # simpleBackPressurePlant.FWT.ports[1].m_flow
+ -2 2.7000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.FWT.ports[1].p
+ -2 2.5636000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260 # simpleBackPressurePlant.FWT.ports[1].h_outflow
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.FWT.flowDirection
+ -2       0                       0                       0                
+  6   769 # simpleBackPressurePlant.FWT.use_p_in
+ -2       0                       0                       0                
+  6   769 # simpleBackPressurePlant.FWT.use_h_in
+ -2       0                       0                       0                
+  6   769 # simpleBackPressurePlant.FWT.use_X_in
+ -2       0                       0                       0                
+  6   769 # simpleBackPressurePlant.FWT.use_C_in
+ -2 2.7000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.FWT.p
+ -2 2.5636000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.FWT.h
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.FWT.X[1]
+ -2 2.7000000000000000E+005       0                       0                
+  6  1280 # simpleBackPressurePlant.FWT.p_in_internal
+ -2 2.5636000000000000E+006       0                       0                
+  6  1280 # simpleBackPressurePlant.FWT.h_in_internal
+ -2       1                       0                       0                
+  6  1280 # simpleBackPressurePlant.FWT.X_in_internal[1]
+ -2 1.0100000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.overStreamClap.p_a_nominal
+ -2   97400                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.overStreamClap.p_b_nominal
+ -2 8.2989999999999995E+000 -100000                  100000                
+  6   256 # simpleBackPressurePlant.overStreamClap.m_flow_nominal
+ -2 4.3378720327750335E+002       0                       0                
+  6   256 # simpleBackPressurePlant.overStreamClap.K
+ -2 5.9100000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.FWT_valve.p_a_nominal
+ -2 2.7000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.FWT_valve.p_b_nominal
+ -2 4.5800000000000002E-001 -100000                  100000                
+  6   256 # simpleBackPressurePlant.FWT_valve.m_flow_nominal
+ -2 7.0087336244541476E+005       0                       0                
+  6   256 # simpleBackPressurePlant.FWT_valve.K
+ -2 2.5636000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260 # simpleBackPressurePlant.FWT_valve.port_a.h_outflow
+ -2 2.7000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.FWT_valve.port_b.p
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.bypassValve.allowFlowReversal
+ -2       0                       0                       0                
+  6  1281 # simpleBackPressurePlant.bypassValve.port_a_exposesState
+ -2       0                       0                       0                
+  6  1281 # simpleBackPressurePlant.bypassValve.port_b_exposesState
+ -2       1                       0                       0                
+  6  1281 # simpleBackPressurePlant.bypassValve.showDesignFlowDirection
+ -2 1.0132500000000000E+003 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.bypassValve.dp_start
+ -2       0                 -100000                  100000                
+  6   256 # simpleBackPressurePlant.bypassValve.m_flow_start
+ -2 1.0000000000000000E-002 -100000                  100000                
+  6   256 # simpleBackPressurePlant.bypassValve.m_flow_small
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.bypassValve.show_T
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.bypassValve.show_V_flow
+ -2 3.8748420421598391E+006       0                       0                
+  6   288 # simpleBackPressurePlant.bypassValve.dp
+ -2 6.7067911349471576E-001       0                       0                
+  6   256 # simpleBackPressurePlant.bypassValve.V_flow
+ -2 6.7936362656988115E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.bypassValve.port_a_T
+ -2 6.4936299335977287E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.bypassValve.port_b_T
+ -2       0                       0                       2                
+  6  1282 # simpleBackPressurePlant.bypassValve.state_a.phase
+ -2 1.3453381713768277E+001       0                  100000                
+  6  1280 # simpleBackPressurePlant.bypassValve.state_a.d
+ -2 6.7936362656988115E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6  1280 # simpleBackPressurePlant.bypassValve.state_a.T
+ -2       0                       0                       2                
+  6  1282 # simpleBackPressurePlant.bypassValve.state_b.phase
+ -2 4.0778713323661409E-001       0                  100000                
+  6  1280 # simpleBackPressurePlant.bypassValve.state_b.d
+ -2 6.4936454730894752E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6  1280 # simpleBackPressurePlant.bypassValve.state_b.T
+ -2 5.9680000000000000E+006       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.bypassValve.dp_nominal
+ -2 1.3897000000000000E+001 -100000                  100000                
+  6   256 # simpleBackPressurePlant.bypassValve.m_flow_nominal
+ -2 2.3285857908847187E-006       0                       0                
+  6   256 # simpleBackPressurePlant.bypassValve.k
+ -2       0                 -100000                       0                
+  6   388 # simpleBackPressurePlant.splitBypass.port_1.m_flow
+ -2 9.0229999999999979E+000 -9.9999999999999995E+059 9.9999999999999995E+059
+  6   388 # simpleBackPressurePlant.splitBypass.port_3.m_flow
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.splitBypass.portFlowDirection_1
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.splitBypass.portFlowDirection_2
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.splitBypass.portFlowDirection_3
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.splitBypass.fluidVolume
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.splitBypass.energyDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.splitBypass.massDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.splitBypass.substanceDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.splitBypass.traceDynamics
+ -2 6.0580000000000000E+006 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.splitBypass.p_start
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.splitBypass.use_T_start
+ -2 6.9366881755075485E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.splitBypass.T_start
+ -2 3.2291000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.splitBypass.h_start
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.splitBypass.X_start[1]
+ -2 3.9968326303651249E+006       0                 1.0000000000000000E+100
+  2   272 # simpleBackPressurePlant.splitBypass.medium.p
+ -2 2.8886422885688791E+002       0                       0                
+  3   256 # simpleBackPressurePlant.splitBypass.medium.der(p)
+ -2 3.2291032074188679E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  2   304 # simpleBackPressurePlant.splitBypass.medium.h
+ -2 -4.0225989519210970E-002       0                       0                
+  3   256 # simpleBackPressurePlant.splitBypass.medium.der(h)
+ -2 1.3453381713768277E+001       0                  100000                
+  6   256 # simpleBackPressurePlant.splitBypass.medium.d
+ -2 9.7878703870790673E-004       0                       0                
+  6   256 # simpleBackPressurePlant.splitBypass.medium.der(d)
+ -2 6.7936362656988115E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.splitBypass.medium.T
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.splitBypass.medium.X[1]
+ -2 2.9320156263629654E+006 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.splitBypass.medium.u
+ -2 1.0258158723657140E-001       0                       0                
+  6   256 # simpleBackPressurePlant.splitBypass.medium.der(u)
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # simpleBackPressurePlant.splitBypass.medium.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # simpleBackPressurePlant.splitBypass.medium.MM
+ -2       1                       0                       2                
+  6   322 # simpleBackPressurePlant.splitBypass.medium.state.phase
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.splitBypass.medium.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.splitBypass.medium.standardOrderComponents
+ -2 4.0621362656988117E+002       0                       0                
+  6   256 # simpleBackPressurePlant.splitBypass.medium.T_degC
+ -2 3.9968326303651253E+001       0                       0                
+  6   256 # simpleBackPressurePlant.splitBypass.medium.p_bar
+ -2 5.2346054973335788E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.splitBypass.medium.sat.Tsat
+ -2 3.9445525412194361E+006       0                       0                
+  6   256 # simpleBackPressurePlant.splitBypass.U
+ -2 2.8711989616230130E+002       0                       0                
+  6   256 # simpleBackPressurePlant.splitBypass.der(U)
+ -2 1.3453381713768278E+000       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.splitBypass.m
+ -2 9.7878703870790673E-005       0                       0                
+  6   256 # simpleBackPressurePlant.splitBypass.der(m)
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.splitBypass.Qb_flow
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.splitBypass.Wb_flow
+ -2       1                       0                       0                
+  6  1281 # simpleBackPressurePlant.splitBypass.initialize_p
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.splitBypass.V
+ -2       1                       0                       0                
+  6   256 # simpleBackPressurePlant.generator.eta
+ -2 3.1415926535897933E+002       0                       0                
+  6   256 # simpleBackPressurePlant.generator.omega
+ -2 3.1415926535897933E+002       0                       0                
+  6   260 # simpleBackPressurePlant.generator.shaft.der(phi)
+ -2 -7.3832365618663920E-001       0                       0                
+  6   388 # simpleBackPressurePlant.generator.shaft.tau
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.LP.V_bleed
+ -2 1.7259496812257694E-002       0                       0                
+  6   256 # simpleBackPressurePlant.LP.K1
+ -2 6.4272126885167119E-002       0                       0                
+  6   256 # simpleBackPressurePlant.LP.K2
+ -2 3.2460000000000000E+000       0                       0                
+  6   256 # simpleBackPressurePlant.LP.m_flow_nominal1
+ -2 1.3897000000000000E+001       0                       0                
+  6   256 # simpleBackPressurePlant.LP.m_flow_nominal2
+ -2   97400                       0                 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.LP.p_a_nominal
+ -2   62200                       0                 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.LP.p_b_nominal
+ -2   45400                       0                 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.LP.p_c_nominal
+ -2 2.5363000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.LP.h_a_nominal
+ -2 2.5172000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.LP.h_c_nominal
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.LP.allowFlowReversal
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.LP.energyDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.LP.massDynamics
+ -2   97400                       0                 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.LP.p_a_start
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.LP.use_T_a_start
+ -2 3.7202430882659854E+002       1                   10000                
+  6   288 # simpleBackPressurePlant.LP.T_a_start
+ -2 2.5363000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.LP.h_a_start
+ -2 6.3410550594140659E+001       0                       0                
+  6   256 # simpleBackPressurePlant.LP.W
+ -2 3.7699111843076913E+004       0                       0                
+  6   260 # simpleBackPressurePlant.LP.flange_a.phi
+ -2 -5.3648160476191509E-001       0                       0                
+  6   388 # simpleBackPressurePlant.LP.flange_a.tau
+ -2 3.7699111843076913E+004       0                       0                
+  6   260 # simpleBackPressurePlant.LP.flange_b.phi
+ -2 2.7238895232577994E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260 # simpleBackPressurePlant.LP.port_c.h_outflow
+ -2       0                       0                       2                
+  6   258 # simpleBackPressurePlant.LP.stage1.state_a.phase
+ -2 6.7315549946699071E-001       0                  100000                
+  6   256 # simpleBackPressurePlant.LP.stage1.state_a.d
+ -2 3.9777896982480274E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.LP.stage1.state_a.T
+ -2 -7.1805332480289508E-001       0                       0                
+  6   256 # simpleBackPressurePlant.LP.stage1.W
+ -2 9.0000000000000002E-001       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.LP.stage1.eta_is
+ -2 2.7237718155525289E+006       0                       0                
+  6   256 # simpleBackPressurePlant.LP.stage1.h_b_is
+ -2 -2.2856347209190202E-003       0                       0                
+  6   256 # simpleBackPressurePlant.LP.stage1.tau
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.LP.stage1.allowFlowReversal
+ -2 3.7699111843076913E+004       0                       0                
+  2   276 # simpleBackPressurePlant.LP.stage1.flange_a.phi
+ -2 3.1415926535897933E+002       0                       0                
+  3   260 # simpleBackPressurePlant.LP.stage1.flange_a.der(phi)
+ -2 5.3419597004099606E-001       0                       0                
+  6   388 # simpleBackPressurePlant.LP.stage1.flange_a.tau
+ -2 3.7699111843076913E+004       0                       0                
+  6   260 # simpleBackPressurePlant.LP.stage1.flange_b.phi
+ -2 1.7259496812257694E-002       0                       0                
+  6   256 # simpleBackPressurePlant.LP.stage1.K
+ -2 2.5363000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.LP.stage1.h_a_nominal
+ -2 3.2460000000000000E+000       0                       0                
+  6   256 # simpleBackPressurePlant.LP.stage1.m_flow_nominal
+ -2   97400                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.LP.stage1.p_a_nominal
+ -2   62200                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.LP.stage1.p_b_nominal
+ -2       0                       0                       2                
+  6   258 # simpleBackPressurePlant.LP.stage2.state_a.phase
+ -2 6.7315549946699071E-001       0                  100000                
+  6   256 # simpleBackPressurePlant.LP.stage2.state_a.d
+ -2 3.9777896982480274E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.LP.stage2.state_a.T
+ -2 6.4128603918943554E+001       0                       0                
+  6   256 # simpleBackPressurePlant.LP.stage2.W
+ -2 9.0000000000000002E-001       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.LP.stage2.eta_is
+ -2 2.7238996836052029E+006       0                       0                
+  6   256 # simpleBackPressurePlant.LP.stage2.h_b_is
+ -2 2.0412768614564314E-001       0                       0                
+  6   256 # simpleBackPressurePlant.LP.stage2.tau
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.LP.stage2.allowFlowReversal
+ -2 3.7699111843076913E+004       0                       0                
+  6   260 # simpleBackPressurePlant.LP.stage2.flange_a.phi
+ -2 3.1415926535897933E+002       0                       0                
+  6   260 # simpleBackPressurePlant.LP.stage2.flange_a.der(phi)
+ -2 3.7699111843076913E+004       0                       0                
+  6   260 # simpleBackPressurePlant.LP.stage2.flange_b.phi
+ -2 6.4272126885167119E-002       0                       0                
+  6   256 # simpleBackPressurePlant.LP.stage2.K
+ -2 2.5363000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.LP.stage2.h_a_nominal
+ -2 1.3897000000000000E+001       0                       0                
+  6   256 # simpleBackPressurePlant.LP.stage2.m_flow_nominal
+ -2   97400                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.LP.stage2.p_a_nominal
+ -2   45400                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.LP.stage2.p_b_nominal
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.LP.splitter.portFlowDirection_1
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.LP.splitter.portFlowDirection_2
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.LP.splitter.portFlowDirection_3
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.LP.splitter.fluidVolume
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.LP.splitter.energyDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.LP.splitter.massDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.LP.splitter.substanceDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.LP.splitter.traceDynamics
+ -2   97400                 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.LP.splitter.p_start
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.LP.splitter.use_T_start
+ -2 3.7202430882659854E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.LP.splitter.T_start
+ -2 2.5363000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.LP.splitter.h_start
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.LP.splitter.X_start[1]
+ -2 1.2190218800275469E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  2   304 # simpleBackPressurePlant.LP.splitter.medium.p
+ -2 2.9680743904970421E+002       0                       0                
+  3   256 # simpleBackPressurePlant.LP.splitter.medium.der(p)
+ -2 2.7237980801311689E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  2   272 # simpleBackPressurePlant.LP.splitter.medium.h
+ -2 1.3829092174455348E+003       0                       0                
+  3   256 # simpleBackPressurePlant.LP.splitter.medium.der(h)
+ -2 6.7315549946699071E-001       0                  100000                
+  6   256 # simpleBackPressurePlant.LP.splitter.medium.d
+ -2 4.1154063008752573E-004       0                       0                
+  6   256 # simpleBackPressurePlant.LP.splitter.medium.der(d)
+ -2 3.9777896982480274E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.LP.splitter.medium.T
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.LP.splitter.medium.X[1]
+ -2 2.5427073988557761E+006 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.LP.splitter.medium.u
+ -2 1.0527013142929145E+003       0                       0                
+  6   256 # simpleBackPressurePlant.LP.splitter.medium.der(u)
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # simpleBackPressurePlant.LP.splitter.medium.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # simpleBackPressurePlant.LP.splitter.medium.MM
+ -2       1                       0                       2                
+  6   322 # simpleBackPressurePlant.LP.splitter.medium.state.phase
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.LP.splitter.medium.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.LP.splitter.medium.standardOrderComponents
+ -2 1.2462896982480277E+002       0                       0                
+  6   256 # simpleBackPressurePlant.LP.splitter.medium.T_degC
+ -2 1.2190218800275470E+000       0                       0                
+  6   256 # simpleBackPressurePlant.LP.splitter.medium.p_bar
+ -2 3.7838817198778304E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.LP.splitter.medium.sat.Tsat
+ -2 1.7116374690751726E+005       0                       0                
+  6   256 # simpleBackPressurePlant.LP.splitter.U
+ -2 1.7550590840657242E+002       0                       0                
+  6   256 # simpleBackPressurePlant.LP.splitter.der(U)
+ -2 6.7315549946699069E-002       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.LP.splitter.m
+ -2 4.1154063008752573E-005       0                       0                
+  6   256 # simpleBackPressurePlant.LP.splitter.der(m)
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.LP.splitter.Qb_flow
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.LP.splitter.Wb_flow
+ -2       1                       0                       0                
+  6  1281 # simpleBackPressurePlant.LP.splitter.initialize_p
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.LP.splitter.V
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.HP.V_bleed
+ -2 8.1450345125677549E-004       0                       0                
+  6   256 # simpleBackPressurePlant.HP.K1
+ -2 6.5900066105349341E-003       0                       0                
+  6   256 # simpleBackPressurePlant.HP.K2
+ -2 9.0229999999999979E+000       0                       0                
+  6   256 # simpleBackPressurePlant.HP.m_flow_nominal1
+ -2 8.4669999999999987E+000       0                       0                
+  6   256 # simpleBackPressurePlant.HP.m_flow_nominal2
+ -2 6.0580000000000000E+006       0                 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.HP.p_a_nominal
+ -2 1.0100000000000000E+005       0                 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.HP.p_b_nominal
+ -2 5.9100000000000000E+005       0                 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.HP.p_c_nominal
+ -2 3.2291000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.HP.h_a_nominal
+ -2 2.8256000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.HP.h_c_nominal
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.HP.allowFlowReversal
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.HP.energyDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.HP.massDynamics
+ -2 5.9100000000000000E+005       0                 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.HP.p_c_start
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.HP.use_T_c_start
+ -2 4.6158563036432599E+002       1                   10000                
+  6   256 # simpleBackPressurePlant.HP.T_c_start
+ -2 2.8256000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.HP.h_c_start
+ -2 1.6854066683060955E+002       0                       0                
+  6   256 # simpleBackPressurePlant.HP.W
+ -2 1.2226520320428682E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.HP.port_a.p
+ -2 3.2291088685826049E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260 # simpleBackPressurePlant.HP.port_a.h_outflow
+ -2 2.5629383775204802E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260 # simpleBackPressurePlant.HP.port_b.h_outflow
+ -2 3.7699111843076913E+004       0                       0                
+  6   260 # simpleBackPressurePlant.HP.flange_a.phi
+ -2       0                       0                       0                
+  6   388 # simpleBackPressurePlant.HP.flange_a.tau
+ -2 3.7699111843076913E+004       0                       0                
+  6   260 # simpleBackPressurePlant.HP.flange_b.phi
+ -2       0                       0                       2                
+  6   258 # simpleBackPressurePlant.HP.stage1.state_a.phase
+ -2 4.0870632701404108E-001       0                  100000                
+  6   256 # simpleBackPressurePlant.HP.stage1.state_a.d
+ -2 6.4936528012473013E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.HP.stage1.state_a.T
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.HP.stage1.W
+ -2 9.0000000000000002E-001       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.HP.stage1.eta_is
+ -2 3.2291094976007976E+006       0                       0                
+  6   256 # simpleBackPressurePlant.HP.stage1.h_b_is
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.HP.stage1.tau
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.HP.stage1.allowFlowReversal
+ -2 3.7699111843076913E+004       0                       0                
+  6   260 # simpleBackPressurePlant.HP.stage1.flange_a.phi
+ -2 3.1415926535897933E+002       0                       0                
+  6   260 # simpleBackPressurePlant.HP.stage1.flange_a.der(phi)
+ -2       0                       0                       0                
+  6   388 # simpleBackPressurePlant.HP.stage1.flange_a.tau
+ -2 3.7699111843076913E+004       0                       0                
+  6   260 # simpleBackPressurePlant.HP.stage1.flange_b.phi
+ -2 8.1450345125677549E-004       0                       0                
+  6   256 # simpleBackPressurePlant.HP.stage1.K
+ -2 3.2291000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.HP.stage1.h_a_nominal
+ -2 9.0229999999999979E+000       0                       0                
+  6   256 # simpleBackPressurePlant.HP.stage1.m_flow_nominal
+ -2 6.0580000000000000E+006 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.HP.stage1.p_a_nominal
+ -2 5.9100000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.HP.stage1.p_b_nominal
+ -2       0                       0                       2                
+  6   258 # simpleBackPressurePlant.HP.stage2.state_a.phase
+ -2 7.5271501401058649E-001       0                  100000                
+  6   256 # simpleBackPressurePlant.HP.stage2.state_a.d
+ -2 3.7847618105404075E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.HP.stage2.state_a.T
+ -2 1.6854066683060955E+002       0                       0                
+  6   256 # simpleBackPressurePlant.HP.stage2.W
+ -2 9.0000000000000002E-001       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.HP.stage2.eta_is
+ -2 2.5628494629334188E+006       0                       0                
+  6   256 # simpleBackPressurePlant.HP.stage2.h_b_is
+ -2 5.3648160476191509E-001       0                       0                
+  6   256 # simpleBackPressurePlant.HP.stage2.tau
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.HP.stage2.allowFlowReversal
+ -2 3.7699111843076913E+004       0                       0                
+  6   260 # simpleBackPressurePlant.HP.stage2.flange_a.phi
+ -2 3.1415926535897933E+002       0                       0                
+  6   260 # simpleBackPressurePlant.HP.stage2.flange_a.der(phi)
+ -2 3.7699111843076913E+004       0                       0                
+  6   260 # simpleBackPressurePlant.HP.stage2.flange_b.phi
+ -2 6.5900066105349341E-003       0                       0                
+  6   256 # simpleBackPressurePlant.HP.stage2.K
+ -2 2.8256000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.HP.stage2.h_a_nominal
+ -2 8.4669999999999987E+000       0                       0                
+  6   256 # simpleBackPressurePlant.HP.stage2.m_flow_nominal
+ -2 5.9100000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.HP.stage2.p_a_nominal
+ -2 1.0100000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.HP.stage2.p_b_nominal
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.HP.splitter.portFlowDirection_1
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.HP.splitter.portFlowDirection_2
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.HP.splitter.portFlowDirection_3
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.HP.splitter.fluidVolume
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.HP.splitter.energyDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.HP.splitter.massDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.HP.splitter.substanceDynamics
+ -2       3                       1                       4                
+  6   258 # simpleBackPressurePlant.HP.splitter.traceDynamics
+ -2 5.9100000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.HP.splitter.p_start
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.HP.splitter.use_T_start
+ -2 4.6158563036432599E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.HP.splitter.T_start
+ -2 2.8256000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.HP.splitter.h_start
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.HP.splitter.X_start[1]
+ -2 1.2226520320428682E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  2   304 # simpleBackPressurePlant.HP.splitter.medium.p
+ -2 2.9107093644055789E+002       0                       0                
+  3   256 # simpleBackPressurePlant.HP.splitter.medium.der(p)
+ -2 2.5637386088040322E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  2   304 # simpleBackPressurePlant.HP.splitter.medium.h
+ -2 -1.4587385406551334E+000       0                       0                
+  3   256 # simpleBackPressurePlant.HP.splitter.medium.der(h)
+ -2 7.5271501401058649E-001       0                  100000                
+  6   256 # simpleBackPressurePlant.HP.splitter.medium.d
+ -2 1.7177559289571764E-003       0                       0                
+  6   256 # simpleBackPressurePlant.HP.splitter.medium.der(d)
+ -2 3.7847618105404075E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.HP.splitter.medium.T
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.HP.splitter.medium.X[1]
+ -2 2.4013063456918108E+006 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.HP.splitter.medium.u
+ -2 -1.7470048533521052E+001       0                       0                
+  6   256 # simpleBackPressurePlant.HP.splitter.medium.der(u)
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # simpleBackPressurePlant.HP.splitter.medium.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # simpleBackPressurePlant.HP.splitter.medium.MM
+ -2       2                       0                       2                
+  6   322 # simpleBackPressurePlant.HP.splitter.medium.state.phase
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.HP.splitter.medium.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.HP.splitter.medium.standardOrderComponents
+ -2 1.0532618105404077E+002       0                       0                
+  6   256 # simpleBackPressurePlant.HP.splitter.medium.T_degC
+ -2 1.2226520320428684E+000       0                       0                
+  6   256 # simpleBackPressurePlant.HP.splitter.medium.p_bar
+ -2 3.7847422218919780E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.HP.splitter.medium.sat.Tsat
+ -2 1.8074993396411216E+005       0                       0                
+  6   256 # simpleBackPressurePlant.HP.splitter.U
+ -2 4.1117082447279245E+002       0                       0                
+  6   256 # simpleBackPressurePlant.HP.splitter.der(U)
+ -2 7.5271501401058649E-002       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.HP.splitter.m
+ -2 1.7177559289571764E-004       0                       0                
+  6   256 # simpleBackPressurePlant.HP.splitter.der(m)
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.HP.splitter.Qb_flow
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.HP.splitter.Wb_flow
+ -2       1                       0                       0                
+  6  1281 # simpleBackPressurePlant.HP.splitter.initialize_p
+ -2 1.0000000000000001E-001       0                       0                
+  6   256 # simpleBackPressurePlant.HP.splitter.V
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.T_liveSteam.allowFlowReversal
+ -2 9.0229999999999979E+000       0                  100000                
+  6   388 # simpleBackPressurePlant.T_liveSteam.port_a.m_flow
+ -2 -9.0229999999999979E+000 -100000                       0                
+  6   388 # simpleBackPressurePlant.T_liveSteam.port_b.m_flow
+ -2 3.2291000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260 # simpleBackPressurePlant.T_liveSteam.port_b.h_outflow
+ -2       0                       0                       0                
+  6  1281 # simpleBackPressurePlant.T_liveSteam.port_a_exposesState
+ -2       0                       0                       0                
+  6  1281 # simpleBackPressurePlant.T_liveSteam.port_b_exposesState
+ -2       1                       0                       0                
+  6  1281 # simpleBackPressurePlant.T_liveSteam.showDesignFlowDirection
+ -2       1                 -100000                  100000                
+  6   256 # simpleBackPressurePlant.T_liveSteam.m_flow_nominal
+ -2 1.0000000000000000E-002       0                  100000                
+  6   256 # simpleBackPressurePlant.T_liveSteam.m_flow_small
+ -2 6.7936226417611510E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.T_liveSteam.T
+ -2       1                       0                       0                
+  6   258 # simpleBackPressurePlant.liveSteam.nPorts
+ -2 3.2291000000000000E+006       0                       0                
+  6   256 # simpleBackPressurePlant.liveSteam.medium.h
+ -2 1.3453414840099947E+001       0                  100000                
+  6   256 # simpleBackPressurePlant.liveSteam.medium.d
+ -2 6.7936226417611510E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.liveSteam.medium.T
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.liveSteam.medium.X[1]
+ -2 2.9320131504625906E+006 -1.0000000000000000E+008 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.liveSteam.medium.u
+ -2 4.6152363650654542E+002       0                 1.0000000000000000E+007
+  6   256 # simpleBackPressurePlant.liveSteam.medium.R
+ -2 1.8015268000000001E-002 1.0000000000000000E-003 2.5000000000000000E-001
+  6   256 # simpleBackPressurePlant.liveSteam.medium.MM
+ -2       1                       0                       2                
+  6   322 # simpleBackPressurePlant.liveSteam.medium.state.phase
+ -2 3.2291000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.liveSteam.medium.state.h
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.liveSteam.medium.preferredMediumStates
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.liveSteam.medium.standardOrderComponents
+ -2 4.0621226417611513E+002       0                       0                
+  6   256 # simpleBackPressurePlant.liveSteam.medium.T_degC
+ -2 3.9968326303651253E+001       0                       0                
+  6   256 # simpleBackPressurePlant.liveSteam.medium.p_bar
+ -2 5.2346054973335788E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.liveSteam.medium.sat.Tsat
+ -2 -9.0229999999999979E+000 -9.9999999999999995E+059 9.9999999999999995E+059
+  6   388 # simpleBackPressurePlant.liveSteam.ports[1].m_flow
+ -2 3.9968326303651249E+006 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.liveSteam.ports[1].p
+ -2 3.2291000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   260 # simpleBackPressurePlant.liveSteam.ports[1].h_outflow
+ -2       3                       1                       3                
+  6  1282 # simpleBackPressurePlant.liveSteam.flowDirection
+ -2       1                       0                       0                
+  6   769 # simpleBackPressurePlant.liveSteam.use_m_flow_in
+ -2       0                       0                       0                
+  6   769 # simpleBackPressurePlant.liveSteam.use_h_in
+ -2       0                       0                       0                
+  6   769 # simpleBackPressurePlant.liveSteam.use_X_in
+ -2       0                       0                       0                
+  6   769 # simpleBackPressurePlant.liveSteam.use_C_in
+ -2 9.0229999999999979E+000 -100000                  100000                
+  6   256 # simpleBackPressurePlant.liveSteam.m_flow
+ -2 3.2291000000000000E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.liveSteam.h
+ -2       1                       0                       1                
+  6   256 # simpleBackPressurePlant.liveSteam.X[1]
+ -2 9.0229999999999979E+000       0                       0                
+  6   256 # simpleBackPressurePlant.liveSteam.m_flow_in
+ -2 9.0229999999999979E+000       0                       0                
+  6  1280 # simpleBackPressurePlant.liveSteam.m_flow_in_internal
+ -2 3.2291000000000000E+006       0                       0                
+  6  1280 # simpleBackPressurePlant.liveSteam.h_in_internal
+ -2       1                       0                       0                
+  6  1280 # simpleBackPressurePlant.liveSteam.X_in_internal[1]
+ -2 1.1967000000000000E+002 -100000                  100000                
+  6   388 # simpleBackPressurePlant.dh_return.m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.dh_return.p
+ -2 -1.1967000000000000E+002 -100000                  100000                
+  6   388 # simpleBackPressurePlant.dh_forward.m_flow
+ -2 6.0000000000000000E+005 6.1165700000000004E+002 1.0000000000000000E+008
+  6   260 # simpleBackPressurePlant.dh_forward.p
+ -2 9.0229999999999979E+000       0                 9.9999999999999995E+059
+  6   256 # simpleBackPressurePlant.u_load
+ -2       0                       0                       0                
+  6   257 # simpleBackPressurePlant.turbineValve.allowFlowReversal
+ -2       0                       0                       0                
+  6  1281 # simpleBackPressurePlant.turbineValve.port_a_exposesState
+ -2       0                       0                       0                
+  6  1281 # simpleBackPressurePlant.turbineValve.port_b_exposesState
+ -2       1                       0                       0                
+  6  1281 # simpleBackPressurePlant.turbineValve.showDesignFlowDirection
+ -2 1.0132500000000000E+003 6.1165700000000004E+002 1.0000000000000000E+008
+  6   256 # simpleBackPressurePlant.turbineValve.dp_start
+ -2       0                 -100000                  100000                
+  6   256 # simpleBackPressurePlant.turbineValve.m_flow_start
+ -2 1.0000000000000000E-002 -100000                  100000                
+  6   256 # simpleBackPressurePlant.turbineValve.m_flow_small
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.turbineValve.show_T
+ -2       1                       0                       0                
+  6   257 # simpleBackPressurePlant.turbineValve.show_V_flow
+ -2 3.8745674271608382E+006       0                       0                
+  6   288 # simpleBackPressurePlant.turbineValve.dp
+ -2       0                       0                       0                
+  6   256 # simpleBackPressurePlant.turbineValve.V_flow
+ -2 6.7936482889858576E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.turbineValve.port_a_T
+ -2 6.4936665638621184E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.turbineValve.port_b_T
+ -2       0                       0                       2                
+  6  1282 # simpleBackPressurePlant.turbineValve.state_a.phase
+ -2 1.3453381713768277E+001       0                  100000                
+  6  1280 # simpleBackPressurePlant.turbineValve.state_a.d
+ -2 6.7936362656988115E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6  1280 # simpleBackPressurePlant.turbineValve.state_a.T
+ -2       0                       0                       2                
+  6  1282 # simpleBackPressurePlant.turbineValve.state_b.phase
+ -2 4.0870458245685565E-001       0                  100000                
+  6  1280 # simpleBackPressurePlant.turbineValve.state_b.d
+ -2 6.4936803264769344E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6  1280 # simpleBackPressurePlant.turbineValve.state_b.T
+ -2   10000                       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.turbineValve.dp_nominal
+ -2 9.0229999999999997E+000 -100000                  100000                
+  6   256 # simpleBackPressurePlant.turbineValve.m_flow_nominal
+ -2 9.0229999999999998E-004       0                       0                
+  6   256 # simpleBackPressurePlant.turbineValve.k
+ -2       0                       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.turbineValve.opening_min
+ -2       0                       0                       0                
+  6   321 # simpleBackPressurePlant.u_TAV
+ -2 3.7831276780922894E+002 2.7314999999999998E+002 2.2731500000000001E+003
+  6   256 # simpleBackPressurePlant.deaerator.sat.Tsat
+ -2      10                       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.Vt
+ -2 1.9880000000000000E+006       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.deaerator.p_start
+ -2       5                       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.Vl_start
+ -2 2.6836453904313799E+006 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.deaerator.hv
+ -2 1.0878858914053052E+002       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.der(hv)
+ -2 4.4090105524101330E+005 -1.0000000000000000E+010 1.0000000000000000E+010
+  6   256 # simpleBackPressurePlant.deaerator.hl
+ -2 2.9684843073483347E+002       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.der(hl)
+ -2 7.0870528737433403E-001       0                  100000                
+  6   256 # simpleBackPressurePlant.deaerator.rho_v
+ -2 1.6098519030630324E-003       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.der(rho_v)
+ -2 9.5458712042181696E+002       0                  100000                
+  6   256 # simpleBackPressurePlant.deaerator.rho_l
+ -2 -5.2060720596741751E-002       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.der(rho_l)
+ -2 2.5844321174914732E+009       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.U
+ -2 5.7272737329072217E+006       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.der(U)
+ -2 5.8504971675900842E+003       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.deaerator.m
+ -2 9.0625020837627623E+000       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.der(m)
+ -2 2.7455607308349039E+000       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.deaerator.mv
+ -2 -7.2885544995538246E-004       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.der(mv)
+ -2 5.8477516068592495E+003       0                 1.0000000000000000E+100
+  6   256 # simpleBackPressurePlant.deaerator.ml
+ -2 9.0632309392127173E+000       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.der(ml)
+ -2 3.8740514283544698E+000       0                      10                
+  6   256 # simpleBackPressurePlant.deaerator.Vv
+ -2 6.1259485716455302E+000       0                      10                
+  2   280 # simpleBackPressurePlant.deaerator.Vl
+ -2 9.8284923769402406E-003       0                       0                
+  3   288 # simpleBackPressurePlant.deaerator.der(Vl)
+ -2 1.7148830527200173E-001       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.mc
+ -2 -1.6800000000000001E-001 -100000                  100000                
+  6   388 # simpleBackPressurePlant.deaerator.condensate.m_flow
+ -2 6.1259485716455309E-001       0                       0                
+  6   256 # simpleBackPressurePlant.deaerator.VlVt_ratio
+ -2       0                       0                       0                
+  6   256 # load.height
+ -2      60                       0                 1.0000000000000000E+100
+  6   256 # load.duration
+ -2 9.0229999999999979E+000       0                       0                
+  6   256 # load.offset
+ -2      20                       0                       0                
+  6   256 # load.startTime
+ -2 9.0229999999999979E+000       0                       0                
+  6   256 # load.y
+ -2      90                       0                       0                
+  6   256 # closeTAV.startTime
+ -2       1                       0                       0                
+  6   257 # closeTAV.startValue
+ -2 3.9791000000000004E+001       0                       0                
+  4   256 # CPUtime
+ -2      22                       0                       0                
+  4   256 # EventCounter
+
+# initialDescription
+char initialDescription(807,116)
+Default ambient pressure [Pa|bar]
+Default ambient temperature [K|degC]
+Constant gravity acceleration [m/s2]
+= false to restrict to design flow direction (port_a -> port_b) [:#(type=Boolean)]
+Default formulation of energy balances [:#(type=Modelica.Fluid.Types.Dynamics)]
+Default formulation of mass balances [:#(type=Modelica.Fluid.Types.Dynamics)]
+Default formulation of substance balances [:#(type=Modelica.Fluid.Types.Dynamics)]
+Default formulation of trace substance balances [:#(type=Modelica.Fluid.Types.Dynamics)]
+Default formulation of momentum balances, if options available [:#(type=Modelica.Fluid.Types.Dynamics)]
+Default start value for mass flow rates [kg/s]
+Default start value for pressures [Pa|bar]
+Default start value for temperatures [K|degC]
+= true to determine turbulent region automatically using Reynolds number [:#(type=Boolean)]
+Default nominal mass flow rate [kg/s]
+Regularization of zero flow for |m_flow| < eps_m_flow*m_flow_nominal [1]
+Default small pressure drop for regularization of laminar and zero flow [Pa|bar]
+Default small mass flow rate for regularization of laminar and zero flow [kg/s]
+Number of ports [:#(type=Integer)]
+Absolute pressure of medium [Pa|bar]
+Density of medium [kg/m3|g/cm3]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Pressure [Pa|bar]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation pressure [Pa|bar]
+Saturation temperature [K|degC]
+Molar mass [kg/mol]
+Critical temperature [K|degC]
+Critical pressure [Pa|bar]
+Critical molar Volume [m3/mol]
+Pitzer acentric factor
+Triple point temperature [K|degC]
+Triple point pressure [Pa|bar]
+Melting point at 101325 Pa [K|degC]
+Normal boiling point (at 101325 Pa) [K|degC]
+Dipole moment of molecule in Debye (1 debye = 3.33564e10-30 C.m) [debye]
+True if ideal gas heat capacity is available [:#(type=Boolean)]
+True if critical data are known [:#(type=Boolean)]
+True if a dipole moment known [:#(type=Boolean)]
+True if a fundamental equation [:#(type=Boolean)]
+True if liquid heat capacity is available [:#(type=Boolean)]
+True if solid heat capacity is available [:#(type=Boolean)]
+True if accurate data for a viscosity function is available [:#(type=Boolean)]
+True if accurate data for thermal conductivity is available [:#(type=Boolean)]
+True if vapour pressure data, e.g., Antoine coefficents are known [:#(type=Boolean)]
+True if Pitzer accentric factor is known [:#(type=Boolean)]
+Critical specific enthalpy of the fundamental equation [J/kg]
+Critical specific entropy of the fundamental equation [J/(kg.K)]
+Difference between specific enthalpy model (h_m) and f.eq. (h_f) (h_m - h_f) [J/kg]
+Difference between specific enthalpy model (s_m) and f.eq. (s_f) (s_m - s_f) [J/(kg.K)]
+Molar mass [kg/mol]
+Critical temperature [K|degC]
+Critical pressure [Pa|bar]
+Critical molar Volume [m3/mol]
+Pitzer acentric factor
+Triple point temperature [K|degC]
+Triple point pressure [Pa|bar]
+Melting point at 101325 Pa [K|degC]
+Normal boiling point (at 101325 Pa) [K|degC]
+Dipole moment of molecule in Debye (1 debye = 3.33564e10-30 C.m) [debye]
+True if ideal gas heat capacity is available [:#(type=Boolean)]
+True if critical data are known [:#(type=Boolean)]
+True if a dipole moment known [:#(type=Boolean)]
+True if a fundamental equation [:#(type=Boolean)]
+True if liquid heat capacity is available [:#(type=Boolean)]
+True if solid heat capacity is available [:#(type=Boolean)]
+True if accurate data for a viscosity function is available [:#(type=Boolean)]
+True if accurate data for thermal conductivity is available [:#(type=Boolean)]
+True if vapour pressure data, e.g., Antoine coefficents are known [:#(type=Boolean)]
+True if Pitzer accentric factor is known [:#(type=Boolean)]
+Critical specific enthalpy of the fundamental equation [J/kg]
+Critical specific entropy of the fundamental equation [J/(kg.K)]
+Difference between specific enthalpy model (h_m) and f.eq. (h_f) (h_m - h_f) [J/kg]
+Difference between specific enthalpy model (s_m) and f.eq. (s_f) (s_m - s_f) [J/(kg.K)]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Allowed flow direction [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Get the mass flow rate from the input connector [:#(type=Boolean)]
+Get the temperature from the input connector [:#(type=Boolean)]
+Get the composition from the input connector [:#(type=Boolean)]
+Get the trace substances from the input connector [:#(type=Boolean)]
+Fixed mass flow rate going out of the fluid port [kg/s]
+Fixed value of temperature [K|degC]
+Fixed value of composition [kg/kg]
+Needed to connect to conditional connector [kg/s]
+Needed to connect to conditional connector [K]
+Needed to connect to conditional connector [1]
+Number of ports [:#(type=Integer)]
+Absolute pressure of medium [Pa|bar]
+Density of medium [kg/m3|g/cm3]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Pressure [Pa|bar]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation pressure [Pa|bar]
+Saturation temperature [K|degC]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Allowed flow direction [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Get the pressure from the input connector [:#(type=Boolean)]
+Get the temperature from the input connector [:#(type=Boolean)]
+Get the composition from the input connector [:#(type=Boolean)]
+Get the trace substances from the input connector [:#(type=Boolean)]
+Fixed value of pressure [Pa|bar]
+Fixed value of temperature [K|degC]
+Fixed value of composition [kg/kg]
+Needed to connect to conditional connector [Pa]
+Needed to connect to conditional connector [K]
+Needed to connect to conditional connector [1]
+Height of ramps [degC]
+Duration of ramp (= 0.0 gives a Step) [s]
+Offset of output signal [degC]
+Output = offset for time < startTime [s]
+Connector of Real output signal [degC]
+[K]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+= true if port_a exposes the state of a fluid volume [:#(type=Boolean)]
+= true if port_b.p exposes the state of a fluid volume [:#(type=Boolean)]
+= false to hide the arrow in the model icon [:#(type=Boolean)]
+Nominal value of m_flow = port_a.m_flow [kg/s]
+Regularization for bi-directional flow in the region |m_flow| < m_flow_small (m_flow_small > 0 required) [kg/s]
+Temperature of the passing fluid [K|degC]
+Height of ramps [1]
+Duration of ramp (= 0.0 gives a Step) [s]
+Offset of output signal [1]
+Output = offset for time < startTime [s]
+Connector of Real output signal [1]
+District heat [W]
+Electical power [W]
+Absolute pressure of medium [Pa|bar]
+Specific enthalpy of medium [J/kg]
+der(Specific enthalpy of medium) [m2/s3]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+der(Specific internal energy of medium) [m2/s3]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Pressure [Pa|bar]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation pressure [Pa|bar]
+Saturation temperature [K|degC]
+Nominal saturation temperature [K|degC]
+Nominal saturation pressure [Pa|bar]
+Nominal inlet pressure, port_c [Pa|bar]
+Nominal steam flow [kg/s]
+Flow coefficient [m-1.kg-1]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Energy dynamics, cold side [:#(type=Modelica.Fluid.Types.Dynamics)]
+Volume of cold-side fluid [m3]
+Start value of cold-side pressure [Pa|bar]
+= true, use T_cold_start, otherwise h_cold_start [:#(type=Boolean)]
+Start value of cold-side temperature [K|degC]
+Start value of cold-side specific enthalpy [J/kg]
+Start value of steam flow [kg/s]
+Heat transferred to water [W]
+Wet saturation enthalpy [J/kg]
+Saturation pressure [Pa|bar]
+Mass of cold-side fluid [kg]
+der(Mass of cold-side fluid) [kg/s]
+Nominal hot-side pressure drop [Pa|bar]
+Internal energy cold side [J]
+der(Internal energy cold side) [W]
+hot-side pressure drop [Pa|bar]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Mass flow rate from the connection point into the component [kg/s]
+Absolute pressure of medium [Pa|bar]
+Specific enthalpy of medium [J/kg]
+der(Specific enthalpy of medium) [m2/s3]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+der(Specific internal energy of medium) [m2/s3]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Pressure [Pa|bar]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation pressure [Pa|bar]
+Saturation temperature [K|degC]
+Nominal saturation temperature [K|degC]
+Nominal saturation pressure [Pa|bar]
+Nominal inlet pressure, port_c [Pa|bar]
+Nominal steam flow [kg/s]
+Flow coefficient [m-1.kg-1]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Energy dynamics, cold side [:#(type=Modelica.Fluid.Types.Dynamics)]
+Volume of cold-side fluid [m3]
+Start value of cold-side pressure [Pa|bar]
+= true, use T_cold_start, otherwise h_cold_start [:#(type=Boolean)]
+Start value of cold-side temperature [K|degC]
+Start value of cold-side specific enthalpy [J/kg]
+Start value of steam flow [kg/s]
+Heat transferred to water [W]
+Wet saturation enthalpy [J/kg]
+Saturation pressure [Pa|bar]
+Mass of cold-side fluid [kg]
+der(Mass of cold-side fluid) [kg/s]
+Nominal hot-side pressure drop [Pa|bar]
+Internal energy cold side [J]
+der(Internal energy cold side) [W]
+hot-side pressure drop [Pa|bar]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Mass flow rate from the connection point into the component [kg/s]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+= true if port_a exposes the state of a fluid volume [:#(type=Boolean)]
+= true if port_b.p exposes the state of a fluid volume [:#(type=Boolean)]
+= false to hide the arrow in the model icon [:#(type=Boolean)]
+Nominal value of m_flow = port_a.m_flow [kg/s]
+Regularization for bi-directional flow in the region |m_flow| < m_flow_small (m_flow_small > 0 required) [kg/s]
+Temperature of the passing fluid [K|degC]
+Number of ports [:#(type=Integer)]
+Specific enthalpy of medium [J/kg]
+Density of medium [kg/m3|g/cm3]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Specific enthalpy [J/kg]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation temperature [K|degC]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Allowed flow direction [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Get the mass flow rate from the input connector [:#(type=Boolean)]
+Get the specific enthalpy from the input connector [:#(type=Boolean)]
+Get the composition from the input connector [:#(type=Boolean)]
+Get the trace substances from the input connector [:#(type=Boolean)]
+Fixed mass flow rate going out of the fluid port [kg/s]
+Fixed value of specific enthalpy [J/kg]
+Fixed value of composition [kg/kg]
+Needed to connect to conditional connector [kg/s]
+Needed to connect to conditional connector [J/kg]
+Needed to connect to conditional connector [1]
+Mass flow rate from the connection point into the component [kg/s]
+Mass flow rate from the connection point into the component [kg/s]
+Mass flow rate from the connection point into the component [kg/s]
+Flow direction for port_1 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Flow direction for port_2 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Flow direction for port_3 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Volume [m3]
+Formulation of energy balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of mass balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of substance balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of trace substance balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Start value of pressure [Pa|bar]
+= true, use T_start, otherwise h_start [:#(type=Boolean)]
+Start value of temperature [K|degC]
+Start value of specific enthalpy [J/kg]
+Start value of mass fractions m_i/m [kg/kg]
+Absolute pressure of medium [Pa|bar]
+der(Absolute pressure of medium) [Pa/s]
+Specific enthalpy of medium [J/kg]
+der(Specific enthalpy of medium) [m2/s3]
+Density of medium [kg/m3|g/cm3]
+der(Density of medium) [Pa.m-2.s]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+der(Specific internal energy of medium) [m2/s3]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation temperature [K|degC]
+Internal energy of fluid [J]
+der(Internal energy of fluid) [W]
+Mass of fluid [kg]
+der(Mass of fluid) [kg/s]
+Heat flow across boundaries or energy source/sink [W]
+Work flow across boundaries or source term [W]
+= true to set up initial equations for pressure [:#(type=Boolean)]
+Mixing volume inside junction [m3]
+Mass flow rate from the connection point into the component [kg/s]
+Mass flow rate from the connection point into the component [kg/s]
+Flow direction for port_1 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Flow direction for port_2 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Flow direction for port_3 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Volume [m3]
+Formulation of energy balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of mass balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of substance balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of trace substance balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Start value of pressure [Pa|bar]
+= true, use T_start, otherwise h_start [:#(type=Boolean)]
+Start value of temperature [K|degC]
+Start value of specific enthalpy [J/kg]
+Start value of mass fractions m_i/m [kg/kg]
+Absolute pressure of medium [Pa|bar]
+der(Absolute pressure of medium) [Pa/s]
+Specific enthalpy of medium [J/kg]
+der(Specific enthalpy of medium) [m2/s3]
+Density of medium [kg/m3|g/cm3]
+der(Density of medium) [Pa.m-2.s]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+der(Specific internal energy of medium) [m2/s3]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation temperature [K|degC]
+Internal energy of fluid [J]
+der(Internal energy of fluid) [W]
+Mass of fluid [kg]
+der(Mass of fluid) [kg/s]
+Heat flow across boundaries or energy source/sink [W]
+Work flow across boundaries or source term [W]
+= true to set up initial equations for pressure [:#(type=Boolean)]
+Mixing volume inside junction [m3]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Mass flow rate from the connection point into the component [kg/s]
+Mass flow rate from the connection point into the component [kg/s]
+= true if port_a exposes the state of a fluid volume [:#(type=Boolean)]
+= true if port_b.p exposes the state of a fluid volume [:#(type=Boolean)]
+= false to hide the arrow in the model icon [:#(type=Boolean)]
+Absolute pressure of medium [Pa|bar]
+der(Absolute pressure of medium) [Pa/s]
+Specific enthalpy of medium [J/kg]
+der(Specific enthalpy of medium) [m2/s3]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+der(Specific internal energy of medium) [m2/s3]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation temperature [K|degC]
+Volume [m3]
+= true to use the HeatTransfer model [:#(type=Boolean)]
+= true to use the UA exponent in expression 'UA = UA_nominal*(m_flow/m_flow_nominal)^UA_exponent' [:#(type=Boolean)]
+Nominal thermal conductance [W/K]
+Nominal mass flow rate [kg/s]
+Exponent for expression 'UA = UA_nominal*(m_flow/m_flow_nominal)^UA_exponent'
+Formulation of energy balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of mass balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Start value of pressure [Pa|bar]
+= true, use T_start, otherwise h_start [:#(type=Boolean)]
+Start value of temperature [K|degC]
+Start value of specific enthalpy [J/kg]
+Start value of mass fractions m_i/m [kg/kg]
+= true to activate homotopy(actual,simple) during steady-state initialization [:#(type=Boolean)]
+Internal energy of fluid [J]
+der(Internal energy of fluid) [W]
+Bulk temperature [K|degC]
+Mass of fluid [kg]
+der(Mass of fluid) [kg/s]
+[W/K]
+Heat flow rate (positive if flowing from outside into the component) [W]
+= true to set up initial equations for pressure [:#(type=Boolean)]
+[J/kg]
+Number of ports [:#(type=Integer)]
+Absolute pressure of medium [Pa|bar]
+Specific enthalpy of medium [J/kg]
+Density of medium [kg/m3|g/cm3]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Specific enthalpy [J/kg]
+Pressure [Pa|bar]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation pressure [Pa|bar]
+Saturation temperature [K|degC]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Allowed flow direction [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Get the pressure from the input connector [:#(type=Boolean)]
+Get the specific enthalpy from the input connector [:#(type=Boolean)]
+Get the composition from the input connector [:#(type=Boolean)]
+Get the trace substances from the input connector [:#(type=Boolean)]
+Fixed value of pressure [Pa|bar]
+Fixed value of specific enthalpy [J/kg]
+Fixed value of composition [kg/kg]
+Needed to connect to conditional connector [Pa]
+Needed to connect to conditional connector [J/kg]
+Needed to connect to conditional connector [1]
+Nominal pressure at port_a [Pa|bar]
+Nominal pressure at port_b [Pa|bar]
+Nominal mass flow rate [kg/s]
+linear pressuredrop coefficient [m-1.s-1]
+Nominal pressure at port_a [Pa|bar]
+Nominal pressure at port_b [Pa|bar]
+Nominal mass flow rate [kg/s]
+linear pressuredrop coefficient [m-1.s-1]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Thermodynamic pressure in the connection point [Pa|bar]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+= true if port_a exposes the state of a fluid volume [:#(type=Boolean)]
+= true if port_b.p exposes the state of a fluid volume [:#(type=Boolean)]
+= false to hide the arrow in the model icon [:#(type=Boolean)]
+Guess value of dp = port_a.p - port_b.p [Pa|bar]
+Guess value of m_flow = port_a.m_flow [kg/s]
+Small mass flow rate for regularization of zero flow [kg/s]
+= true, if temperatures at port_a and port_b are computed [:#(type=Boolean)]
+= true, if volume flow rate at inflowing port is computed [:#(type=Boolean)]
+Pressure difference between port_a and port_b (= port_a.p - port_b.p) [Pa|bar]
+Volume flow rate at inflowing port (positive when flow from port_a to port_b) [m3/s]
+Temperature close to port_a, if show_T = true [K|degC]
+Temperature close to port_b, if show_T = true [K|degC]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Density [kg/m3|g/cm3]
+Temperature [K|degC]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Density [kg/m3|g/cm3]
+Temperature [K|degC]
+Nominal pressure drop at full opening [Pa|bar]
+Nominal mass flowrate at full opening [kg/s]
+Hydraulic conductance at full opening [kg/(s.Pa)]
+Mass flow rate from the connection point into the component [kg/s]
+Mass flow rate from the connection point into the component [kg/s]
+Flow direction for port_1 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Flow direction for port_2 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Flow direction for port_3 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Volume [m3]
+Formulation of energy balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of mass balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of substance balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of trace substance balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Start value of pressure [Pa|bar]
+= true, use T_start, otherwise h_start [:#(type=Boolean)]
+Start value of temperature [K|degC]
+Start value of specific enthalpy [J/kg]
+Start value of mass fractions m_i/m [kg/kg]
+Absolute pressure of medium [Pa|bar]
+der(Absolute pressure of medium) [Pa/s]
+Specific enthalpy of medium [J/kg]
+der(Specific enthalpy of medium) [m2/s3]
+Density of medium [kg/m3|g/cm3]
+der(Density of medium) [Pa.m-2.s]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+der(Specific internal energy of medium) [m2/s3]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation temperature [K|degC]
+Internal energy of fluid [J]
+der(Internal energy of fluid) [W]
+Mass of fluid [kg]
+der(Mass of fluid) [kg/s]
+Heat flow across boundaries or energy source/sink [W]
+Work flow across boundaries or source term [W]
+= true to set up initial equations for pressure [:#(type=Boolean)]
+Mixing volume inside junction [m3]
+Conversion efficiency [1]
+Fixed speed [rad/s]
+der(Absolute rotation angle of flange) [rad/s]
+Cut torque in the flange [N.m]
+Mixing volume inside bleed splitter [m3]
+Elipse Constant for stage1 [m2]
+Elipse Constant for stage2 [m2]
+Nominal steam flow rate for stage1 [kg/s]
+Nominal steam flow rate for stage2 [kg/s]
+Nominal inlet pressure [Pa|bar]
+Nominal outlet pressure [Pa|bar]
+Nominal bleed pressure [Pa|bar]
+Nominal inlet enthalpy [J/kg]
+Nominal bleed enthalpy [J/kg]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Formulation of energy balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of mass balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Start value of bleed pressure [Pa|bar]
+= true, use T_start, otherwise h_start [:#(type=Boolean)]
+Start value of bleed temperature [K|degC]
+Start value of specific enthalpy [J/kg]
+Mechanical power [W]
+Absolute rotation angle of flange [rad|deg]
+Cut torque in the flange [N.m]
+Absolute rotation angle of flange [rad|deg]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Density [kg/m3|g/cm3]
+Temperature [K|degC]
+Mechanical power [W]
+Isentropic efficiency [1]
+[J/kg]
+Net torque from turbine [N.m]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Absolute rotation angle of flange [rad|deg]
+der(Absolute rotation angle of flange) [rad/s]
+Cut torque in the flange [N.m]
+Absolute rotation angle of flange [rad|deg]
+Elipse Constant [m2]
+Nominal inlet enthalpy [J/kg]
+Nominal steam flow rate [kg/s]
+Nominal inlet pressure [Pa|bar]
+Nominal outlet pressure [Pa|bar]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Density [kg/m3|g/cm3]
+Temperature [K|degC]
+Mechanical power [W]
+Isentropic efficiency [1]
+[J/kg]
+Net torque from turbine [N.m]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Absolute rotation angle of flange [rad|deg]
+der(Absolute rotation angle of flange) [rad/s]
+Absolute rotation angle of flange [rad|deg]
+Elipse Constant [m2]
+Nominal inlet enthalpy [J/kg]
+Nominal steam flow rate [kg/s]
+Nominal inlet pressure [Pa|bar]
+Nominal outlet pressure [Pa|bar]
+Flow direction for port_1 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Flow direction for port_2 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Flow direction for port_3 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Volume [m3]
+Formulation of energy balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of mass balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of substance balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of trace substance balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Start value of pressure [Pa|bar]
+= true, use T_start, otherwise h_start [:#(type=Boolean)]
+Start value of temperature [K|degC]
+Start value of specific enthalpy [J/kg]
+Start value of mass fractions m_i/m [kg/kg]
+Absolute pressure of medium [Pa|bar]
+der(Absolute pressure of medium) [Pa/s]
+Specific enthalpy of medium [J/kg]
+der(Specific enthalpy of medium) [m2/s3]
+Density of medium [kg/m3|g/cm3]
+der(Density of medium) [Pa.m-2.s]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+der(Specific internal energy of medium) [m2/s3]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation temperature [K|degC]
+Internal energy of fluid [J]
+der(Internal energy of fluid) [W]
+Mass of fluid [kg]
+der(Mass of fluid) [kg/s]
+Heat flow across boundaries or energy source/sink [W]
+Work flow across boundaries or source term [W]
+= true to set up initial equations for pressure [:#(type=Boolean)]
+Mixing volume inside junction [m3]
+Mixing volume inside bleed splitter [m3]
+Elipse Constant for stage1 [m2]
+Elipse Constant for stage2 [m2]
+Nominal steam flow rate for stage1 [kg/s]
+Nominal steam flow rate for stage2 [kg/s]
+Nominal inlet pressure [Pa|bar]
+Nominal outlet pressure [Pa|bar]
+Nominal bleed pressure [Pa|bar]
+Nominal inlet enthalpy [J/kg]
+Nominal bleed enthalpy [J/kg]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Formulation of energy balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of mass balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Start value of bleed pressure [Pa|bar]
+= true, use T_start, otherwise h_start [:#(type=Boolean)]
+Start value of bleed temperature [K|degC]
+Start value of specific enthalpy [J/kg]
+Mechanical power [W]
+Thermodynamic pressure in the connection point [Pa|bar]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Absolute rotation angle of flange [rad|deg]
+Cut torque in the flange [N.m]
+Absolute rotation angle of flange [rad|deg]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Density [kg/m3|g/cm3]
+Temperature [K|degC]
+Mechanical power [W]
+Isentropic efficiency [1]
+[J/kg]
+Net torque from turbine [N.m]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Absolute rotation angle of flange [rad|deg]
+der(Absolute rotation angle of flange) [rad/s]
+Cut torque in the flange [N.m]
+Absolute rotation angle of flange [rad|deg]
+Elipse Constant [m2]
+Nominal inlet enthalpy [J/kg]
+Nominal steam flow rate [kg/s]
+Nominal inlet pressure [Pa|bar]
+Nominal outlet pressure [Pa|bar]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Density [kg/m3|g/cm3]
+Temperature [K|degC]
+Mechanical power [W]
+Isentropic efficiency [1]
+[J/kg]
+Net torque from turbine [N.m]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Absolute rotation angle of flange [rad|deg]
+der(Absolute rotation angle of flange) [rad/s]
+Absolute rotation angle of flange [rad|deg]
+Elipse Constant [m2]
+Nominal inlet enthalpy [J/kg]
+Nominal steam flow rate [kg/s]
+Nominal inlet pressure [Pa|bar]
+Nominal outlet pressure [Pa|bar]
+Flow direction for port_1 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Flow direction for port_2 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Flow direction for port_3 [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Volume [m3]
+Formulation of energy balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of mass balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of substance balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Formulation of trace substance balance [:#(type=Modelica.Fluid.Types.Dynamics)]
+Start value of pressure [Pa|bar]
+= true, use T_start, otherwise h_start [:#(type=Boolean)]
+Start value of temperature [K|degC]
+Start value of specific enthalpy [J/kg]
+Start value of mass fractions m_i/m [kg/kg]
+Absolute pressure of medium [Pa|bar]
+der(Absolute pressure of medium) [Pa/s]
+Specific enthalpy of medium [J/kg]
+der(Specific enthalpy of medium) [m2/s3]
+Density of medium [kg/m3|g/cm3]
+der(Density of medium) [Pa.m-2.s]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+der(Specific internal energy of medium) [m2/s3]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation temperature [K|degC]
+Internal energy of fluid [J]
+der(Internal energy of fluid) [W]
+Mass of fluid [kg]
+der(Mass of fluid) [kg/s]
+Heat flow across boundaries or energy source/sink [W]
+Work flow across boundaries or source term [W]
+= true to set up initial equations for pressure [:#(type=Boolean)]
+Mixing volume inside junction [m3]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+Mass flow rate from the connection point into the component [kg/s]
+Mass flow rate from the connection point into the component [kg/s]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+= true if port_a exposes the state of a fluid volume [:#(type=Boolean)]
+= true if port_b.p exposes the state of a fluid volume [:#(type=Boolean)]
+= false to hide the arrow in the model icon [:#(type=Boolean)]
+Nominal value of m_flow = port_a.m_flow [kg/s]
+Regularization for bi-directional flow in the region |m_flow| < m_flow_small (m_flow_small > 0 required) [kg/s]
+Temperature of the passing fluid [K|degC]
+Number of ports [:#(type=Integer)]
+Specific enthalpy of medium [J/kg]
+Density of medium [kg/m3|g/cm3]
+Temperature of medium [K|degC]
+Mass fractions (= (component mass)/total mass  m_i/m) [kg/kg]
+Specific internal energy of medium [J/kg]
+Gas constant (of mixture if applicable) [J/(kg.K)]
+Molar mass (of mixture or single fluid) [kg/mol]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Specific enthalpy [J/kg]
+= true if StateSelect.prefer shall be used for the independent property variables of the medium [:#(type=Boolean)]
+If true, and reducedX = true, the last element of X will be computed from the other ones [:#(type=Boolean)]
+Temperature of medium in [degC] [degC;]
+Absolute pressure of medium in [bar] [bar]
+Saturation temperature [K|degC]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Specific thermodynamic enthalpy close to the connection point if m_flow < 0 [J/kg]
+Allowed flow direction [:#(type=Modelica.Fluid.Types.PortFlowDirection)]
+Get the mass flow rate from the input connector [:#(type=Boolean)]
+Get the specific enthalpy from the input connector [:#(type=Boolean)]
+Get the composition from the input connector [:#(type=Boolean)]
+Get the trace substances from the input connector [:#(type=Boolean)]
+Fixed mass flow rate going out of the fluid port [kg/s]
+Fixed value of specific enthalpy [J/kg]
+Fixed value of composition [kg/kg]
+Prescribed mass flow rate [kg/s]
+Needed to connect to conditional connector [kg/s]
+Needed to connect to conditional connector [J/kg]
+Needed to connect to conditional connector [1]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+Mass flow rate from the connection point into the component [kg/s]
+Thermodynamic pressure in the connection point [Pa|bar]
+[kg/s]
+= true to allow flow reversal, false restricts to design direction (port_a -> port_b) [:#(type=Boolean)]
+= true if port_a exposes the state of a fluid volume [:#(type=Boolean)]
+= true if port_b.p exposes the state of a fluid volume [:#(type=Boolean)]
+= false to hide the arrow in the model icon [:#(type=Boolean)]
+Guess value of dp = port_a.p - port_b.p [Pa|bar]
+Guess value of m_flow = port_a.m_flow [kg/s]
+Small mass flow rate for regularization of zero flow [kg/s]
+= true, if temperatures at port_a and port_b are computed [:#(type=Boolean)]
+= true, if volume flow rate at inflowing port is computed [:#(type=Boolean)]
+Pressure difference between port_a and port_b (= port_a.p - port_b.p) [Pa|bar]
+Volume flow rate at inflowing port (positive when flow from port_a to port_b) [m3/s]
+Temperature close to port_a, if show_T = true [K|degC]
+Temperature close to port_b, if show_T = true [K|degC]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Density [kg/m3|g/cm3]
+Temperature [K|degC]
+Phase of the fluid: 1 for 1-phase, 2 for two-phase, 0 for not known, e.g., interactive use [:#(type=Integer)]
+Density [kg/m3|g/cm3]
+Temperature [K|degC]
+Nominal pressure drop at full opening=1 [Pa|bar]
+Nominal mass flowrate at full opening=1 [kg/s]
+Hydraulic conductance at full opening=1 [kg/(s.Pa)]
+Remaining opening if closed, causing small leakage flow [1]
+[:#(type=Boolean)]
+Saturation temperature [K|degC]
+Total fluid volume [m3]
+Nominal pressure [Pa|bar]
+Nominal liquid volume [m3]
+Specific enthalpy of vapour (x=1) [J/kg]
+der(Specific enthalpy of vapour (x=1)) [m2/s3]
+Specific enthalpy of liquid (x=0) [J/kg]
+der(Specific enthalpy of liquid (x=0)) [m2/s3]
+vapour density [kg/m3|g/cm3]
+der(vapour density) [Pa.m-2.s]
+liquid density [kg/m3|g/cm3]
+der(liquid density) [Pa.m-2.s]
+Internal energy of liquid [J]
+der(Internal energy of liquid) [W]
+Total fluid mass [kg]
+der(Total fluid mass) [kg/s]
+vapour mass [kg]
+der(vapour mass) [kg/s]
+liquid mass [kg]
+der(liquid mass) [kg/s]
+vapour volume [m3]
+liquid volume [m3]
+der(liquid volume) [m3/s]
+condensation mass flow rate [kg/s]
+Mass flow rate from the connection point into the component [kg/s]
+[1]
+Height of ramps [kg/s]
+Duration of ramp (= 0.0 gives a Step) [s]
+Offset of output signal [kg/s]
+Output = offset for time < startTime [s]
+Connector of Real output signal [kg/s]
+Time instant of step start [s]
+Output before startTime [:#(type=Boolean)]
+
+
+

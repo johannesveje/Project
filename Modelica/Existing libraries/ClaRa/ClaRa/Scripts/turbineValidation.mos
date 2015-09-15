@@ -1,0 +1,33 @@
+cd("..")
+translateModel("ClaRaCCS.Components.TurboMachines.Turbines.ValidateTurbines.ValidateTurbine_2");
+simulateModel("ClaRaCCS.Components.TurboMachines.Turbines.ValidateTurbines.ValidateTurbine_2", stopTime=14400, method="dassl", resultFile="ValidateTurbine_2");
+createPlot(id = 1,
+ position = {10, 10, 500, 500},
+ y = {"HPTurbine.inlet.m_flow", "gainMeas[5].y"},
+ heading = "HP-turbine",
+ range = {0.0, 14500.0, 440.0, 200.0},
+ autoscale = true,
+ autoerase = true,
+ autoreplot = true,
+ description = false,
+ grid = true,
+ color = true,
+ online = false,
+ legends = {"simulation", "measurement"},
+ leftTitle = "massflow in kg/s",
+ bottomTitle = "time in s");
+createPlot(id = 2,
+ position = {10, 10, 500, 500},
+ y = {"HPTurbine.dat.T", "MeasurementTable.y[1]"},
+ heading = "HP-turbine",
+ range = {0.0, 14500.0, 322.0, 304.0},
+ autoscale = true,
+ autoerase = true,
+ autoreplot = true,
+ description = false,
+ grid = true,
+ color = true,
+ online = false,
+ subPlot = 2,
+ leftTitle = "outlet temperature in °C",
+ bottomTitle = "time in s");

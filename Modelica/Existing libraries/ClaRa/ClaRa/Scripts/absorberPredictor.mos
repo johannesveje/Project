@@ -1,0 +1,20 @@
+cd("..");
+translateModel("ClaRaCCS.Components.ThermalSeparation.Columns.testColumns.Absorber_GG2_modEQ_Pre");
+simulateModel("ClaRaCCS.Components.ThermalSeparation.Columns.testColumns.Absorber_GG2_modEQ_Pre", stopTime=10000, method="dassl", resultFile="absorberPredictor");
+
+createPlot(id = 1,
+ position = {0, 0, 600, 300},
+ y = {"x_CO2_out", "predictorAbsorber.x_CO2_out_predict"},
+ heading = "CO2 at absorber outlet",
+ range = {0.0, 10000.0, 0, 0.04},
+ autoscale = true,
+ autoerase = true,
+ autoreplot = true,
+ description = false,
+ grid = true,
+ color = true,
+ online = false,
+ filename = "absorberPredictor.mat",
+ legends = {"xCO2_actual", "xCO2_predict"},
+ leftTitle = "xCO2 in mol/mol",
+ bottomTitle = "Time in s");

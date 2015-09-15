@@ -1,0 +1,954 @@
+convertClear();
+// ===========Conversion Script for Replaceable Models============
+// ===============================================================
+// Conversion script for updated replaceable models  (NewICom)
+// for pressure loss,heat transfer, spacial distribution and geometry. 
+// ===============================================================
+// ______________PressurLoss________________
+// _______________Generic_PL________________
+// PressureLoss --> PressureLoss_L2 + dp --> Delta_p
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L2");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L2");
+convertClass("Fundamentals.PressureLoss.Generic_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L2");
+convertClass("PressureLoss.Generic_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L2");
+convertClass("Generic_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L2");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss","dp","Delta_p");
+//
+// NoFriction --> NoFriction_L2 + dp --> Delta_p
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L2");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L2");
+convertClass("Fundamentals.PressureLoss.Generic_PL.NoFriction", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L2");
+convertClass("PressureLoss.Generic_PL.NoFriction", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L2");
+convertClass("Generic_PL.NoFriction", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L2");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction","dp","Delta_p");
+//
+// LinearPressureLoss --> LinearPressureLoss_L2  + dp --> Delta_p
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L2");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L2");
+convertClass("Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L2");
+convertClass("PressureLoss.Generic_PL.LinearPressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L2");
+convertClass("Generic_PL.LinearPressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L2");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss","dp","Delta_p");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss",{"dp_nom"},{"Delta_p_nom=%dp_nom%"},true);
+//
+// QuadraticNominalPoint --> QuadraticNominalPoint_L2  + dp --> Delta_p
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint_L2");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint_L2");
+convertClass("Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint_L2");
+convertClass("PressureLoss.Generic_PL.QuadraticNominalPoint", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint_L2");
+convertClass("Generic_PL.QuadraticNominalPoint", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint_L2");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint","dp","Delta_p");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint",{"dp_nom"},{"Delta_p_nom=%dp_nom%"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint",{"dp_smooth"},{"Delta_p_smooth=%dp_smooth%"},true);
+//
+//PressureLoss_L3
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L3","dp","Delta_p");
+//
+//NoFriction_L3
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L3","dp","Delta_p");
+//
+// LinearPressureLoss_3 --> LinearSerialZones_L3 + dp --> Delta_p + dp_nom --> Delta_p_nom
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertClass("Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertClass("PressureLoss.Generic_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertClass("Generic_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_3","dp","Delta_p");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_3",{"dp_nom"},{"Delta_p_nom=%dp_nom%"},true);
+//
+// LinearPressureLoss_L3 --> LinearSerialZones_L3 + dp --> Delta_p + dp_nom --> Delta_p_nom
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertClass("Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertClass("PressureLoss.Generic_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertClass("Generic_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearSerialZones_L3");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L3","dp","Delta_p");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L3",{"dp_nom"},{"Delta_p_nom=%dp_nom%"},true);
+//
+// _______________VLE_PL________________
+// PressureLoss --> PressureLoss_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLoss_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLoss_L2");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLoss_L2");
+convertClass("Fundamentals.PressureLoss.VLE_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLoss_L2");
+convertClass("PressureLoss.VLE_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLoss_L2");
+convertClass("VLE_PL.PressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLoss_L2");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLoss","dp","Delta_p");
+//
+// PressureLossCoefficient --> PressureLossCoefficient_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient_L2");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient_L2");
+convertClass("Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient_L2");
+convertClass("PressureLoss.VLE_PL.PressureLossCoeffcient", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient_L2");
+convertClass("VLE_PL.PressureLossCoeffcient", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient_L2");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient","dp","Delta_p");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.PressureLossCoeffcient",{"dp_smooth"},{"Delta_p_smooth=%dp_smooth%"},true);
+//
+// VLE_PL.GenericPressureLoss_L3 --> Generic_PL.PressureLoss_L3
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.GenericPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.GenericPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L3");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.VLE_PL.GenericPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L3");
+convertClass("Fundamentals.PressureLoss.VLE_PL.GenericPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L3");
+convertClass("PressureLoss.VLE_PL.GenericPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L3");
+convertClass("VLE_PL.GenericPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.PressureLoss_L3");
+//
+// VLE_PL.NoFriction_L3 --> Generic_PL.NoFriction_L3
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.NoFriction_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.NoFriction_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L3");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.VLE_PL.NoFriction_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L3");
+convertClass("Fundamentals.PressureLoss.VLE_PL.NoFriction_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L3");
+convertClass("PressureLoss.VLE_PL.NoFriction_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L3");
+convertClass("VLE_PL.NoFriction_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L3");
+
+//
+// VLE_PL.LinearPressureLoss_3/VLE_PL.LinearPressureLoss_L3 --> Generic_PL.LinearPressureLoss_L3
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertClass("Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertClass("PressureLoss.VLE_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertClass("VLE_PL.LinearPressureLoss_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertClass( "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertClass( "Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertClass( "ControlVolumes.Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertClass( "Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertClass( "PressureLoss.VLE_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertClass( "VLE_PL.LinearPressureLoss_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearParallelZones_L3");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_3","dp","Delta_p");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_L3","dp","Delta_p");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_3",{"dp_nom"},{"Delta_p_nom=%dp_nom%"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.LinearPressureLoss_L3",{"dp_nom"},{"Delta_p_nom=%dp_nom%"},true);
+//
+//VLE_PL.QuadraticNominal_3/VLE_PL.QuadraticNominal_L3 --> Generic_PL.QuadraticParallelZones_L3
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelZones_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelZones_L3");
+convertClass("ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelZones_L3");
+convertClass("Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelZones_L3");
+convertClass("PressureLoss.VLE_PL.QuadraticNominal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelZones_L3");
+convertClass("VLE_PL.QuadraticNominal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelZones_L3");
+convertClass( "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelones_L3");
+convertClass( "Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelones_L3");
+convertClass( "ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelones_L3");
+convertClass( "Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelones_L3");
+convertClass( "PressureLoss.VLE_PL.QuadraticNominal_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelones_L3");
+convertClass( "VLE_PL.QuadraticNominal_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticParallelones_L3");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_3","dp","Delta_p");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_L3","dp","Delta_p");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_3",{"dp_nom"},{"Delta_p_nom=%dp_nom%"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_L3",{"dp_nom"},{"Delta_p_nom=%dp_nom%"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_3",{"dp_smooth"},{"Delta_p_smooth=%dp_smooth%"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.VLE_PL.QuadraticNominal_L3",{"dp_smooth"},{"Delta_p_smooth=%dp_smooth%"},true);
+//______________________________________________________________________________________________________________________________
+//
+// ______________HeatTransport________________
+// _______________Generic_HT__________________
+//HeatTransfer --> HeatTransfer_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.HeatTransfer_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.HeatTransfer_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Generic_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.HeatTransfer_L2");
+convertClass("Fundamentals.HeatTransport.Generic_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.HeatTransfer_L2");
+convertClass("HeatTransport.Generic_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.HeatTransfer_L2");
+convertClass("Generic_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.HeatTransfer_L2");
+//
+//IdealHeatTransfer --> IdealHeatTransfer_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+convertClass("Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+convertClass("HeatTransport.Generic_HT.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+convertClass("Generic_HT.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+//
+// Adiabat --> Adiabat_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+convertClass("Fundamentals.HeatTransport.Generic_HT.Adiabat", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+convertClass("HeatTransport.Generic_HT.Adiabat", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+convertClass("Generic_HT.Adiabat", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+//
+//ConstantHTC --> Constant_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.ConstantHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.ConstantHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.ConstantHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Generic_HT.ConstantHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("Fundamentals.HeatTransport.Generic_HT.ConstantHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("HeatTransport.Generic_HT.ConstantHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("Generic_HT.ConstantHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+//
+// CharLineHTC --> CharLine_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("Fundamentals.HeatTransport.Generic_HT.CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("HeatTransport.Generic_HT.CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("Generic_HT.CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+//
+// Constant_HTC_AMTD --> Constant_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.ConstantHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.ConstantHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Generic_HT.ConstantHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("Fundamentals.HeatTransport.Generic_HT.ConstantHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("HeatTransport.Generic_HT.ConstantHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("Generic_HT.ConstantHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+//
+// CharLineHTC_AMTD --> CharLine_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLineHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLineHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLineHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("Fundamentals.HeatTransport.Generic_HT.CharLineHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("HeatTransport.Generic_HT.CharLineHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("Generic_HT.CharLineHTC_AMTD", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+
+//______________VLE_HT____________________
+// HeatTransfer --> HeatTransfer_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L2");
+convertClass("Fundamentals.HeatTransport.VLE_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L2");
+convertClass("HeatTransport.VLE_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L2");
+convertClass("VLE_HT.HeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L2");
+//
+// HTC_NusseltPipe2ph --> NusseltPipe2ph_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L2");
+convertClass("Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L2");
+convertClass("HeatTransport.VLE_HT.HTC_NusseltPipe2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L2");
+convertClass("VLE_HT.HTC_NusseltPipe2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L2");
+//
+// HTC_NusseltPipe1ph --> NusseltPipe1ph_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe1ph_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe1ph_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe1ph_L2");
+convertClass("Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe1ph_L2");
+convertClass("HeatTransport.VLE_HT.HTC_NusseltPipe1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe1ph_L2");
+convertClass("VLE_HT.HTC_NusseltPipe1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe1ph_L2");
+//
+// HTC_NusseltShell2ph --> NusseltShell2ph_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L2");
+convertClass("Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L2");
+convertClass("HeatTransport.VLE_HT.HTC_NusseltShell2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L2");
+convertClass("VLE_HT.HTC_NusseltShell2ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L2");
+
+// HTC_NusseltShell1ph --> NusseltShell1ph_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell1ph_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell1ph_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell1ph_L2");
+convertClass("Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell1ph_L2");
+convertClass("HeatTransport.VLE_HT.HTC_NusseltShell1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell1ph_L2");
+convertClass("VLE_HT.HTC_NusseltShell1ph", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell1ph_L2");
+//
+// HeatTransfer_3 --> HeatTransfer_L3
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L3");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L3");
+convertClass("Fundamentals.HeatTransport.VLE_HT.HeatTransfer_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L3");
+convertClass("HeatTransport.VLE_HT.HeatTransfer_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L3");
+convertClass("VLE_HT.HeatTransfer_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HeatTransfer_L3");
+//
+// HTC_const_3 --> Constant_L3
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_const_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_const_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_const_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+convertClass("Fundamentals.HeatTransport.VLE_HT.HTC_const_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+convertClass("HeatTransport.VLE_HT.HTC_const_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+convertClass("VLE_HT.HTC_const_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+//
+// HTC_const_L3 --> Constant_L3
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_const_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_const_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_const_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+convertClass("Fundamentals.HeatTransport.VLE_HT.HTC_const_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+convertClass("HeatTransport.VLE_HT.HTC_const_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+convertClass("VLE_HT.HTC_const_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Constant_L3");
+//
+// HTC_ideal_3 --> Ideal_L3
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_ideal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Ideal_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_ideal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Ideal_L3");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_ideal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Ideal_L3");
+convertClass("Fundamentals.HeatTransport.VLE_HT.HTC_ideal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Ideal_L3");
+convertClass("CHeatTransport.VLE_HT.HTC_ideal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Ideal_L3");
+convertClass("VLE_HT.HTC_ideal_3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.Ideal_L3");
+//
+// HTC_NusseltPipe2ph_L3 --> NusseltPipe2ph_L3
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L3");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L3");
+convertClass("Fundamentals.HeatTransport.VLE_HT.HTC_NusseltPipe2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L3");
+convertClass("HeatTransport.VLE_HT.HTC_NusseltPipe2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L3");
+convertClass("VLE_HT.HTC_NusseltPipe2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltPipe2ph_L3");
+//
+// HTC_NusseltShell2ph_L3 --> NusseltShell2ph_L3
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L3");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L3");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L3");
+convertClass("Fundamentals.HeatTransport.VLE_HT.HTC_NusseltShell2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L3");
+convertClass("HeatTransport.VLE_HT.HTC_NusseltShell2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L3");
+convertClass("VLE_HT.HTC_NusseltShell2ph_L3", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.VLE_HT.NusseltShell2ph_L3");
+//
+// TubeType --> TubeType_L2, ShellType --> ShellType_L2
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.TubeType", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.TubeType_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.TubeType", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.TubeType_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.TubeType", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.TubeType_L2");
+convertClass("Fundamentals.HeatTransport.TubeType", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.TubeType_L2");
+convertClass("HeatTransport.TubeType", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.TubeType_L2");
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.ShellType", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.ShellType_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.ShellType", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.ShellType_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.ShellType", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.ShellType_L2");
+convertClass("Fundamentals.HeatTransport.ShellType", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.ShellType_L2");
+convertClass("HeatTransport.ShellType", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.ShellType_L2");
+
+
+//____________GAS_HT_____________________________________________________________________________________________________________________________________________
+//
+//convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock","W","width");
+//convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock","L","length");
+//convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock","H","height");
+//convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes","W","width");
+//convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes","L","length");
+//convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes","H","height");
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes",{"z_in", "z_out"},{"height=%z_out%-%z_in%", "z_in={%z_in%}", "z_out={%z_out%}"});
+
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RegenerativeAirPreheater_array",{"S"},fill("",0),true);
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RegenerativeAirPreheater_array","kc","alpha");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RegenerativeAirPreheater_array","d_hyd","diameter_hyd");
+
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Constant_HTC_array",{"S"},fill("",0),true);
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Constant_HTC_array","kc","alpha");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Constant_HTC_array","kc_nom","alpha_nom");
+
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.CharLineHTC_array",{"S"},fill("",0),true);
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.CharLineHTC_array","kc","alpha");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.CharLineHTC_array","kc_nom","alpha_nom");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.CharLineHTC_array","kc_korr_u","alpha_korr_u");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.CharLineHTC_array","PL_kc","PL_alpha");
+
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.SimpleMassFlowDependent",{"S"},fill("",0),true);
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.SimpleMassFlowDependent","kc","alpha");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.SimpleMassFlowDependent","kc_nom","alpha_nom");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.noHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.noHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.noHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_constantAlpha", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToWall",{"A_heat_fixed"},fill("",0),true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToWall",{"surfaceType"},fill("",0),true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToGas",{"A_heat_fixed"},fill("",0),true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToGas",{"surfaceType"},fill("",0),true);
+
+convertClass("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellInitT", "ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCell");
+convertClass("Basics.ControlVolumes.GasVolumes.FlueGasCellInitT", "ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCell");
+convertClass("ControlVolumes.GasVolumes.FlueGasCellInitT", "ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCell");
+
+convertModifiers("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCell",{"h_start"},fill("",0),true);
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.noHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.noHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.noHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_constantAlpha", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_constantAlpha", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_constantAlpha", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_CharLineHTC",{"m_flow_nom"},fill("",0),true);
+convertModifiers("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_CharLineHTC",{"m_flow_nom"},fill("",0),true);
+convertModifiers("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_CharLineHTC",{"m_flow_nom"},fill("",0),true);
+
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_CharLineHTC",{"A_heat"},fill("",0),true);
+convertModifiers("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_CharLineHTC",{"A_heat"},fill("",0),true);
+convertModifiers("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_CharLineHTC",{"A_heat"},fill("",0),true);
+
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_constantAlpha","alpha","kc_nom");
+convertElement("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_constantAlpha","alpha","kc_nom");
+convertElement("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_constantAlpha","alpha","kc_nom");
+
+//__________Relocation of Gas HT models_____________
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_TubeBank","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_tubeBank_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_TubeBank","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_tubeBank_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_TubeBank","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_tubeBank_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_Wall","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_flatWall_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_Wall","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_flatWall_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_Wall","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_flatWall_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_FinnedTubes","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_finnedTubes_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_FinnedTubes","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_finnedTubes_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_FinnedTubes","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_finnedTubes_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_CarrierTubes","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_carrierTubes_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_CarrierTubes","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_carrierTubes_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_CarrierTubes","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_carrierTubes_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveAndRadiantHeat_TubeBankSuperheater","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.ConvectionAndRadiation_tubeBank_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveAndRadiantHeat_TubeBankSuperheater","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.ConvectionAndRadiation_tubeBank_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveAndRadiantHeat_TubeBankSuperheater","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.ConvectionAndRadiation_tubeBank_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToWall","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Wall_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToWall","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Wall_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToWall","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Wall_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToGas","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Gas_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToGas","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Gas_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToGas","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Gas_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToWall_geo_epsilon_calc","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Wall_advanced_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToWall_geo_epsilon_calc","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Wall_advanced_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToWall_geo_epsilon_calc","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Wall_advanced_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToGas_geo_epsilon_calc","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gasT2Gas_advanced_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToGas_geo_epsilon_calc","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gasT2Gas_advanced_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToGas_geo_epsilon_calc","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gasT2Gas_advanced_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RegenerativeAirPreheater_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_regenerativeAirPreheater_array");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RegenerativeAirPreheater_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_regenerativeAirPreheater_array");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RegenerativeAirPreheater_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_regenerativeAirPreheater_array");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.HeatTransfer_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.HeatTransfer_array");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.HeatTransfer_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.HeatTransfer_array");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.HeatTransfer_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.HeatTransfer_array");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.CharLineHTC_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_charLine_array");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.CharLineHTC_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_charLine_array");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.CharLineHTC_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_charLine_array");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.SimpleMassFlowDependent","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_simpleMassFlowDependent_array");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.SimpleMassFlowDependent","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_simpleMassFlowDependent_array");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.SimpleMassFlowDependent","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_simpleMassFlowDependent_array");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Constant_HTC_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_constantAlpha_array");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Constant_HTC_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_constantAlpha_array");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Constant_HTC_array","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Special.Convection_constantAlpha_array");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.HeatTransfer","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.HeatTransfer_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.HeatTransfer","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.HeatTransfer_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.HeatTransfer","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.HeatTransfer_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.HeatTransfer","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.HeatTransfer_L2");
+convertClass("Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.HeatTransfer","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.HeatTransfer_L2");
+convertClass("ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.HeatTransfer","ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.HeatTransfer_L2");
+
+
+//_________foulingFactor______________
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_constantAlpha","foulingFactor","CF_fouling");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_TubeBank","foulingFactor","CF_fouling");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_Wall","foulingFactor","CF_fouling");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_FinnedTubes","foulingFactor","CF_fouling");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveHeat_alpha_CarrierTubes","foulingFactor","CF_fouling");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.ConvectiveAndRadiantHeat_TubeBankSuperheater","foulingFactor","CF_fouling");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToWall","foulingFactor","CF_fouling");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.RadiantHeat_GasToWall_geo_epsilon_calc","foulingFactor","CF_fouling");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2","foulingFactor","CF_fouling");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2","foulingFactor","CF_fouling");
+
+
+//_____Old FluidVolume HT______________________
+convertClass("ClaRa.Basics.ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.Adiabat", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+convertClass("Basics.ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.Adiabat", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+convertClass("ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.Adiabat", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Adiabat_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+convertClass("Basics.ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+convertClass("ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.IdealHeatTransfer", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.IdealHeatTransfer_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("Basics.ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+convertClass("ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.CharLineHTC", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.CharLine_L2");
+
+convertClass("ClaRa.Basics.ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.constantAlphaA", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("Basics.ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.constantAlphaA", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+convertClass("ControlVolumes.FluidVolumes.Fundamentals.HeatTransport.constantAlphaA", "ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Generic_HT.Constant_L2");
+
+
+//________________Flue Gas cleaning____________________
+convertClass("ClaRa.Components.Desulfurization.DeSO_ideal_L1", "ClaRa.Components.FlueGasCleaning.Desulfurization.Desulfurization_ideal_L1");
+convertClass("Components.Desulfurization.DeSO_ideal_L1", "ClaRa.Components.FlueGasCleaning.Desulfurization.Desulfurization_ideal_L1");
+convertClass("Desulfurization.DeSO_ideal_L1", "ClaRa.Components.FlueGasCleaning.Desulfurization.Desulfurization_ideal_L1");
+
+
+convertClass("ClaRa.Components.Desulfurization.Internals.Desulfurisation_controlVolume_ideal", "ClaRa.Components.FlueGasCleaning.Desulfurization.Internals.Desulfurisation_controlVolume_ideal");
+convertClass("Components.Desulfurization.Internals.Desulfurisation_controlVolume_ideal", "ClaRa.Components.FlueGasCleaning.Desulfurization.Internals.Desulfurisation_controlVolume_ideal");
+convertClass("CDesulfurization.Internals.Desulfurisation_controlVolume_ideal", "ClaRa.Components.FlueGasCleaning.Desulfurization.Internals.Desulfurisation_controlVolume_ideal");
+
+convertClass("ClaRa.Components.E_Filter.E_Filter_ideal_L1", "ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_ideal_L1");
+convertClass("Components.E_Filter.E_Filter_ideal_L1", "ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_ideal_L1");
+convertClass("E_Filter.E_Filter_ideal_L1", "ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_ideal_L1");
+
+convertClass("ClaRa.Components.E_Filter.E_Filter_empirical_L1", "ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_empirical_L1");
+convertClass("Components.E_Filter.E_Filter_empirical_L1", "ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_empirical_L1");
+convertClass("E_Filter.E_Filter_empirical_L1", "ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_empirical_L1");
+
+convertClass("ClaRa.Components.E_Filter.E_Filter_detailed_L2", "ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_detailed_L2");
+convertClass("Components.E_Filter.E_Filter_detailed_L2", "ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_detailed_L2");
+convertClass("E_Filter.E_Filter_detailed_L2", "ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_detailed_L2");
+
+
+convertClass("ClaRa.Components.deNOx.DeNOxFilter_L1", "ClaRa.Components.FlueGasCleaning.Denitrification.Denitrification_L1");
+convertClass("Components.deNOx.DeNOxFilter_L1", "ClaRa.Components.FlueGasCleaning.Denitrification.Denitrification_L1");
+convertClass("deNOx.DeNOxFilter_L1", "ClaRa.Components.FlueGasCleaning.Denitrification.Denitrification_L1");
+
+convertClass("ClaRa.Components.deNOx.DeNOxFilter_NH3port_L1", "ClaRa.Components.FlueGasCleaning.Denitrification.Denitrification_NH3port_L1");
+convertClass("Components.deNOx.DeNOxFilter_NH3port_L1", "ClaRa.Components.FlueGasCleaning.Denitrification.Denitrification_NH3port_L1");
+convertClass("deNOx.DeNOxFilter_NH3port_L1", "ClaRa.Components.FlueGasCleaning.Denitrification.Denitrification_NH3port_L1");
+
+convertClass("ClaRa.Components.deNOx.Internals.DeNOx_controlVolume", "ClaRa.Components.FlueGasCleaning.Denitrification.Internals.Denitrification_controlVolume");
+convertClass("Components.deNOx.Internals.DeNOx_controlVolume", "ClaRa.Components.FlueGasCleaning.Denitrification.Internals.Denitrification_controlVolume");
+convertClass("deNOx.Internals.DeNOx_controlVolume", "ClaRa.Components.FlueGasCleaning.Denitrification.Internals.Denitrification_controlVolume");
+
+convertClass("ClaRa.Components.deNOx.Internals.DeNOx_NH3port_controlVolume", "ClaRa.Components.FlueGasCleaning.Denitrification.Internals.Denitrification_NH3port_controlVolume");
+convertClass("Components.deNOx.Internals.DeNOx_NH3port_controlVolume", "ClaRa.Components.FlueGasCleaning.Denitrification.Internals.Denitrification_NH3port_controlVolume");
+convertClass("deNOx.Internals.DeNOx_NH3port_controlVolume", "ClaRa.Components.FlueGasCleaning.Denitrification.Internals.Denitrification_NH3port_controlVolume");
+
+
+
+//____________Renaming TLK___________________________________________
+
+//________________Sources
+convertElement("ClaRa.Components.BoundaryConditions.MassFlowSource_h","X_const", "xi_const");
+convertElement("ClaRa.Components.BoundaryConditions.MassFlowSource_h","X_in", "xi_in");
+convertElement("ClaRa.Components.BoundaryConditions.MassFlowSource_h","X", "xi");
+convertElement("ClaRa.Components.BoundaryConditions.MassFlowSource_h","XInputIsActive", "variable_xi");
+convertElement("ClaRa.Components.BoundaryConditions.MassFlowSource_T","X_const", "xi_const");
+convertElement("ClaRa.Components.BoundaryConditions.MassFlowSource_T","X_in", "xi_in");
+convertElement("ClaRa.Components.BoundaryConditions.MassFlowSource_T","X", "xi");
+convertElement("ClaRa.Components.BoundaryConditions.MassFlowSource_T","XInputIsActive", "variable_xi");
+convertElement("ClaRa.Components.BoundaryConditions.PressureSink_ph","X_const", "xi_const");
+convertElement("ClaRa.Components.BoundaryConditions.PressureSink_ph","X_in", "xi_in");
+convertElement("ClaRa.Components.BoundaryConditions.PressureSink_ph","X", "xi");
+convertElement("ClaRa.Components.BoundaryConditions.PressureSink_ph","XInputIsActive", "variable_xi");
+convertElement("ClaRa.Components.BoundaryConditions.PressureSink_pT","X_const", "xi_const");
+convertElement("ClaRa.Components.BoundaryConditions.PressureSink_pT","X_in", "xi_in");
+convertElement("ClaRa.Components.BoundaryConditions.PressureSink_pT","X", "xi");
+convertElement("ClaRa.Components.BoundaryConditions.PressureSink_pT","XInputIsActive", "variable_xi");
+convertElement("ClaRa.Components.BoundaryConditions.GasSink_pT","X_const", "xi_const");
+convertElement("ClaRa.Components.BoundaryConditions.GasSink_pT","X_in", "xi_in");
+convertElement("ClaRa.Components.BoundaryConditions.GasSink_pT","X", "xi");
+convertElement("ClaRa.Components.BoundaryConditions.GasSink_pT","XInputIsActive", "variable_xi");
+convertElement("ClaRa.Components.BoundaryConditions.GasFlowSource_T","X_const", "xi_const");
+convertElement("ClaRa.Components.BoundaryConditions.GasFlowSource_T","X_in", "xi_in");
+convertElement("ClaRa.Components.BoundaryConditions.GasFlowSource_T","X", "xi");
+convertElement("ClaRa.Components.BoundaryConditions.GasFlowSource_T","XInputIsActive", "variable_xi");
+convertElement("ClaRa.Components.BoundaryConditions.CoalFlowSource","X_const", "xi_const");
+convertElement("ClaRa.Components.BoundaryConditions.CoalFlowSource","X_in", "xi_in");
+convertElement("ClaRa.Components.BoundaryConditions.CoalFlowSource","X", "xi");
+convertElement("ClaRa.Components.BoundaryConditions.CoalFlowSource","XInputIsActive", "variable_xi");
+convertElement("ClaRa.Components.BoundaryConditions.CoalSink","X_const", "xi_const");
+convertElement("ClaRa.Components.BoundaryConditions.CoalSink","X_in", "xi_in");
+convertElement("ClaRa.Components.BoundaryConditions.CoalSink","X", "xi");
+convertElement("ClaRa.Components.BoundaryConditions.CoalSink","XInputIsActive", "variable_xi");
+convertElement("ClaRa.Components.BoundaryConditions.GasSink_pT_HB","X_const", "xi_const");
+convertElement("ClaRa.Components.BoundaryConditions.GasSink_pT_HB","X_in", "xi_in");
+convertElement("ClaRa.Components.BoundaryConditions.GasSink_pT_HB","X", "xi");
+convertElement("ClaRa.Components.BoundaryConditions.GasSink_pT_HB","XInputIsActive", "variable_xi");
+
+//________________Connectors
+convertElement("ClaRa.Basics.Interfaces.GasMassSpecific","Xi_outflow", "xi_outflow");
+convertElement("ClaRa.Basics.Interfaces.fluidPort_XRG","Xi_outflow", "xi_outflow");
+convertElement("ClaRa.Basics.Interfaces.Coal_inlet","Xi_outflow", "xi_outflow");
+
+
+//__________________Geo
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes","d_t", "diameter_t");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndCarrierTubes","d_t", "diameter_t");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell","d_t", "diameter_t");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes","d_t", "diameter_t");
+
+//________________FGCarray
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","L", "length");
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","d_hyd", "diameter_hyd");
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","A_crossFM", "A_cross_FM");
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","dx", "Delta_x");
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","dxFM", "Delta_x_FM");
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","dp_nom", "Delta_p_nom");
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","d_nom", "rho_nom");
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","dp_fric", "Delta_p_fric");
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","massFM", "mass_FM");
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","c", "w");
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","cInlet", "w_inlet");
+convertElement("ClaRa.Basics.ControlVolumes.GasVolumes.FlueGasCellArray","cOutlet", "w_outlet");
+
+//________________AirPreheater
+convertElement("ClaRa.Components.HeatExchangers.RegenerativeAirPreheater_L4_array","D_reg", "diameter_reg");
+convertElement("ClaRa.Components.HeatExchangers.RegenerativeAirPreheater_L4_array","D_hub", "diameter_hub");
+convertElement("ClaRa.Components.HeatExchangers.RegenerativeAirPreheater_L4_array","H_reg", "height_reg");
+convertElement("ClaRa.Components.HeatExchangers.RegenerativeAirPreheater_L4_array","dp_freshAir_nom", "Delta_p_freshAir_nom");
+convertElement("ClaRa.Components.HeatExchangers.RegenerativeAirPreheater_L4_array","dp_flueGas_nom", "Delta_p_flueGas_nom");
+convertElement("ClaRa.Components.HeatExchangers.RegenerativeAirPreheaterPrimaryAndSecondaryAir_L4_array","D_reg", "diameter_reg");
+convertElement("ClaRa.Components.HeatExchangers.RegenerativeAirPreheaterPrimaryAndSecondaryAir_L4_array","D_hub", "diameter_hub");
+convertElement("ClaRa.Components.HeatExchangers.RegenerativeAirPreheaterPrimaryAndSecondaryAir_L4_array","H_reg", "height_reg");
+convertElement("ClaRa.Components.HeatExchangers.RegenerativeAirPreheaterPrimaryAndSecondaryAir_L4_array","dp_primaryAir_nom", "Delta_p_primaryAir_nom");
+convertElement("ClaRa.Components.HeatExchangers.RegenerativeAirPreheaterPrimaryAndSecondaryAir_L4_array","dp_flueGas_nom", "Delta_p_flueGas_nom");
+convertElement("ClaRa.Components.HeatExchangers.RegenerativeAirPreheaterPrimaryAndSecondaryAir_L4_array","dp_secondaryAir_nom", "Delta_p_secondaryAir_nom");
+
+//________________Gas HT
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_flatWall_L2","L_flow", "length_char");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_tubeBank_L2","L_flow", "length_char");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.ConvectionAndRadiation_tubeBank_L2","L_flow", "length_char");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Convection.Convection_finnedTubes_L2","L_tube", "length_tube");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Wall_advanced_L2","x_m_coke", "diameter_mean_coke");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Wall_advanced_L2","x_m_ash", "diameter_mean_ash");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Wall_advanced_L2","Q_m_abs_coke", "Q_mean_abs_coke");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Wall_advanced_L2","Q_m_abs_ash", "Q_mean_abs_ash");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Gas_advanced_L2","x_m_coke", "diameter_mean_coke");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Gas_advanced_L2","x_m_ash", "diameter_mean_ash");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Gas_advanced_L2","Q_m_abs_coke", "Q_mean_abs_coke");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.HeatTransport.Gas_HT.Radiation.Radiation_gas2Gas_advanced_L2","Q_m_abs_ash", "Q_mean_abs_ash");
+
+//________________Efilter
+convertElement("ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_ideal_L1","separationrate", "separationRate");
+convertElement("ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_empirical_L1","separationrate", "separationRate");
+convertElement("ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_detailed_L2","separationrate", "separationRate");
+convertElement("ClaRa.Components.FlueGasCleaning.E_Filter.E_Filter_detailed_L2","d_particle", "diameter_particle");
+
+//________________Turbine
+convertElement("ClaRa.Components.TurboMachines.Turbines.GasTurbineStagestacked", "nStages", "N_stages");
+convertElement("ClaRa.Components.TurboMachines.Turbines.GasTurbineStagestacked", "nVIGVStages", "N_VIGVstages");
+convertElement("ClaRa.Components.TurboMachines.Turbines.GasTurbineStagestacked", "tau_aux", "Tau_aux");
+convertElement("ClaRa.Components.TurboMachines.Turbines.GasTurbineStagestacked", "D", "diameter");
+
+//Integrator Block
+convertElement("ClaRa.Components.Control.Blocks.Integrator","Ti","Tau_i");
+convertElement("ClaRa.Components.Control.Blocks.Integrator","Ti_in","Tau_i_in");
+convertElement("ClaRa.Components.Control.Blocks.Integrator","Ti_const","Tau_i_const");
+convertElement("ClaRa.Components.Control.Blocks.Integrator","TiInputIsActive","variable_Tau_i");
+
+//__________________Generic Pressure Loss___________________
+
+//convertClass("ClaRa.Basics.ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.NoFriction", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L2");
+//convertClass("Basics.ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.NoFriction", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L2");
+//convertClass("ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.NoFriction", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.NoFriction_L2");
+//
+//convertClass("ClaRa.Basics.ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.LinearPressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L2");
+//convertClass("Basics.ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.LinearPressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L2");
+//convertClass("ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.LinearPressureLoss", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.LinearPressureLoss_L2");
+//
+//convertClass("ClaRa.Basics.ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.PressureLossCoeffcient", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint_L2");
+//convertClass("Basics.ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.PressureLossCoeffcient", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint_L2");
+//convertClass("ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.PressureLossCoeffcient", "ClaRa.Basics.ControlVolumes.Fundamentals.PressureLoss.Generic_PL.QuadraticNominalPoint_L2");
+//
+//convertElement("ClaRa.Basics.ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.LinearPressureLoss","dp_nom","Delta_p_nom");
+//convertModifiers("ClaRa.Basics.ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.PressureLossCoeffcient",{"zeta_TOT"},fill("",0),true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.FluidVolumes.Fundamentals.PressureLoss.PressureLossCoeffcient",{"A_cross"},fill("",0),true);
+
+//_________________Geometry_____________
+// GenericGeometry --> renaming+vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry", "z_in","z_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry", "z_out","z_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry", "S","A_heat");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry", {"z_in"},{"z_in={%z_in%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry", {"z_out"},{"z_out={%z_out%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry", {"S"},{"A_heat={%S%}"},true);
+//
+// HollowBlock --> renaming+vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", "z_in","z_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", "z_out","z_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", "S","A_heat[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", "H","height");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", "W","width");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", "L","length");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", {"z_in"},{"z_in={%z_in%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", {"z_out"},{"z_out={%z_out%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlock", {"S"},{"A_heat={%S%}"},true);
+//
+//HollowBlockWithTubes --> renaming+vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", "z_in","z_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", "z_out","z_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", "S","A_heat[2]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", "H","height");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", "W","width");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", "L","length");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", {"z_in"},{"z_in={%z_in%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", {"z_out"},{"z_out={%z_out%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubes", {"S"},{"A_heat={%S%}"},true);
+//
+//HollowBlockWithTubesAndHotwell --> renaming+vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "z_in","z_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "z_out","z_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "S","A_heat[2]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "H","height");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "W","width");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "L","length");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "H_hotwell","height_hotwell");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "W_hotwell","width_hotwell");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", "L_hotwell","length_hotwell");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", {"z_in"},{"z_in={%z_in%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", {"z_out"},{"z_out={%z_out%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell", {"S"},{"A_heat={%S%}"},true);
+//
+//Condenser --> renaming+vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "z_in","z_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "z_out","z_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "S","A_heat[2]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "H","height");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "W","width");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "L","length");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "H_hotwell","height_hotwell");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "W_hotwell","width_hotwell");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", "L_hotwell","length_hotwell");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", {"z_in"},{"z_in={%z_in%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", {"z_out"},{"z_out={%z_out%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Condenser", {"S"},{"A_heat={%S%}"},true);
+//
+// HollowCylinder --> renaming+vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinder", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinder", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinder", "z_in","z_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinder", "z_out","z_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinder", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinder", "S","A_heat[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinder", "D","diameter");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinder", "L","length");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinder", {"z_in"},{"z_in={%z_in%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinder", {"z_out"},{"z_out={%z_out%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinder", {"S"},{"A_heat={%S%}"},true);
+//
+// HollowCylinderWithTubes --> renaming+vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", "z_in","z_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", "z_out","z_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", "S","A_heat[2]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", "D","diameter");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", "L","length");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", "L_tubes","length_tubes");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", {"z_in"},{"z_in={%z_in%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", {"z_out"},{"z_out={%z_out%}"});
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes", {"S"},{"A_heat={%S%}"},true);
+//
+// PipeGeometry --> renaming+vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeGeometry", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeGeometry", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeGeometry", "z_in","z_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeGeometry", "z_out","z_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeGeometry", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeGeometry", "S","A_heat[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeGeometry", "D","diameter");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeGeometry", "L","length");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeGeometry", {"z_in"},{"z_in={%z_in%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeGeometry", {"z_out"},{"z_out={%z_out%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeGeometry", {"S"},{"A_heat={%S%}"},true);
+//
+// PipeWithHotwell --> renaming+vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", "z_in","z_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", "z_out","z_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", "S","A_heat[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", "D","diameter");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", "L","length");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", "H_hotwell","height_hotwell");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", "W_hotwell","width_hotwell");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", "L_hotwell","length_hotwell");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", {"z_in"},{"z_in={%z_in%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", {"z_out"},{"z_out={%z_out%}"},true);
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.PipeWithHotwell", {"S"},{"A_heat={%S%}"},true);
+//
+// GenericGeometry_NPorts --> GenericGeometry + renaming
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry_NPorts", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry");
+convertClass("Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry_NPorts", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry");
+convertClass("ControlVolumes.Fundamentals.Geometry.GenericGeometry_NPorts", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry");
+convertClass("Fundamentals.Geometry.GenericGeometry_NPorts", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry");
+convertClass("Geometry.GenericGeometry_NPorts", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry_NPorts", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry_NPorts", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.GenericGeometry_NPorts", "H_fill","height_fill");
+//
+// BUh_Nports --> HollowBlockWithTubesAndHotwell + renaming + A_heat vectorization
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell");
+convertClass("Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell");
+convertClass("ControlVolumes.Fundamentals.Geometry.BUh_Nports", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell");
+convertClass("Fundamentals.Geometry.BUh_Nports", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell");
+convertClass("Geometry.BUh_Nports", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowBlockWithTubesAndHotwell");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "A_heat","A_heat[2]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "H","height");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "W","width");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "L","length");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "H_hotwell","height_hotwell");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "W_hotwell","width_hotwell");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", "L_hotwell","length_hotwell");
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.BUh_Nports", {"A_heat"},{"A_heat={%A_heat%}"},true);
+//
+// C_Nports --> HollowCylinderWithTubes + renaming + A_heat vectorization
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.C_Nports", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes");
+convertClass("Basics.ControlVolumes.Fundamentals.Geometry.C_Nports", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes");
+convertClass("ControlVolumes.Fundamentals.Geometry.C_Nports", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes");
+convertClass("Fundamentals.Geometry.C_Nports", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes");
+convertClass("Geometry.C_Nports", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.HollowCylinderWithTubes");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.C_Nports", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.C_Nports", "A_heat","A_heat[2]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.C_Nports", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.C_Nports", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.C_Nports", "D","diameter");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.C_Nports", "L","length");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.C_Nports", "L_tubes","length_tubes");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.C_Nports", {"A_heat"},{"A_heat={%A_heat%}"},true);
+//
+// CU_Nports --> renaming+vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CU_Nports", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CU_Nports", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CU_Nports", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CU_Nports", "A_heat","A_heat[2]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CU_Nports", "D","diameter");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CU_Nports", "L","length");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CU_Nports", "L_tubes","length_tubes");
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CU_Nports", {"A_heat"},{"A_heat={%A_heat%}"},true);
+//
+// CH_Nports --> renaming+vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports", "A_heat","A_heat[2]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports", "D","diameter");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports", "L","length");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports", "L_tubes","length_tubes");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports", {"A_heat"},{"A_heat={%A_heat%}"},true);
+//
+// Preheater_HP --> CH_Nports
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_HP", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports");
+convertClass("Basics.ControlVolumes.Fundamentals.Geometry.Preheater_HP", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports");
+convertClass("ControlVolumes.Fundamentals.Geometry.Preheater_HP", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports");
+convertClass("Fundamentals.Geometry.Preheater_HP", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports");
+convertClass("Geometry.Preheater_HP", "ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.CH_Nports");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_HP", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_HP", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_HP", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_HP", "A_heat","A_heat[2]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_HP", "D","diameter");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_HP", "L","length");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_HP", "L_tubes","length_tubes");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_HP", {"A_heat"},{"A_heat={%A_heat%}"},true);
+//
+// Preheater_LP --> renaming + A_heat vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_LP", "V","volume");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_LP", "A_fr","A_front");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_LP", "H_fill","height_fill");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_LP", "A_heat","A_heat[2]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_LP", "D","diameter");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_LP", "L","length");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_LP", "L_tubes","length_tubes");
+convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.Geometry.Preheater_LP", {"A_heat"},{"A_heat={%A_heat%}"},true);
+//_______________________________________________________________________________________________________________________________________
+//
+// ________________SpacalDistribution___________________
+//
+// Real Phases --> vectorizing
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", "dp_geo_in","dp_geo_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", "dp_geo_out","dp_geo_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", "zoneAlloc_in","zoneAlloc_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", "zoneAlloc_out","zoneAlloc_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", "m_flow_inliq","m_flow_inliq[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", "m_flow_invap","m_flow_invap[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", "m_flow_outliq","m_flow_outliq[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", "m_flow_outvap","m_flow_outvap[1]");
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", {"dp_geo_in"},{"dp_geo_in={%dp_geo_in%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", {"dp_geo_out"},{"dp_geo_out={%dp_geo_out%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", {"zoneAlloc_in"},{"zoneAlloc_in={%zoneAlloc_in%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", {"zoneAlloc_out"},{"zoneAlloc_out={%zoneAlloc_out%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", {"m_flow_inliq"},{"m_flow_inliq={%m_flow_inliq%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", {"m_flow_invap"},{"m_flow_invap={%m_flow_invap%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", {"m_flow_outliq"},{"m_flow_outliq={%m_flow_outliq%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases", {"m_flow_outvap"},{"m_flow_outvap={%m_flow_outvap%}"},true);
+//
+// RealPhases_flex --> RealPhases
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases");
+convertClass("Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases");
+convertClass("ControlVolumes.Fundamentals.SpacialDistribution.RealPhases_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases");
+convertClass("Fundamentals.SpacialDistribution.RealPhases_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases");
+convertClass("SpacialDistribution.RealPhases_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealPhases");
+//
+// RealSeparatingLevelDependent_flex --> RealSeparated
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparated");
+convertClass("Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparated");
+convertClass("ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparated");
+convertClass("Fundamentals.SpacialDistribution.RealSeparatingLevelDependent_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparated");
+convertClass("SpacialDistribution.RealSeparatingLevelDependent_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparated");
+//
+// RealSeparatingLevelDependent --> RealSeparated + vectorizing
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparated");
+convertClass("Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparated");
+convertClass("ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparated");
+convertClass("Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparated");
+convertClass("SpacialDistribution.RealSeparatingLevelDependent", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparated");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "dp_geo_in","dp_geo_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "dp_geo_out","dp_geo_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "zoneAlloc_in","zoneAlloc_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "zoneAlloc_out","zoneAlloc_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "m_flow_inliq","m_flow_inliq[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "m_flow_invap","m_flow_invap[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "m_flow_outliq","m_flow_outliq[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "m_flow_outvap","m_flow_outvap[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "steamQuality_in","steamQuality_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "steamQuality_out","steamQuality_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "Dz_max_in","Dz_max_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "Dz_min_in","Dz_min_in[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "Dz_max_out","Dz_max_out[1]");
+convertElement("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", "Dz_min_out","Dz_min_out[1]");
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"dp_geo_in"},{"dp_geo_in={%dp_geo_in%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"dp_geo_out"},{"dp_geo_out={%dp_geo_out%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"zoneAlloc_in"},{"zoneAlloc_in={%zoneAlloc_in%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"zoneAlloc_out"},{"zoneAlloc_out={%zoneAlloc_out%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"m_flow_inliq"},{"m_flow_inliq={%m_flow_inliq%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"m_flow_invap"},{"m_flow_invap={%m_flow_invap%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"m_flow_outliq"},{"m_flow_outliq={%m_flow_outliq%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"m_flow_outvap"},{"m_flow_outvap={%m_flow_outvap%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"steamQuality_in"},{"steamQuality_in={%steamQuality_in%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"steamQuality_out"},{"steamQuality_out={%steamQuality_out%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"Dz_max_in"},{"Dz_max_in={%Dz_max_in%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"Dz_min_in"},{"Dz_min_in={%Dz_min_in%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"Dz_max_out"},{"Dz_max_out={%Dz_max_out%}"},true);
+//convertModifiers("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealSeparatingLevelDependent", {"Dz_min_out"},{"Dz_min_out={%Dz_min_out%}"},true);
+//
+// RealMixingLevelIndependent_flex --> RealMixed
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealMixingLevelIndependent_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealMixed");
+convertClass("Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealMixingLevelIndependent_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealMixed");
+convertClass("ControlVolumes.Fundamentals.SpacialDistribution.RealMixingLevelIndependent_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealMixed");
+convertClass("Fundamentals.SpacialDistribution.RealMixingLevelIndependent_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealMixed");
+convertClass("SpacialDistribution.RealMixingLevelIndependent_flex", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.RealMixed");
+//
+// IdeallySeparatingLevelDependent --> IdeallySeparated
+convertClass("ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.IdeallySeparatingLevelDependent", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.IdeallySeparated");
+convertClass("Basics.ControlVolumes.Fundamentals.SpacialDistribution.IdeallySeparatingLevelDependent", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.IdeallySeparated");
+convertClass("ControlVolumes.Fundamentals.SpacialDistribution.IdeallySeparatingLevelDependent", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.IdeallySeparated");
+convertClass("Fundamentals.SpacialDistribution.IdeallySeparatingLevelDependent", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.IdeallySeparated");
+convertClass("SpacialDistribution.IdeallySeparatingLevelDependent", "ClaRa.Basics.ControlVolumes.Fundamentals.SpacialDistribution.IdeallySeparated");
+
+
