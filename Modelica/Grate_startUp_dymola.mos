@@ -1,5 +1,5 @@
-openModel("C:\Users\Johannes\Documents\GitHub\Project\Modelica\Grate\package.mo");
-openModel("C:\Users\Johannes\Documents\GitHub\Project\Modelica\Tutorial\package.mo");
+openModel("C:\Projects\modelling\Projects\Grate\package.mo");
+openModel("C:\Projects\project\Modelica\Tutorial\package.mo");
 
 Advanced.OnlineParameterChanges:=true;
 Advanced.TransparentImageBackground:=true;
@@ -9,4 +9,4 @@ Advanced.AutoFormatting:=true;
 defineUnitConversion("J/kg", "KJ/kg", 0.001);
 defineUnitConversion("J/kg", "MJ/kg", 1e-6);
 
-cd C:\Users\Johannes\Documents\GitHub\Project\Modelica\Grate
+cd C:\Projects\modelling\Projects\Grate

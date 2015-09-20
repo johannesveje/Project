@@ -1,6 +1,4 @@
 within Tutorial.UnitTest;
-
-
 model Mixer
   import Tutorial;
   Tutorial.Mixer mixer(redeclare package Medium =
@@ -43,3 +41,4 @@ equation
   annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}})));
 end Mixer;
+
